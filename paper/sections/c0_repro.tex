@@ -1,0 +1,50 @@
+\section{Reproduction details}
+\label{app:repro}
+
+\paragraph{Backbone and adapter.}
+\texttt{Qwen/Qwen3-VL-8B-Instruct} at Hugging Face revision
+\texttt{0c351dd01ed87e9c1b53cbc748cba10e6187ff3b}, run through its own processor and visual pathway.
+The LoRA adapter has rank 32, $\alpha=64$ and dropout 0, on the query, key, value and output
+projections of each of the 36 language-model attention blocks, for $30{,}670{,}848$ trainable parameters. Every other weight
+stays frozen in BF16. The adapter and optimizer state use 32-bit floats.
+
+\paragraph{Decision sampling.}
+Each physical trajectory keeps one of its instructions, chosen by a seeded hash. A decision at step
+$t$ is eligible when $3\le t\le 96$, so no training or held-out history needs padding. The
+selection, natural-outcome and balanced partitions take one decision per trajectory by seeded hash,
+the balanced one drawing 64 per action from distinct trajectories. Training takes one decision from
+each of its 2,451 trajectories and 621 more from the same trajectories, again by seeded hash, and
+visits them once in a seeded order.
+
+\paragraph{Class weighting and selection.}
+The weighted arm computes one weight per action from the $3{,}072$ training decisions,
+$w_a = N/(4 n_a)$, so that the mean weight over those decisions is one: \textsc{stop} $10.82$
+($n=71$), \textsc{move\_forward} $0.379$ ($2{,}024$), \textsc{turn\_left} $1.430$ ($537$) and
+\textsc{turn\_right} $1.745$ ($440$). Each decision contributes $w_y(-\log p_y)$ for its expert action
+$y$. The $16$ decisions of an update are each divided by $16$ and accumulated, with no
+renormalization of the weights within an update. The weights act on training only: checkpoint
+selection and every cross-entropy reported here use the unweighted four-way loss in both arms.
+
+\paragraph{Prompt, history and action tokens.}
+A system message lists the four action IDs and asks for an answer of the form ``Action ID: $N$''.
+The user message holds the four frames in time order, each preceded by a label such as
+``Frame t-1 (previous action: 1=MOVE\_FORWARD).'', and ends with the instruction and ``Choose the
+next official action now.'' The target ``Action ID: $N$'' tokenizes to four shared tokens (ids 2512,
+3034, 25, 220) and one digit token: 15 for \textsc{stop} ($N=0$), 16 for \textsc{move\_forward}
+($N=1$), 17 for \textsc{turn\_left} ($N=2$) and 18 for \textsc{turn\_right} ($N=3$). Only the digit
+position is supervised, and every score compares the four digit tokens at that one position. In
+closed loop, a frame that does not yet exist is replaced by a copy of the initial observation and
+labeled as such, with no previous action. Training never sees such a padded history, and six of the
+seven weighted \textsc{stop} presses fall on step 1, where it occurs, so those early stops are
+confounded with this untrained input.
+
+\paragraph{Runtime.}
+Training ran on one NVIDIA GB10 GPU (aarch64) and the first closed-loop evaluation on the same
+aarch64 platform, with Habitat-Sim 0.3.3. All 37 policies were later executed and scored on NVIDIA
+L40S GPUs (x86-64, Appendix~\ref{app:sweep}). Because some stored decisions are exact BF16 ties (Appendix~\ref{app:ties}), another GPU model could
+change individual actions.
+
+\paragraph{Protocol records.}
+Each training run records the SHA-256 hash of every protocol file it followed. The protocol for the
+two later seeds was edited after their runs finished, to mark it completed and add a closing note.
+No rule, seed or threshold changed, and those four runs record the hash of the version they followed.

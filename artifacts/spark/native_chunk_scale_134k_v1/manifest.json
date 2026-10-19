@@ -1,0 +1,140 @@
+{
+  "run_id": "native_chunk_pilot_v1",
+  "status_boundary": "exploratory_capability_pilot_not_a_paper_artifact",
+  "objective": "mean_restricted_four_way_cross_entropy_over_chunk_positions_v1",
+  "chunk_codebook": {
+    "protocol_version": 1,
+    "method": "shared_position_official_action_id_chunk_v1",
+    "chunk_size": 4,
+    "system_prompt": "You are a spatial navigation assistant. Given an indoor RGB-D observation and a navigation instruction, choose the next 4 official action IDs: 0=STOP, 1=MOVE_FORWARD, 2=TURN_LEFT, 3=TURN_RIGHT. Respond only with `Action IDs: N N N N`, replacing each N with the chosen ID.",
+    "target_prefix": "Action IDs:",
+    "tokenizer_class": "Qwen2TokenizerFast",
+    "tokenizer_name_or_path": "Qwen/Qwen3-VL-8B-Instruct",
+    "shared_prefix_token_ids": [
+      2512,
+      28360,
+      25,
+      220
+    ],
+    "shared_prefix_token_count": 4,
+    "action_token_offsets": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "reference_target_token_ids": [
+      2512,
+      28360,
+      25,
+      220,
+      15,
+      220,
+      15,
+      220,
+      15,
+      220,
+      15
+    ],
+    "action_specific_token_count_per_position": 1,
+    "supervised_token_count": 4,
+    "actions": {
+      "STOP": {
+        "action_id": 0,
+        "action_token_id": 15
+      },
+      "MOVE_FORWARD": {
+        "action_id": 1,
+        "action_token_id": 16
+      },
+      "TURN_LEFT": {
+        "action_id": 2,
+        "action_token_id": 17
+      },
+      "TURN_RIGHT": {
+        "action_id": 3,
+        "action_token_id": 18
+      }
+    }
+  },
+  "model_id": "Qwen/Qwen3-VL-8B-Instruct",
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "trainable_contract": {
+    "trainable_tensor_count": 288,
+    "trainable_parameter_count": 30670848,
+    "trainable_name_sha256": "8d84ba8712dd2a9052660dff9c3fc50dbb6708f2324d02e7d7ed943ae76e6838",
+    "all_trainable_names_are_lora": true
+  },
+  "hyperparameters": {
+    "chunk_size": 4,
+    "seed": 20260825,
+    "sampler_seed": 20260825,
+    "lora_rank": 32,
+    "lora_alpha": 64,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "accumulation": 16,
+    "max_updates": 3000,
+    "calibrate_every": 150,
+    "calibration_decisions": 256,
+    "max_hours": 10.0,
+    "resume": false,
+    "lazy_frames": true
+  },
+  "train_summary": {
+    "sample_count": 127661,
+    "supervised_position_count": 510644,
+    "distinct_chunk_patterns": 51,
+    "constant_chunk_count": 40121,
+    "constant_chunk_fraction": 0.3142776572328276,
+    "chunks_containing_stop": 2375,
+    "chunks_containing_stop_fraction": 0.0186039589224587,
+    "most_common_chunk": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "most_common_chunk_count": 34146,
+    "most_common_chunk_fraction": 0.26747401320685255,
+    "supervised_action_histogram": {
+      "MOVE_FORWARD": 348378,
+      "STOP": 2375,
+      "TURN_LEFT": 82492,
+      "TURN_RIGHT": 77399
+    },
+    "distinct_trajectories": 2451,
+    "distinct_scenes": 61
+  },
+  "selection_summary": {
+    "sample_count": 240,
+    "supervised_position_count": 960,
+    "distinct_chunk_patterns": 37,
+    "constant_chunk_count": 81,
+    "constant_chunk_fraction": 0.3375,
+    "chunks_containing_stop": 4,
+    "chunks_containing_stop_fraction": 0.016666666666666666,
+    "most_common_chunk": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "most_common_chunk_count": 67,
+    "most_common_chunk_fraction": 0.2791666666666667,
+    "supervised_action_histogram": {
+      "MOVE_FORWARD": 662,
+      "STOP": 4,
+      "TURN_LEFT": 136,
+      "TURN_RIGHT": 158
+    },
+    "distinct_trajectories": 240,
+    "distinct_scenes": 55
+  },
+  "sealed_splits_never_opened": [
+    "primary_evaluation",
+    "balanced_diagnostic",
+    "val_unseen"
+  ],
+  "started_unix": 1788100548.6665788
+}

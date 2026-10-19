@@ -1,0 +1,19 @@
+{
+  "all_checkpoint_files_fully_loaded_and_hashed": true,
+  "dataset_reconstruction_performed": true,
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_qwen_c0_action_balance_verification_v1",
+  "manifest_path": "/artifacts/manifest.json",
+  "manifest_sha256": "056284189286c66de34fbe0dd5b4b9f59ecc1d805688a49440692cfa5548867a",
+  "outcome_reconstruction_performed": true,
+  "recorded_at_utc": "2026-08-25T16:40:54.127011+00:00",
+  "result_path": "/artifacts/result.json",
+  "result_sha256": "ced3e7c213508bf0c80f1aeed60e732aaf71f2cd133eb056e716305a2a089866",
+  "schema_version": 1,
+  "status": "passed",
+  "stress_authorization_reconstruction_performed": true,
+  "updates_path": "/artifacts/updates.jsonl",
+  "updates_sha256": "6594da708a33b073f3374dcf616a4d87f43184a81e25ffc9e5e57c4c443bdf8d",
+  "weighted_event_chain_reconstruction_performed": true
+}

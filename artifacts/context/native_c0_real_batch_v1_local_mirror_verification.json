@@ -1,0 +1,27 @@
+{
+  "checkpoint": {
+    "bytes": 368418393,
+    "path": "/Users/vivekmattam/Desktop/GI/GridNav/checkpoints/native_c0_real_batch_v1/trainable_step1.pt",
+    "sha256": "d564ad6794486602625a72930cf185b715c9ac6199d28fabffbd18baa5d8093a"
+  },
+  "error_count": 0,
+  "errors": [],
+  "evidence_boundary": {
+    "established": "The compact native-C0 evidence, current locked sources, and checkpoint copied from Spark match the identities independently verified on Spark.",
+    "not_established": "Local reconstruction of licensed simulator data or Qwen weight shards, history selection, navigation competence, convergence, generalization, or C0-C4 effects."
+  },
+  "evidence_root": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/spark/native_c0_real_batch_v1",
+  "file_hashes": {
+    "processor_reverification": "7d6950b9ab5ced1d09d46de61bb7e504d7665a3f698257da2fd9371bb3255e9c",
+    "result": "f8ed157a4b9def07e31c33a3a9378272b30ef535adc5a829661a49c1c2da9005",
+    "verification_v1": "03e2634abdbf431c6cb1ae47f750957ebd88b53985dd296e3c02ba3e8b71e122",
+    "verification_v2": "addd9ef7b0af51f48dd32b2d9590a8deb9ed9dae5c54c251223b299ebbc0fc01"
+  },
+  "gate": "native_qwen_c0_compact_mac_mirror_verification_v1",
+  "recorded_at_utc": "2026-08-24T03:44:39.492653+00:00",
+  "repo": "/Users/vivekmattam/Desktop/GI/GridNav",
+  "schema_version": 1,
+  "status": "passed",
+  "verified_result_source_lock_count": 31,
+  "verified_verifier_v2_source_lock_count": 6
+}

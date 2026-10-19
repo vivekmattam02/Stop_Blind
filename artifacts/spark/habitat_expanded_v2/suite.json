@@ -1,0 +1,70 @@
+{
+  "evidence_boundary": {
+    "established_if_passed": "Every released val_seen ground-truth trajectory reproduced its actions, native sensor contract, reset pose, forward-step positions, STOP, success, and nDTW under the locked runtime and tolerances. SPL used the simulator geodesic measured at reset, and drift from released geodesic metadata was quantified.",
+    "not_established": "Identity between legacy and modern navmesh geodesic values, legacy collision-flag identity, val_unseen parity, learned-policy performance, training correctness, baseline ordering, or paper-level model claims."
+  },
+  "first_started_at_utc": "2026-08-23T07:22:24.989070+00:00",
+  "gate": "spark_habitat_sim_r2r_ce_full_val_seen_runtime_geodesic_v2",
+  "invocation_started_at_utc": "2026-08-23T07:22:24.989070+00:00",
+  "manifest_sha256": "69053d0ea8591565c8f24f7b1d61a6e88d72919a2cce7bc4d25e82992f6a134e",
+  "max_hours_this_invocation": 8.0,
+  "reason": "Every episode in the immutable full-split manifest passed.",
+  "recorded_at_utc": "2026-08-23T07:34:52.468642+00:00",
+  "runtime": {
+    "action_names": {
+      "MOVE_FORWARD": "move_forward",
+      "TURN_LEFT": "turn_left",
+      "TURN_RIGHT": "turn_right"
+    },
+    "architecture": "aarch64",
+    "config": {
+      "agent_height_m": 1.5,
+      "agent_radius_m": 0.1,
+      "allow_sliding": true,
+      "depth_height_width": [
+        256,
+        256
+      ],
+      "depth_max_m": 10.0,
+      "depth_min_m": 0.0,
+      "forward_step_m": 0.25,
+      "gpu_device_id": 0,
+      "hfov_degrees": 90.0,
+      "rgb_height_width": [
+        224,
+        224
+      ],
+      "scene_root": "/datasets/GridNav/scene_datasets",
+      "seed": 100,
+      "sensor_height_m": 1.25,
+      "turn_angle_degrees": 15
+    },
+    "habitat_sim_build_commit_observed": "acbe6f4922e68145e401e55c30f9dfea460a3f24",
+    "habitat_sim_commit_expected": "acbe6f4922e68145e401e55c30f9dfea460a3f24",
+    "habitat_sim_version": "0.3.3",
+    "navmesh_loaded": true,
+    "platform": "Linux-6.17.0-1014-nvidia-aarch64-with-glibc2.39",
+    "python": "3.12.3",
+    "scene_path": "/datasets/GridNav/scene_datasets/mp3d/vyrNrziPKCB/vyrNrziPKCB.glb",
+    "stop_implementation": "task_level_no_simulator_motion"
+  },
+  "schema_version": 2,
+  "status": "passed",
+  "summary": {
+    "completed_episode_count": 778,
+    "completed_scene_count": 53,
+    "failed_episode_count": 0,
+    "maximum_location_error_m": 8.117741786718522e-06,
+    "maximum_release_metadata_geodesic_drift_m": 0.48644065856933594,
+    "mean_release_metadata_geodesic_drift_m": 0.012306430345942245,
+    "mean_spl": 0.975375007692186,
+    "mean_success_rate": 1.0,
+    "minimum_ndtw": 0.9999988743872253,
+    "passed_episode_count": 778,
+    "release_metadata_geodesic_drift_episode_count": 36,
+    "remaining_episode_count": 0,
+    "runtime_collision_count": 0,
+    "target_episode_count": 778,
+    "target_scene_count": 53
+  }
+}

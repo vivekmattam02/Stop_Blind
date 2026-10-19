@@ -1,0 +1,1429 @@
+{
+  "action_codebook": {
+    "action_token_offset": 4,
+    "actions": {
+      "MOVE_FORWARD": {
+        "action_id": 1,
+        "action_specific_token_count": 1,
+        "action_token_id": 16,
+        "target_text": "Action ID: 1",
+        "target_token_ids": [
+          2512,
+          3034,
+          25,
+          220,
+          16
+        ]
+      },
+      "STOP": {
+        "action_id": 0,
+        "action_specific_token_count": 1,
+        "action_token_id": 15,
+        "target_text": "Action ID: 0",
+        "target_token_ids": [
+          2512,
+          3034,
+          25,
+          220,
+          15
+        ]
+      },
+      "TURN_LEFT": {
+        "action_id": 2,
+        "action_specific_token_count": 1,
+        "action_token_id": 17,
+        "target_text": "Action ID: 2",
+        "target_token_ids": [
+          2512,
+          3034,
+          25,
+          220,
+          17
+        ]
+      },
+      "TURN_RIGHT": {
+        "action_id": 3,
+        "action_specific_token_count": 1,
+        "action_token_id": 18,
+        "target_text": "Action ID: 3",
+        "target_token_ids": [
+          2512,
+          3034,
+          25,
+          220,
+          18
+        ]
+      }
+    },
+    "method": "single_shared_position_official_action_id_token_v1",
+    "protocol_version": 1,
+    "shared_prefix_token_count": 4,
+    "shared_prefix_token_ids": [
+      2512,
+      3034,
+      25,
+      220
+    ],
+    "system_prompt": "You are a spatial navigation assistant. Given an indoor RGB-D observation and a navigation instruction, choose exactly one official action ID: 0=STOP, 1=MOVE_FORWARD, 2=TURN_LEFT, 3=TURN_RIGHT. Respond only with `Action ID: N`, replacing N with the chosen ID.",
+    "target_prefix": "Action ID:",
+    "tokenizer_class": "Qwen2TokenizerFast",
+    "tokenizer_name_or_path": "Qwen/Qwen3-VL-8B-Instruct"
+  },
+  "cache_manifest_path": "/checkpoints/cache/cache_manifest.json",
+  "cache_manifest_sha256": "81f7e44da7fb694bc402de91a31a1f1c9b7a94bbd86999cdb940efb756d3498f",
+  "calibration": {
+    "per_decision": [
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "STOP",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.5790965802875694,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 427,
+              "restricted_probability": 0.0011584415333345532,
+              "scored_token_count": 1,
+              "scored_token_position": 428,
+              "token_nll": 6.760730266571045
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 427,
+              "restricted_probability": 0.770527720451355,
+              "scored_token_count": 1,
+              "scored_token_position": 428,
+              "token_nll": 0.2607302665710449
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 427,
+              "restricted_probability": 0.22075988352298737,
+              "scored_token_count": 1,
+              "scored_token_position": 428,
+              "token_nll": 1.510730266571045
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 427,
+              "restricted_probability": 0.0075539881363511086,
+              "scored_token_count": 1,
+              "scored_token_position": 428,
+              "token_nll": 4.885730266571045
+            }
+          },
+          "top_two_margin_nats": 1.25
+        },
+        "action_token_position": 428,
+        "cache_sha256": "78b72f54e48e3767766fef53b1a787f837bf9323eb2fc0dd8ed5041c7af2d155",
+        "correct": true,
+        "episode_id": "6153",
+        "predicted_action": "STOP",
+        "restricted_action_ce": 0.2606796476447901,
+        "sample_index": 0,
+        "supervised_token_count": 1,
+        "supervised_token_id": 15,
+        "target_action": "STOP",
+        "target_restricted_probability": 0.770527720451355,
+        "target_token_nll": 0.2607302665710449,
+        "trajectory_id": "4058"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "MOVE_FORWARD",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.8882314580792605,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 427,
+              "restricted_probability": 0.6897147297859192,
+              "scored_token_count": 1,
+              "scored_token_position": 428,
+              "token_nll": 0.3718425929546356
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 427,
+              "restricted_probability": 0.19760659337043762,
+              "scored_token_count": 1,
+              "scored_token_position": 428,
+              "token_nll": 1.621842622756958
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 427,
+              "restricted_probability": 0.0823746845126152,
+              "scored_token_count": 1,
+              "scored_token_position": 428,
+              "token_nll": 2.496842622756958
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 427,
+              "restricted_probability": 0.0303039513528347,
+              "scored_token_count": 1,
+              "scored_token_position": 428,
+              "token_nll": 3.496842622756958
+            }
+          },
+          "top_two_margin_nats": 1.2500000298023224
+        },
+        "action_token_position": 428,
+        "cache_sha256": "61e4cb0527e7810aaf5e3815ad6f1541a36b3d046c28500ca3885a07222ba655",
+        "correct": false,
+        "episode_id": "1177",
+        "predicted_action": "MOVE_FORWARD",
+        "restricted_action_ce": 3.496477167284843,
+        "sample_index": 1,
+        "supervised_token_count": 1,
+        "supervised_token_id": 18,
+        "target_action": "TURN_RIGHT",
+        "target_restricted_probability": 0.0303039513528347,
+        "target_token_nll": 3.496842622756958,
+        "trajectory_id": "738"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "TURN_RIGHT",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.3106389368197322,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 447,
+              "restricted_probability": 0.017040329053997993,
+              "scored_token_count": 1,
+              "scored_token_position": 448,
+              "token_nll": 4.072185516357422
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 447,
+              "restricted_probability": 0.006268786732107401,
+              "scored_token_count": 1,
+              "scored_token_position": 448,
+              "token_nll": 5.072185516357422
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 447,
+              "restricted_probability": 0.046320416033267975,
+              "scored_token_count": 1,
+              "scored_token_position": 448,
+              "token_nll": 3.072185516357422
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 447,
+              "restricted_probability": 0.9303704500198364,
+              "scored_token_count": 1,
+              "scored_token_position": 448,
+              "token_nll": 0.07218551635742188
+            }
+          },
+          "top_two_margin_nats": 3.0
+        },
+        "action_token_position": 448,
+        "cache_sha256": "7c26cb5bfa3387f762f09d0c368a06408e13f4c182aa3138053d82bda47a3e69",
+        "correct": false,
+        "episode_id": "9304",
+        "predicted_action": "TURN_RIGHT",
+        "restricted_action_ce": 3.072172464037785,
+        "sample_index": 2,
+        "supervised_token_count": 1,
+        "supervised_token_id": 17,
+        "target_action": "TURN_LEFT",
+        "target_restricted_probability": 0.046320416033267975,
+        "target_token_nll": 3.072185516357422,
+        "trajectory_id": "6230"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "TURN_LEFT",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.9168683157529028,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 434,
+              "restricted_probability": 0.01646582782268524,
+              "scored_token_count": 1,
+              "scored_token_position": 435,
+              "token_nll": 4.106677055358887
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 434,
+              "restricted_probability": 0.07379472255706787,
+              "scored_token_count": 1,
+              "scored_token_position": 435,
+              "token_nll": 2.606677293777466
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 434,
+              "restricted_probability": 0.6178756356239319,
+              "scored_token_count": 1,
+              "scored_token_position": 435,
+              "token_nll": 0.4816772937774658
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 434,
+              "restricted_probability": 0.2918637990951538,
+              "scored_token_count": 1,
+              "scored_token_position": 435,
+              "token_nll": 1.2316772937774658
+            }
+          },
+          "top_two_margin_nats": 0.75
+        },
+        "action_token_position": 435,
+        "cache_sha256": "e96697119ee5707aba8faf2082114287d9ed8e32b4abb880f52bfe3c7348970c",
+        "correct": false,
+        "episode_id": "9784",
+        "predicted_action": "TURN_LEFT",
+        "restricted_action_ce": 1.2314680269864628,
+        "sample_index": 3,
+        "supervised_token_count": 1,
+        "supervised_token_id": 18,
+        "target_action": "TURN_RIGHT",
+        "target_restricted_probability": 0.2918637990951538,
+        "target_token_nll": 1.2316772937774658,
+        "trajectory_id": "6568"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "TURN_LEFT",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.38724845461437557,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 442,
+              "restricted_probability": 0.010031075216829777,
+              "scored_token_count": 1,
+              "scored_token_position": 443,
+              "token_nll": 4.60210657119751
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 442,
+              "restricted_probability": 0.012880154885351658,
+              "scored_token_count": 1,
+              "scored_token_position": 443,
+              "token_nll": 4.35210657119751
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 442,
+              "restricted_probability": 0.9029685854911804,
+              "scored_token_count": 1,
+              "scored_token_position": 443,
+              "token_nll": 0.10210637003183365
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 442,
+              "restricted_probability": 0.0741201788187027,
+              "scored_token_count": 1,
+              "scored_token_position": 443,
+              "token_nll": 2.6021063327789307
+            }
+          },
+          "top_two_margin_nats": 2.499999962747097
+        },
+        "action_token_position": 443,
+        "cache_sha256": "a9e3ebd5173f3945b46725b99e90c1cabf01023bd0306f5fda46e105aac487b5",
+        "correct": true,
+        "episode_id": "3592",
+        "predicted_action": "TURN_LEFT",
+        "restricted_action_ce": 0.10206751521661636,
+        "sample_index": 4,
+        "supervised_token_count": 1,
+        "supervised_token_id": 17,
+        "target_action": "TURN_LEFT",
+        "target_restricted_probability": 0.9029685854911804,
+        "target_token_nll": 0.10210637003183365,
+        "trajectory_id": "2397"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "MOVE_FORWARD",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.08169297217953432,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 438,
+              "restricted_probability": 0.9862093329429626,
+              "scored_token_count": 1,
+              "scored_token_position": 439,
+              "token_nll": 0.01396256498992443
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 438,
+              "restricted_probability": 0.01095579657703638,
+              "scored_token_count": 1,
+              "scored_token_position": 439,
+              "token_nll": 4.513962745666504
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 438,
+              "restricted_probability": 0.0016801259480416775,
+              "scored_token_count": 1,
+              "scored_token_position": 439,
+              "token_nll": 6.388962745666504
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 438,
+              "restricted_probability": 0.0011547324247658253,
+              "scored_token_count": 1,
+              "scored_token_position": 439,
+              "token_nll": 6.763962745666504
+            }
+          },
+          "top_two_margin_nats": 4.5000001806765795
+        },
+        "action_token_position": 439,
+        "cache_sha256": "f415cd3dc3118c2670d6ff88101836fa53e87f53440a6c951bb407e32a223ec9",
+        "correct": false,
+        "episode_id": "10473",
+        "predicted_action": "MOVE_FORWARD",
+        "restricted_action_ce": 6.76388662871671,
+        "sample_index": 5,
+        "supervised_token_count": 1,
+        "supervised_token_id": 18,
+        "target_action": "TURN_RIGHT",
+        "target_restricted_probability": 0.0011547324247658253,
+        "target_token_nll": 6.763962745666504,
+        "trajectory_id": "7054"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "STOP",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.33215320944065013,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 425,
+              "restricted_probability": 0.0006409285706467927,
+              "scored_token_count": 1,
+              "scored_token_position": 426,
+              "token_nll": 7.352600574493408
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 425,
+              "restricted_probability": 0.9024946093559265,
+              "scored_token_count": 1,
+              "scored_token_position": 426,
+              "token_nll": 0.10260052233934402
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 425,
+              "restricted_probability": 0.09512222558259964,
+              "scored_token_count": 1,
+              "scored_token_position": 426,
+              "token_nll": 2.352600574493408
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 425,
+              "restricted_probability": 0.0017422244418412447,
+              "scored_token_count": 1,
+              "scored_token_position": 426,
+              "token_nll": 6.352600574493408
+            }
+          },
+          "top_two_margin_nats": 2.250000052154064
+        },
+        "action_token_position": 426,
+        "cache_sha256": "89b520fa4d2ca131a923a748bf223f838746c5bbce4ca941e35771aa8f87f8ce",
+        "correct": false,
+        "episode_id": "2445",
+        "predicted_action": "STOP",
+        "restricted_action_ce": 2.3525926292429733,
+        "sample_index": 6,
+        "supervised_token_count": 1,
+        "supervised_token_id": 17,
+        "target_action": "TURN_LEFT",
+        "target_restricted_probability": 0.09512222558259964,
+        "target_token_nll": 2.352600574493408,
+        "trajectory_id": "1577"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "STOP",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.3883818766450278,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 423,
+              "restricted_probability": 0.03538231551647186,
+              "scored_token_count": 1,
+              "scored_token_position": 424,
+              "token_nll": 3.3415586948394775
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 423,
+              "restricted_probability": 0.9125219583511353,
+              "scored_token_count": 1,
+              "scored_token_position": 424,
+              "token_nll": 0.09155880659818649
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 423,
+              "restricted_probability": 0.016713423654437065,
+              "scored_token_count": 1,
+              "scored_token_position": 424,
+              "token_nll": 4.091558933258057
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 423,
+              "restricted_probability": 0.03538231551647186,
+              "scored_token_count": 1,
+              "scored_token_position": 424,
+              "token_nll": 3.3415586948394775
+            }
+          },
+          "top_two_margin_nats": 3.249999888241291
+        },
+        "action_token_position": 424,
+        "cache_sha256": "b275891b16eb6b1dcb72e717108d1d2427e22ab2035a1e14e6b22aabcaf606f0",
+        "correct": true,
+        "episode_id": "2689",
+        "predicted_action": "STOP",
+        "restricted_action_ce": 0.091543129868573,
+        "sample_index": 7,
+        "supervised_token_count": 1,
+        "supervised_token_id": 15,
+        "target_action": "STOP",
+        "target_restricted_probability": 0.9125219583511353,
+        "target_token_nll": 0.09155880659818649,
+        "trajectory_id": "1756"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "MOVE_FORWARD",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.04667296234168416,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 438,
+              "restricted_probability": 0.9933367967605591,
+              "scored_token_count": 1,
+              "scored_token_position": 439,
+              "token_nll": 0.0067140464670956135
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 438,
+              "restricted_probability": 0.0019175910856574774,
+              "scored_token_count": 1,
+              "scored_token_position": 439,
+              "token_nll": 6.2567138671875
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 438,
+              "restricted_probability": 0.0035825318191200495,
+              "scored_token_count": 1,
+              "scored_token_position": 439,
+              "token_nll": 5.6317138671875
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 438,
+              "restricted_probability": 0.001163077773526311,
+              "scored_token_count": 1,
+              "scored_token_position": 439,
+              "token_nll": 6.7567138671875
+            }
+          },
+          "top_two_margin_nats": 5.624999820720404
+        },
+        "action_token_position": 439,
+        "cache_sha256": "3d565b2021bff8096f9c69640da41fad464978cd8cf8e73ec8b1e067257b8ae6",
+        "correct": true,
+        "episode_id": "4377",
+        "predicted_action": "MOVE_FORWARD",
+        "restricted_action_ce": 0.006685501485171261,
+        "sample_index": 8,
+        "supervised_token_count": 1,
+        "supervised_token_id": 16,
+        "target_action": "MOVE_FORWARD",
+        "target_restricted_probability": 0.9933367967605591,
+        "target_token_nll": 0.0067140464670956135,
+        "trajectory_id": "2911"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "TURN_LEFT",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.7368975815556696,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 424,
+              "restricted_probability": 0.015605740249156952,
+              "scored_token_count": 1,
+              "scored_token_position": 425,
+              "token_nll": 4.160121440887451
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 424,
+              "restricted_probability": 0.0073716300539672375,
+              "scored_token_count": 1,
+              "scored_token_position": 425,
+              "token_nll": 4.910121440887451
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 424,
+              "restricted_probability": 0.6635729670524597,
+              "scored_token_count": 1,
+              "scored_token_position": 425,
+              "token_nll": 0.41012129187583923
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 424,
+              "restricted_probability": 0.3134496808052063,
+              "scored_token_count": 1,
+              "scored_token_position": 425,
+              "token_nll": 1.1601213216781616
+            }
+          },
+          "top_two_margin_nats": 0.7500000298023224
+        },
+        "action_token_position": 425,
+        "cache_sha256": "48d065aba884d6a08f281e0ded4032b7a142e8a4b1b970a5bbd217f0fad360f0",
+        "correct": false,
+        "episode_id": "3162",
+        "predicted_action": "TURN_LEFT",
+        "restricted_action_ce": 4.160116467719501,
+        "sample_index": 9,
+        "supervised_token_count": 1,
+        "supervised_token_id": 16,
+        "target_action": "MOVE_FORWARD",
+        "target_restricted_probability": 0.015605740249156952,
+        "target_token_nll": 4.160121440887451,
+        "trajectory_id": "2081"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "STOP",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.9172386230607433,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 421,
+              "restricted_probability": 0.07720319926738739,
+              "scored_token_count": 1,
+              "scored_token_position": 422,
+              "token_nll": 2.5613322257995605
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 421,
+              "restricted_probability": 0.5704587697982788,
+              "scored_token_count": 1,
+              "scored_token_position": 422,
+              "token_nll": 0.5613321661949158
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 421,
+              "restricted_probability": 0.3460007607936859,
+              "scored_token_count": 1,
+              "scored_token_position": 422,
+              "token_nll": 1.0613322257995605
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 421,
+              "restricted_probability": 0.006337225437164307,
+              "scored_token_count": 1,
+              "scored_token_position": 422,
+              "token_nll": 5.0613322257995605
+            }
+          },
+          "top_two_margin_nats": 0.5000000596046448
+        },
+        "action_token_position": 422,
+        "cache_sha256": "e4056f1e2df53fbd72e494bae89c2002245541f860929d4ad34d0dd64c394da9",
+        "correct": false,
+        "episode_id": "4290",
+        "predicted_action": "STOP",
+        "restricted_action_ce": 1.0613143051011484,
+        "sample_index": 10,
+        "supervised_token_count": 1,
+        "supervised_token_id": 17,
+        "target_action": "TURN_LEFT",
+        "target_restricted_probability": 0.3460007607936859,
+        "target_token_nll": 1.0613322257995605,
+        "trajectory_id": "2844"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "MOVE_FORWARD",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.7101443895022628,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 428,
+              "restricted_probability": 0.7088475823402405,
+              "scored_token_count": 1,
+              "scored_token_position": 429,
+              "token_nll": 0.344136118888855
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 428,
+              "restricted_probability": 0.002896898193284869,
+              "scored_token_count": 1,
+              "scored_token_position": 429,
+              "token_nll": 5.8441362380981445
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 428,
+              "restricted_probability": 0.2607704699039459,
+              "scored_token_count": 1,
+              "scored_token_position": 429,
+              "token_nll": 1.344136118888855
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 428,
+              "restricted_probability": 0.02748500369489193,
+              "scored_token_count": 1,
+              "scored_token_position": 429,
+              "token_nll": 3.5941362380981445
+            }
+          },
+          "top_two_margin_nats": 1.0
+        },
+        "action_token_position": 429,
+        "cache_sha256": "07b336678155c48d3359bdcfe5a78370230f5a6dc1225bb18341f00b19a405a2",
+        "correct": false,
+        "episode_id": "8466",
+        "predicted_action": "MOVE_FORWARD",
+        "restricted_action_ce": 5.844114702930176,
+        "sample_index": 11,
+        "supervised_token_count": 1,
+        "supervised_token_id": 15,
+        "target_action": "STOP",
+        "target_restricted_probability": 0.002896898193284869,
+        "target_token_nll": 5.8441362380981445,
+        "trajectory_id": "5662"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "TURN_RIGHT",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 1.1908940810842936,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 442,
+              "restricted_probability": 0.04825316369533539,
+              "scored_token_count": 1,
+              "scored_token_position": 443,
+              "token_nll": 3.0313143730163574
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 442,
+              "restricted_probability": 0.21625569462776184,
+              "scored_token_count": 1,
+              "scored_token_position": 443,
+              "token_nll": 1.5313143730163574
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 442,
+              "restricted_probability": 0.2776778042316437,
+              "scored_token_count": 1,
+              "scored_token_position": 443,
+              "token_nll": 1.2813143730163574
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 442,
+              "restricted_probability": 0.4578132927417755,
+              "scored_token_count": 1,
+              "scored_token_position": 443,
+              "token_nll": 0.7813143730163574
+            }
+          },
+          "top_two_margin_nats": 0.5
+        },
+        "action_token_position": 443,
+        "cache_sha256": "260585118c6989afbd6d74b57a19418ca9cb49d197861d0d12e89fddcac2fd15",
+        "correct": false,
+        "episode_id": "5342",
+        "predicted_action": "TURN_RIGHT",
+        "restricted_action_ce": 3.0312938845314417,
+        "sample_index": 12,
+        "supervised_token_count": 1,
+        "supervised_token_id": 16,
+        "target_action": "MOVE_FORWARD",
+        "target_restricted_probability": 0.04825316369533539,
+        "target_token_nll": 3.0313143730163574,
+        "trajectory_id": "3537"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "MOVE_FORWARD",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.3926603338246365,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 434,
+              "restricted_probability": 0.8919499516487122,
+              "scored_token_count": 1,
+              "scored_token_position": 435,
+              "token_nll": 0.11442746967077255
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 434,
+              "restricted_probability": 0.09401082992553711,
+              "scored_token_count": 1,
+              "scored_token_position": 435,
+              "token_nll": 2.3644275665283203
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 434,
+              "restricted_probability": 0.004130547866225243,
+              "scored_token_count": 1,
+              "scored_token_position": 435,
+              "token_nll": 5.48942756652832
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 434,
+              "restricted_probability": 0.009908669628202915,
+              "scored_token_count": 1,
+              "scored_token_position": 435,
+              "token_nll": 4.61442756652832
+            }
+          },
+          "top_two_margin_nats": 2.2500000968575478
+        },
+        "action_token_position": 435,
+        "cache_sha256": "47c7645acea65c11f87a6740557b12027e9fe26d82e6a2ac795967da14141d61",
+        "correct": true,
+        "episode_id": "4364",
+        "predicted_action": "MOVE_FORWARD",
+        "restricted_action_ce": 0.11434525599338019,
+        "sample_index": 13,
+        "supervised_token_count": 1,
+        "supervised_token_id": 16,
+        "target_action": "MOVE_FORWARD",
+        "target_restricted_probability": 0.8919499516487122,
+        "target_token_nll": 0.11442746967077255,
+        "trajectory_id": "2898"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "MOVE_FORWARD",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.527243056041956,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 435,
+              "restricted_probability": 0.8605712652206421,
+              "scored_token_count": 1,
+              "scored_token_position": 436,
+              "token_nll": 0.1502251923084259
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 435,
+              "restricted_probability": 0.048550114035606384,
+              "scored_token_count": 1,
+              "scored_token_position": 436,
+              "token_nll": 3.0252251625061035
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 435,
+              "restricted_probability": 0.08004559576511383,
+              "scored_token_count": 1,
+              "scored_token_position": 436,
+              "token_nll": 2.5252251625061035
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 435,
+              "restricted_probability": 0.010832994244992733,
+              "scored_token_count": 1,
+              "scored_token_position": 436,
+              "token_nll": 4.5252251625061035
+            }
+          },
+          "top_two_margin_nats": 2.3749999701976776
+        },
+        "action_token_position": 436,
+        "cache_sha256": "f23e4cbbbe3f6ac212fc3d57ee2af2054b3947724bb0ea2b3edb7b8f3e272c6d",
+        "correct": false,
+        "episode_id": "9469",
+        "predicted_action": "MOVE_FORWARD",
+        "restricted_action_ce": 3.0251587354194176,
+        "sample_index": 14,
+        "supervised_token_count": 1,
+        "supervised_token_id": 15,
+        "target_action": "STOP",
+        "target_restricted_probability": 0.048550114035606384,
+        "target_token_nll": 3.0252251625061035,
+        "trajectory_id": "6344"
+      },
+      {
+        "action_decision": {
+          "legal_actions": [
+            "STOP",
+            "MOVE_FORWARD",
+            "TURN_LEFT",
+            "TURN_RIGHT"
+          ],
+          "method": "single_shared_position_official_action_id_token_v1",
+          "predicted_action": "TURN_LEFT",
+          "protocol_version": 1,
+          "restricted_entropy_nats": 0.3216388827297556,
+          "scores": {
+            "MOVE_FORWARD": {
+              "action_id": 1,
+              "action_token_id": 16,
+              "causal_logit_position": 440,
+              "restricted_probability": 0.0025730235502123833,
+              "scored_token_count": 1,
+              "scored_token_position": 441,
+              "token_nll": 5.962709426879883
+            },
+            "STOP": {
+              "action_id": 0,
+              "action_token_id": 15,
+              "causal_logit_position": 440,
+              "restricted_probability": 0.07519476860761642,
+              "scored_token_count": 1,
+              "scored_token_position": 441,
+              "token_nll": 2.587709426879883
+            },
+            "TURN_LEFT": {
+              "action_id": 2,
+              "action_token_id": 17,
+              "causal_logit_position": 440,
+              "restricted_probability": 0.9160597920417786,
+              "scored_token_count": 1,
+              "scored_token_position": 441,
+              "token_nll": 0.08770953863859177
+            },
+            "TURN_RIGHT": {
+              "action_id": 3,
+              "action_token_id": 18,
+              "causal_logit_position": 440,
+              "restricted_probability": 0.006172362715005875,
+              "scored_token_count": 1,
+              "scored_token_position": 441,
+              "token_nll": 5.087709426879883
+            }
+          },
+          "top_two_margin_nats": 2.499999888241291
+        },
+        "action_token_position": 441,
+        "cache_sha256": "3d8185b7539ff279199898c2401a2af405882b9cceaf6d11bfea1eb460764348",
+        "correct": false,
+        "episode_id": "2286",
+        "predicted_action": "TURN_LEFT",
+        "restricted_action_ce": 5.087673578384607,
+        "sample_index": 15,
+        "supervised_token_count": 1,
+        "supervised_token_id": 18,
+        "target_action": "TURN_RIGHT",
+        "target_restricted_probability": 0.006172362715005875,
+        "target_token_nll": 5.087709426879883,
+        "trajectory_id": "1466"
+      }
+    ],
+    "summary": {
+      "decision_count": 16,
+      "descriptive_accuracy": 0.3125,
+      "distinct_predicted_action_count": 4,
+      "mean_restricted_action_ce": 2.481349352535225,
+      "mean_target_restricted_probability": 0.33772182355460245,
+      "mean_target_token_nll": 2.481415286223637,
+      "per_target_action": {
+        "MOVE_FORWARD": {
+          "count": 4,
+          "mean_restricted_action_ce": 1.8281102774323734,
+          "mean_target_restricted_probability": 0.4872864130884409,
+          "recall": 0.5
+        },
+        "STOP": {
+          "count": 4,
+          "mean_restricted_action_ce": 2.305374053965739,
+          "mean_target_restricted_probability": 0.43362417275784537,
+          "recall": 0.5
+        },
+        "TURN_LEFT": {
+          "count": 4,
+          "mean_restricted_action_ce": 1.6470367283996308,
+          "mean_target_restricted_probability": 0.3476029969751835,
+          "recall": 0.25
+        },
+        "TURN_RIGHT": {
+          "count": 4,
+          "mean_restricted_action_ce": 4.144876350343155,
+          "mean_target_restricted_probability": 0.08237371139694005,
+          "recall": 0.0
+        }
+      },
+      "predicted_action_histogram": {
+        "MOVE_FORWARD": 6,
+        "STOP": 4,
+        "TURN_LEFT": 4,
+        "TURN_RIGHT": 2
+      }
+    },
+    "update_step": 8
+  },
+  "checkpoint": {
+    "bytes": 368422717,
+    "path": "/checkpoints/step_0008.pt",
+    "relative_path": "step_0008.pt",
+    "sha256": "fcfbde09642476da0dd6f2bec91f7e0b7fd5cdfc9b4cadeb57d07a00f7593ea6",
+    "trainable_state_sha256": "497165f6b48fe83e3a0321215d8ccb34d0dc2420d467b3f67dbef7608ebbd1a6",
+    "update_step": 8
+  },
+  "completed_at_utc": "2026-08-25T04:48:58.649479+00:00",
+  "events_path": "/artifacts/updates.jsonl",
+  "events_sha256": "b0bd3366d16055d7a9fd5bd9705af64a7378a3102b76465b183055e337708bc1",
+  "evidence_boundary": {
+    "established_if_passed": "Exact train-release inventory plus measured causal-H4 effective-batch-16 throughput, calibration/checkpoint cost, and peak accelerator memory.",
+    "not_established": "Final development sample size or runtime cap, learning, checkpoint quality, closed-loop competence, val_seen/val_unseen performance, or paper claims."
+  },
+  "final_trainable_state_sha256": "497165f6b48fe83e3a0321215d8ccb34d0dc2420d467b3f67dbef7608ebbd1a6",
+  "gate": "native_c0_development_measurements_v2",
+  "initial_trainable_state_sha256": "e7437fb6ee1f20411906d09b1c4ff072b905c1578798ad0ac2ebb314b753aa25",
+  "inventory_path": "/artifacts/inventory.json",
+  "inventory_sha256": "b22186a0535a2e44aa20cca41ed139a13c19ab25604eebf055f04af7fe826f3f",
+  "manifest_path": "/artifacts/manifest.json",
+  "manifest_sha256": "fc9c136f376b8c3d003f06fa3650018c533db1657cd2b65c23b053ce15cfc4ac",
+  "model_weight_locks": {
+    "model-00001-of-00004.safetensors": {
+      "bytes": 4902275944,
+      "sha256": "d5d0aef0eb170fc7453a296c43c0849a56f510555d3588e4fd662bb35490aefa"
+    },
+    "model-00002-of-00004.safetensors": {
+      "bytes": 4915962496,
+      "sha256": "8be88fb5501e4d5719a6d4cc212e6a13480330e74f3e8c77daa1a68f199106b5"
+    },
+    "model-00003-of-00004.safetensors": {
+      "bytes": 4999831048,
+      "sha256": "83de00eafe6e0d57ccd009dbcf71c9974d74df2f016c27afb7e95aafd16b2192"
+    },
+    "model-00004-of-00004.safetensors": {
+      "bytes": 2716270024,
+      "sha256": "0a88b98e9f96270973f567e6a2c103ede6ccdf915ca3075e21c755604d0377a5"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 67759,
+      "sha256": "520b2e05079402e9468a8701d03d1154d14b2599593afb6effa7fb60c1bff070"
+    }
+  },
+  "prerequisites": {
+    "optimizer_admission": {
+      "suite_path": "/workspace/GridNav/artifacts/spark/native_optimizer_admission_v1/suite.json",
+      "suite_sha256": "92d12ee29b52c4d74771638351be54ab8a24b9290dc79c625fbd6096bfda7e5c",
+      "verification_path": "/workspace/GridNav/artifacts/spark/native_optimizer_admission_v1/verification.json",
+      "verification_sha256": "e99f861c78c4e9dab6e0a19a63f9a1d1f5bfcc2d91276a0b9aec064a2d2c8c9d"
+    },
+    "prior_attempt": {
+      "failure_boundary": "Cache 144/144 completed; exact Qwen loaded; training stopped before update 1 because the runner referenced a nonexistent ActionTokenCodebook.tokens field.",
+      "failure_path": "/workspace/GridNav/artifacts/spark/native_development_measurements_v1/failure.json",
+      "failure_sha256": "611f54edf17bed25221fe80fd92f291a184a1dd0e1abb465d8a176e00d8507e5",
+      "manifest_path": "/workspace/GridNav/artifacts/spark/native_development_measurements_v1/manifest.json",
+      "manifest_sha256": "73b066a1d076459982fa041a3ca08f4d6d7e9bc72dbd18192c27f589d97e3322",
+      "run_id": "native_development_measurements_v1"
+    },
+    "processor": {
+      "result_path": "/workspace/GridNav/artifacts/spark/native_qwen_history_preflight_v5/result.json",
+      "result_sha256": "8f86e8d07c1044122b5b7fd13fdd9f97b7da4e6495709a946a9a91ce7a539335",
+      "verification_path": "/workspace/GridNav/artifacts/spark/native_qwen_history_preflight_v5/verification.json",
+      "verification_sha256": "50f20478372aa597accd7671d8e6265f67083ee1eabd8de42e1acc335208f4f4"
+    }
+  },
+  "protocol": {
+    "accumulation_steps": 16,
+    "calibration_samples_per_action": 4,
+    "calibration_updates": [
+      8
+    ],
+    "checkpoint_updates": [
+      8
+    ],
+    "claim_boundary": "runtime_and_memory_measurement_only",
+    "development_splits_used": [
+      "train"
+    ],
+    "effective_batch": 16,
+    "gate": "native_c0_development_measurements_v2",
+    "hard_max_gradient_norm": 1000000.0,
+    "hard_max_restricted_ce": 100.0,
+    "history_contract": "H4_CAUSAL",
+    "learning_rate": 2e-05,
+    "max_grad_norm": 1.0,
+    "max_hours": 1.0,
+    "max_replay_prefix_actions": 96,
+    "measured_updates": 6,
+    "microbatch_size": 1,
+    "min_decision_step": 3,
+    "model_seed": 20260825,
+    "objective": "restricted_four_action_cross_entropy_v1",
+    "planned_optimizer_updates": 8,
+    "sampler_seed": 20260825,
+    "schema_version": 1,
+    "sealed_splits": [
+      "val_seen",
+      "val_unseen"
+    ],
+    "timed_update_steps": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "train_samples_per_action": 32,
+    "unique_calibration_decisions": 16,
+    "unique_train_decisions": 128,
+    "unit_ledger": {
+      "declared": {
+        "accumulation_steps": 16,
+        "calibration_updates": [
+          8
+        ],
+        "checkpoint_updates": [
+          8
+        ],
+        "drop_last_partial_update": true,
+        "epochs": 1,
+        "microbatch_size": 1,
+        "notes": "Causal-H4 throughput/memory measurement only; no checkpoint or rate selection.",
+        "planned_optimizer_updates": 8,
+        "reuse_policy": "single_pass",
+        "sampler_seed": 20260825,
+        "scheduler_unit": "optimizer_update",
+        "unique_calibration_decisions": 16,
+        "unique_train_decisions": 128
+      },
+      "derived": {
+        "effective_batch": 16,
+        "reconciled_optimizer_updates": 8,
+        "total_microbatches": 128,
+        "total_sample_exposures": 128
+      },
+      "interpretation": {
+        "reportable_as": "learning_quality_study",
+        "supports_learning_quality_claim": true
+      },
+      "schema_version": 1
+    },
+    "warmup_updates_excluded_from_timing": 2,
+    "weight_decay": 0.01
+  },
+  "run_id": "native_development_measurements_v2",
+  "runtime": {
+    "architecture": "aarch64",
+    "compiled_cuda": "13.0",
+    "docker_image_id": "sha256:6d4f86090bcd1bf4d75709858194865353ebf7243e3564b359106518fcbecabf",
+    "gpu": "NVIDIA GB10",
+    "peak_allocated_bytes": 18659765760,
+    "peak_reserved_bytes": 20963131392,
+    "platform": "Linux-6.17.0-1014-nvidia-aarch64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.9.0a0+145a3a7bda.nv25.10",
+    "total_elapsed_seconds": 555.8337699440308
+  },
+  "schema_version": 2,
+  "source_locks": {
+    "docs/NATIVE_C0_DEVELOPMENT_MEASUREMENTS.md": "7cf55f2f745721da50e20af22d607dc860b79d2414e20c9b40f1413fd7bd50b7",
+    "pyproject.toml": "528ff20f8c56e688bc70c48a7fb9927d6110f9539ef5eaf5f5489daacb3b0a90",
+    "scripts/__init__.py": "14b8cf584c22283145a9e6018bb832fa791faf4d3d0e428fed1aa2f65736839e",
+    "scripts/check_context_state.py": "1c1366d64b9b9daceb7067dafdd010ebc2d3883ba22582f2c0afc52a7bef4190",
+    "scripts/check_native_development_measurements_artifacts.py": "34bc770cdef0142a93935adad9fe72db0c006bdc8b955fa700785d619e0ce340",
+    "scripts/native_development_measurements_sync_files.txt": "3e5276c34f95cbbdfa9775fa519b8943dd11efa37d8ed070aeb23313ff87486a",
+    "scripts/run_spark_native_development_measurements.py": "64e0e8692b33096e5075a25d4c90feab2d3f1d3a04a8bf9fab2365b0384901ee",
+    "scripts/run_spark_native_development_measurements.sh": "b9f6911b6c48f8b4d84142424a83c6ea6301ce32cd26a6687fc67653f7cde4e0",
+    "scripts/run_spark_native_history_select.py": "9fadfe96c66606a43753997954ddba609b65cde56f7ecf468a665fb1771499dd",
+    "scripts/spark_launch_helpers.sh": "21dfd0fb10040b729e0b4949b691c84760def2dc32faad6e80253120b086a334",
+    "scripts/start_spark_native_development_measurements.sh": "9435627aadcf77e7670f20185afb82eb1f06773d0181799d96acaae1aabef7b2",
+    "src/spatialvlm/backbone/qwen3_vl.py": "e30964167b80396474e7f8145397a1643eea8c75ffc34e6aa76f16bfe734e612",
+    "src/spatialvlm/backbone/rope_patch.py": "f3bda0a8eb467779e78f8504ecb486d7280fd4c3be7f6ab66961472351a46359",
+    "src/spatialvlm/data/datasets.py": "015183f26b2e8c7387c21c380b65eb586660f9ced912c8364ee6bdb2359e7b63",
+    "src/spatialvlm/data/habitat_sim_r2r.py": "5f4365c5a3d6f49eee70114c13b83ab66c534a7a78025078d21aa42d63c345a3",
+    "src/spatialvlm/data/history.py": "f7f29f1306b386b08e66ad741ebf68452ec7d86bdc5101162cd4361fe541bdf0",
+    "src/spatialvlm/data/native_qwen.py": "2b221c8856d25c593bd42b5971d18bc76cb766fb1bbe468be9172902e57b1f39",
+    "src/spatialvlm/data/native_qwen_artifacts.py": "f5cedcac7b29c6447cff3486c65d88a176e278ae3b11a4a3c52e089fe5e8d34b",
+    "src/spatialvlm/eval/action_decision.py": "7b526f2948745440cd84aafad1191b7e0cc998f1ca918c051a999e55420ee781",
+    "src/spatialvlm/training/native_c0_gate.py": "026ee1ad078cb62e0648606f9f0ec1e71d2d582f611de7042ca07d42460762a6",
+    "src/spatialvlm/training/native_development_measurements.py": "502c3bf6a5d2dd1e07b6a00b536cb813d5fb11de15fd2a34243b26b6fb5ec3d9",
+    "src/spatialvlm/training/native_history_select.py": "dd8d30c383d326166ec5ba8e71b6370a6dd8cd8b3e1343245fa316d1544d01fc",
+    "src/spatialvlm/training/native_optimizer_admission.py": "f67b0323cd6ff6c2a34b80053b6cf8071a862cf912b04a801d0fd002f44e2f96",
+    "src/spatialvlm/training/unit_ledger.py": "5e768faa18a22030cf56f319e026e5eb79b91bb96474559775f5d08c2ebbf49a",
+    "tests/test_action_decision.py": "aa9d11e3976b43e639df3e493c76940ce96a42aca3a3f146ccc5482247c1b102",
+    "tests/test_native_development_measurements.py": "9524b1282485d436a42358b8ab99048907cf3324f81fc4d31d3e97fbaf7e4ea6",
+    "tests/test_native_development_measurements_artifacts.py": "7c481e70f229ee260b895267898ad7c696e634e8c9a93f9609c4fc9e0811fac7",
+    "tests/test_native_history_select.py": "62f64d605a6d4c3ec86d26273ad134abf462809b693d64e94e801c7491562854",
+    "tests/test_native_history_select_artifacts.py": "c6b571d1f645758c883ce552bd2dfaa9c5f8090687dc9f18cdde3a8246cbc35d",
+    "tests/test_native_qwen.py": "55e404fdce553108e1988a83d2a9799f3c6f3dfce33508cc656347fc09fbf716",
+    "tests/test_spark_launch_helpers.py": "288c64287869f92e056dacad226d23f9d8f6373e490c3c669719df1f804fbdd6",
+    "tests/test_unit_ledger.py": "e88e7c93faeb4ff31183a5e7bdb1c406b1c99b39cf495ea875ad88c12cdc923e"
+  },
+  "status": "passed",
+  "supervision": {
+    "method": "single_shared_position_official_action_id_token_v1",
+    "schema_version": 1,
+    "supervised_token_count_per_decision": 1
+  },
+  "timing": {
+    "all_update_seconds": [
+      11.3242541779764,
+      10.095383058069274,
+      10.274823124986142,
+      9.988577412907034,
+      10.179772555828094,
+      10.043490533018485,
+      10.594828923931345,
+      10.492057751864195
+    ],
+    "cache_prepare_seconds": 350.9620320459362,
+    "calibration_decision_count": 16,
+    "calibration_seconds": 3.53628181386739,
+    "calibration_seconds_per_decision": 0.22101761336671188,
+    "checkpoint_seconds": 0.5046315840445459,
+    "model_load_seconds": 85.30654566013254,
+    "projection_contract": {
+      "cache_prepare_seconds_is_dataset_size_specific": true,
+      "calibration_seconds_for_c_decisions": "C * calibration_seconds_per_decision",
+      "fixed_checkpoint_seconds_per_boundary": 0.5046315840445459,
+      "model_load_seconds_per_invocation": 85.30654566013254,
+      "training_seconds_for_u_updates_at_p50": "U * timed_update_p50_seconds",
+      "training_seconds_for_u_updates_at_p95": "U * timed_update_p95_nearest_rank_seconds"
+    },
+    "seconds_per_training_decision_from_timed_mean": 0.6413911489847427,
+    "timed_update_maximum_seconds": 10.594828923931345,
+    "timed_update_mean_seconds": 10.262258383755883,
+    "timed_update_minimum_seconds": 9.988577412907034,
+    "timed_update_p50_seconds": 10.227297840407118,
+    "timed_update_p95_nearest_rank_seconds": 10.594828923931345,
+    "timed_update_seconds": [
+      10.274823124986142,
+      9.988577412907034,
+      10.179772555828094,
+      10.043490533018485,
+      10.594828923931345,
+      10.492057751864195
+    ],
+    "timed_update_steps": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "trainable_contract": {
+    "all_trainable_names_are_lora": true,
+    "trainable_name_sha256": "8d84ba8712dd2a9052660dff9c3fc50dbb6708f2324d02e7d7ed943ae76e6838",
+    "trainable_parameter_count": 30670848,
+    "trainable_tensor_count": 288
+  }
+}

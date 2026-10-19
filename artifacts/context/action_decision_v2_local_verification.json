@@ -1,0 +1,14 @@
+{
+  "checkpoint_path": "/Users/vivekmattam/Desktop/GI/GridNav/checkpoints/real_batch_v2/trainable_step1.pt",
+  "checkpoint_sha256": "95140f96540a63b852b417f83dde35d44440cd5b027e1ad6cbbfbb93f4457f29",
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_action_decision_artifact_verification_v2",
+  "preflight_path": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/spark/action_decision_v2/preflight.json",
+  "preflight_sha256": "221d6ccbc66a6fc1342d89eef21a86570a82fb79d7eecb596e72fcc8fde60632",
+  "recorded_at_utc": "2026-08-23T19:36:34.435280+00:00",
+  "result_path": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/spark/action_decision_v2/result.json",
+  "result_sha256": "0e4a2023a32e4027527f71303c5be48ebf10b8c6ad57e91a1961e12d8c507897",
+  "schema_version": 2,
+  "status": "passed"
+}

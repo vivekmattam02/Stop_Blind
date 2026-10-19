@@ -1,0 +1,113 @@
+{
+  "run_id": "native_chunk_geometry_134k_v1",
+  "status_boundary": "exploratory_geometry_arm_not_a_paper_artifact",
+  "protocol": "docs/GEOMETRY_ARM_PROTOCOL.md",
+  "objective": "mean_restricted_four_way_cross_entropy_over_chunk_positions_v1",
+  "model_id": "Qwen/Qwen3-VL-8B-Instruct",
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "trainable_contract": {
+    "trainable_tensor_count": 288,
+    "trainable_parameter_count": 30670848,
+    "trainable_name_sha256": "8d84ba8712dd2a9052660dff9c3fc50dbb6708f2324d02e7d7ed943ae76e6838",
+    "all_trainable_names_are_lora": true
+  },
+  "geometry": {
+    "branch_version": 1,
+    "rope_patch_version": 1,
+    "splice_version": 1,
+    "n_geometry_tokens": 256,
+    "tokens_per_frame": 64,
+    "patch_size_px": 32,
+    "gatr_blocks": 8,
+    "geometry_param_count": 17634096,
+    "geometry_lr": 0.0001,
+    "filler_token_id": 0,
+    "rope_v2_kernel_diagnostics": {
+      "design_version": 2,
+      "scene_extent_m": 12.0,
+      "n_freqs": 10,
+      "output_dim": 120,
+      "shortest_wavelength_m": 0.5974448323249817,
+      "longest_wavelength_m": 12.0,
+      "kernel_at_0_25m": 0.5135492086410522,
+      "kernel_at_5m": -0.03792869299650192,
+      "near_range_rank_inversions": 262,
+      "prefers_near_over_far": true
+    }
+  },
+  "hyperparameters": {
+    "chunk_size": 4,
+    "seed": 20260825,
+    "sampler_seed": 20260825,
+    "lora_rank": 32,
+    "lora_alpha": 64,
+    "learning_rate": 2e-05,
+    "geometry_lr": 0.0001,
+    "weight_decay": 0.01,
+    "accumulation": 16,
+    "max_updates": 3000,
+    "calibrate_every": 150,
+    "calibration_decisions": 256,
+    "patch_size_px": 32,
+    "gatr_blocks": 8,
+    "max_hours": 16.0,
+    "limit_train": null,
+    "resume": false
+  },
+  "train_summary": {
+    "sample_count": 127661,
+    "supervised_position_count": 510644,
+    "distinct_chunk_patterns": 51,
+    "constant_chunk_count": 40121,
+    "constant_chunk_fraction": 0.3142776572328276,
+    "chunks_containing_stop": 2375,
+    "chunks_containing_stop_fraction": 0.0186039589224587,
+    "most_common_chunk": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "most_common_chunk_count": 34146,
+    "most_common_chunk_fraction": 0.26747401320685255,
+    "supervised_action_histogram": {
+      "MOVE_FORWARD": 348378,
+      "STOP": 2375,
+      "TURN_LEFT": 82492,
+      "TURN_RIGHT": 77399
+    },
+    "distinct_trajectories": 2451,
+    "distinct_scenes": 61
+  },
+  "selection_summary": {
+    "sample_count": 240,
+    "supervised_position_count": 960,
+    "distinct_chunk_patterns": 37,
+    "constant_chunk_count": 81,
+    "constant_chunk_fraction": 0.3375,
+    "chunks_containing_stop": 4,
+    "chunks_containing_stop_fraction": 0.016666666666666666,
+    "most_common_chunk": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "most_common_chunk_count": 67,
+    "most_common_chunk_fraction": 0.2791666666666667,
+    "supervised_action_histogram": {
+      "MOVE_FORWARD": 662,
+      "STOP": 4,
+      "TURN_LEFT": 136,
+      "TURN_RIGHT": 158
+    },
+    "distinct_trajectories": 240,
+    "distinct_scenes": 55
+  },
+  "sealed_splits_never_opened": [
+    "primary_evaluation",
+    "balanced_diagnostic",
+    "val_unseen"
+  ],
+  "started_unix": 1788140786.056395
+}

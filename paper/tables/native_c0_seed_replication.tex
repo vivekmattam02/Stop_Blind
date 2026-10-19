@@ -1,0 +1,18 @@
+%
+\begin{table}[t]
+\centering
+\small
+\caption{Three-seed paired replication. Values are mean $\pm$ sample standard deviation; deltas are weighted minus unweighted. All seeds are reported. Natural CE is scored on the 640-decision natural set; selection CE, on the 256-decision selection set that picks each checkpoint (Figures~\ref{fig:metric_decomposition} and~\ref{fig:blind_metric}), is a different quantity.}
+\label{tab:seed-replication}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Metric & Unweighted & Weighted & Paired delta \\
+\midrule
+Natural mean CE $\downarrow$ & 0.754 $\pm$ 0.012 & 0.955 $\pm$ 0.016 & $0.201 \pm 0.019$ \\
+Balanced mean CE $\downarrow$ & 1.725 $\pm$ 0.117 & 1.452 $\pm$ 0.132 & $-0.273 \pm 0.223$ \\
+Balanced accuracy $\uparrow$ & 0.332 $\pm$ 0.004 & 0.397 $\pm$ 0.038 & $0.065 \pm 0.042$ \\
+Balanced \textsc{stop} recall $\uparrow$ & 0/64 in 3/3 seeds & 12/64, 1/64, 6/64 & $0.099 \pm 0.086$ \\
+Existence gate & 0/3 passed & 0/3 passed & --- \\
+\bottomrule
+\end{tabular}
+\end{table}

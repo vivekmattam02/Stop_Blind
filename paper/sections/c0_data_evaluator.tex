@@ -1,0 +1,91 @@
+\section{Experimental setup}
+\label{sec:data}
+\label{sec:protocol}
+
+\paragraph{Data.}
+We train on the released R2R-CE training split \citep{krantz2020beyond}: 197,455 eligible decisions
+from 3,603 physical trajectories in 61 scenes. For testing in the simulator, we froze a separate set
+of 61 \texttt{val\_seen} episodes spanning 53 scenes. These episodes were chosen without reference to
+any policy's results. They are the hardest expert path in each scene (the most blocked forward
+steps, then the most actions and turns), plus every other trajectory whose released shortest-path
+length differs from the simulator's, 12 such trajectories in all. None of them is used in training or in
+any held-out set. We split the training data by physical trajectory, so the several instructions
+written for one path always fall in the same part. Of the 3,603 eligible trajectories, 2,451 supply
+3,072 training decisions. The rest supply one held-out decision each: 256 for checkpoint selection
+(the selection set), 640 for the natural set, whose actions keep their usual proportions, and 256 for the balanced set,
+with 64 per action.
+Scenes are Matterport3D scans \citep{chang2017matterport3d}, used under its terms of use
+\citep{matterport2017tos} and rendered in Habitat-Sim.
+
+\paragraph{Model and training.}
+For each decision, the model receives the instruction and the last four camera frames, and predicts
+one of four action tokens: \textsc{stop}, \textsc{move\_forward}, \textsc{turn\_left} or
+\textsc{turn\_right}. A decision is
+step $t$ of an expert trajectory, with $3\le t\le 96$, and its frames are the RGB images at steps
+$t-3$ to $t$ ($224\times224$ pixels, 90-degree field of view), rendered by replaying the expert's
+actions. The policy receives no depth. Training and scoring are therefore teacher-forced, with
+every frame taken from the expert's path. The loss is the cross-entropy over the four
+action tokens (Appendix~\ref{app:repro}), and the predicted action is the highest-scoring one, with
+an exact tie going to the lowest action ID. In the simulator, the frames are the policy's own, and
+the first three steps are padded with copies of the first frame. We freeze Qwen3-VL-8B-Instruct
+\citep{bai2025qwen3vl} (Hugging Face revision \texttt{0c351dd}) and train only a rank-32 adapter
+(LoRA) \citep{hu2022lora} on its attention layers. We train with AdamW (learning rate
+$2\times10^{-5}$, weight decay $0.01$, gradient clipping at $1.0$, microbatch 1, gradient
+accumulation 16) for 192 updates. The only difference between the two treatments is
+inverse-frequency weighting, normalized so that the mean sample weight is one. The three seeds,
+$20260825$, $20260826$, and $20260827$, change only the adapter's initialization and the order of
+examples. Everything else is identical across runs, including the data, the held-out sets, the
+model, the optimizer, the selection rule and the thresholds.
+
+\paragraph{Checkpoint selection and the existence gate.}
+Each run saves a checkpoint every 32 updates, including the untrained model at update 0. The
+selection rule keeps the checkpoint with the lowest mean cross-entropy on the selection set (the
+selection loss), and the earlier one on an exact tie. The existence gate, fixed before the first run, asks whether a
+model has learned more than how often each action occurs, by comparing it with two baselines that
+ignore the input. On the natural set, a model is compared with the frequency-only baseline, which
+always predicts the training action frequencies and whose loss is the entropy of those frequencies,
+$H=0.9247$ nats (natural-log units). On the balanced set, it is compared with a uniform guess, whose
+loss is $\ln 4=1.3863$ and whose accuracy is $0.25$. The existence gate passes only if three conditions
+hold. The natural-set loss must fall below $H-0.05$ and the balanced-set loss below $\ln 4-0.05$,
+both judged by the upper end of a $95\%$ interval from resampling scenes, and balanced
+\textsc{stop} recall must be at least $0.25$.
+
+\paragraph{Simulator evaluation.}
+Our pinned Habitat-Sim evaluator \citep{savva2019habitat} reproduces all 778 released
+\texttt{val\_seen} expert trajectories and their official metrics. Besides SR and OSR, we report SPL,
+success weighted by path length, and SDTW, success weighted by how closely the path follows the
+expert's (normalized dynamic time warping, nDTW) \citep{ilharco2019general}. Before any of the six
+training runs, we fixed a suite of 14 runs of non-learning policies on the same 61 episodes, 854 episode-runs
+in all (Table~\ref{tab:evaluator-controls}). Replaying the expert's trajectory succeeds on $61/61$
+episodes with SPL $0.9679$, while random and handcrafted policies each succeed on $3$ of their $305$
+episodes, so the evaluator does not force zero success. Learned policies run on the same 61
+\texttt{val\_seen} episodes (53 scenes) as the controls. Habitat executes 0.25 m forward moves and
+15-degree turns, with a 3 m goal radius and the official 500-step cap. Comparisons are paired
+by seed and episode. Intervals come from 10,000 fixed-seed resamples of the 53 scenes, keeping all
+episodes and seeds of each sampled scene.
+
+\paragraph{Executing every saved checkpoint.}
+We executed all 37 distinct saved checkpoints on the same 61 episodes, all on one GPU type (NVIDIA
+L40S): the 30 the rule passed over, the untrained model, and the six selected ones again for
+comparison. Each passed-over checkpoint is compared with its run's selected checkpoint, and the
+untrained model with all six. A candidate counts as better only if it passes a paired test fixed in
+advance (a one-sided exact McNemar test with Tarone's correction for discrete tests
+\citep{tarone1990modified}) and then passes it again on 61 new episodes
+(Appendix~\ref{app:sweep}).
+
+\paragraph{Verification.}
+Every input and output is recorded with its hash. Separate verifier programs reproduce the six training
+outcomes, all 366 learned rollouts, and the 61 matched always-forward runs without error. For the
+37-checkpoint execution, every count was computed again from the raw episode records, independently
+of the preregistered analysis script. All tables and figures are generated from these records.
+
+\paragraph{Preregistration and later additions.}
+Only the first run, unweighted at seed 20260825, was fully specified before any result, in a
+written protocol whose SHA-256 hash the run records. We added the class-weighted runs after that
+run collapsed, the other two seeds after both seed-20260825 runs finished, and the simulator runs
+after all six. Each addition was fixed before it ran and kept the same selection rule and gate, and
+every seed is reported. The weighting comparison reuses the held-out sets that the first run had
+already used, so it is adaptive. The checkpoint-selection framing, the episode-level comparisons
+with the controls, and the scene-resampled intervals came after the results. Executing every saved
+checkpoint was added after review and preregistered on 9 October 2026, before any unselected
+checkpoint was executed or scored.

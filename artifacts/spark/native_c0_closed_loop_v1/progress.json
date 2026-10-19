@@ -1,0 +1,9 @@
+{
+  "completed_episode_runs": 366,
+  "current_checkpoint": null,
+  "current_episode": null,
+  "recorded_at_utc": "2026-08-26T15:31:51.840048+00:00",
+  "schema_version": 1,
+  "status": "completed",
+  "target_episode_runs": 366
+}

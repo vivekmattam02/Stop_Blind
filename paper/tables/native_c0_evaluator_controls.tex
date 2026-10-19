@@ -1,0 +1,19 @@
+%
+\begin{table}[t]
+\centering
+\small
+\caption{Non-learning evaluator controls on the 61 frozen \texttt{val\_seen} development episodes. Stochastic rows report means over five fixed seeds.}
+\label{tab:evaluator-controls}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Control & Runs & Episodes/run & SR (\%) & SPL (\%) & nDTW \\
+\midrule
+Released trajectory replay & 1 & 61 & 100.00 & 96.79 & 1.000 \\
+Immediate \textsc{stop} & 1 & 61 & 0.00 & 0.00 & 0.204 \\
+Always forward & 1 & 61 & 0.00 & 0.00 & 0.234 \\
+Invalid action & 1 & 61 & 0.00 & 0.00 & 0.204 \\
+Official random & 5 seeds & 61 & 0.98 & 0.79 & 0.233 \\
+Official handcrafted & 5 seeds & 61 & 0.98 & 0.95 & 0.245 \\
+\bottomrule
+\end{tabular}
+\end{table}

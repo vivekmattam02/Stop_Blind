@@ -1,0 +1,17 @@
+Vision-and-language navigation agents follow a written route instruction through a building using
+only their own camera images, and an episode counts as a success only if the agent itself stops
+near the goal. Running every saved checkpoint in a simulator is expensive, so a general-purpose
+fine-tuning pipeline can instead keep the checkpoint with the lowest validation loss. For a
+navigation policy this loss is teacher-forced: the model sees the expert's past frames and is scored
+on whether it predicts the expert's next action. We fine-tune the Qwen3-VL-8B vision--language model
+on Room-to-Room in Continuous Environments (R2R-CE), with and without class weighting, and run the
+checkpoints this loss selects in the Habitat simulator, in buildings seen during training. None of
+the selected checkpoints reaches the goal and stops there. Those trained without class weighting
+never stop and behave like a baseline that always moves forward, and class weighting changes which
+action the policy repeats. A preregistered follow-up executes every saved checkpoint, and no
+checkpoint was shown to navigate better than the selected one. The validation loss gives no warning,
+because stopping is rare among the decisions it averages, as earlier work has noted. Two offline
+checks flag every run before any simulator test: recall on the \textsc{stop} action, and a pass/fail
+test fixed before the first run. In this setting, a low validation loss is not evidence that a
+policy can navigate. Code and run records are at
+\href{https://github.com/vivekmattam02/Stop_Blind}{\texttt{github.com/vivekmattam02/Stop\_Blind}}.

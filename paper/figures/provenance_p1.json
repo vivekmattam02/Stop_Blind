@@ -1,0 +1,169 @@
+{
+  "gate": "p1_figures_v1",
+  "figures": [
+    {
+      "figure": "p1_blind_metric.pdf",
+      "sources": [
+        "artifacts/spark/native_c0_development_v1/result.json",
+        "artifacts/spark/native_c0_seed_replication_unweighted_s20260826_v1/result.json",
+        "artifacts/spark/native_c0_seed_replication_unweighted_s20260827_v1/result.json",
+        "artifacts/spark/native_c0_action_balance_v1/result.json",
+        "artifacts/spark/native_c0_seed_replication_inverse_frequency_s20260826_v1/result.json",
+        "artifacts/spark/native_c0_seed_replication_inverse_frequency_s20260827_v1/result.json"
+      ],
+      "ce_axis_clipped_to": [
+        0.6,
+        1.75
+      ],
+      "ce_at_update_0": 5.487198294414814,
+      "fields": [
+        "calibrations[].update_step",
+        "calibrations[].summary.mean_restricted_action_ce",
+        "calibrations[].per_decision[].action_decision.predicted_action"
+      ]
+    },
+    {
+      "figure": "p1_metric_decomposition.pdf",
+      "sources": [
+        "artifacts/spark/native_c0_seed_replication_unweighted_s20260826_v1/result.json"
+      ],
+      "selected_update_step": 160,
+      "selection_ce_reported": 0.7373,
+      "selection_ce_reconstructed": 0.7373,
+      "reconstruction_residual": 0.0,
+      "decision_count": 256,
+      "stop_predicted_count": 0,
+      "per_action": [
+        {
+          "action": "MOVE_FORWARD",
+          "n": 173,
+          "mean_ce": 0.3968,
+          "contribution": 0.2681
+        },
+        {
+          "action": "TURN_LEFT",
+          "n": 42,
+          "mean_ce": 1.2989,
+          "contribution": 0.2131
+        },
+        {
+          "action": "TURN_RIGHT",
+          "n": 38,
+          "mean_ce": 1.3954,
+          "contribution": 0.2071
+        },
+        {
+          "action": "STOP",
+          "n": 3,
+          "mean_ce": 4.1799,
+          "contribution": 0.049
+        }
+      ],
+      "fields": [
+        "calibrations[].per_decision[].target_action",
+        "calibrations[].per_decision[].restricted_action_ce",
+        "calibrations[].summary.mean_restricted_action_ce"
+      ]
+    },
+    {
+      "figure": "p1_stop_moments.pdf",
+      "sources": [
+        "artifacts/spark/native_c0_seed_replication_unweighted_s20260826_v1/result.json",
+        "/objects/objects/f9/f9490550b8c56ccf498bcde6d2fe4657c6525bdd048c797a8e084238ed7fadfc.pt",
+        "/objects/objects/43/4328834d0b1cb43d4d8d0e5958ef3bb8d26e3cb928e8e72041d0ce8a93664607.pt",
+        "/objects/objects/dd/dda6cc3bcf917868576117efa57e34d99a19f20084e4f0e496dd505c44a57df6.pt"
+      ],
+      "decisions_shown": 3,
+      "selected_update_step": 160,
+      "selected_by": "lowest summary.mean_restricted_action_ce across calibrations",
+      "selection_ce": 0.7373,
+      "stop_target_decisions_on_surface": 3,
+      "is_complete_enumeration": true,
+      "predicted": [
+        "MOVE_FORWARD",
+        "MOVE_FORWARD",
+        "MOVE_FORWARD"
+      ],
+      "p_stop": [
+        0.03383127972483635,
+        0.008950539864599705,
+        0.011828994378447533
+      ]
+    },
+    {
+      "figure": "p1_selection_schematic.pdf",
+      "sources": [
+        "artifacts/spark/native_c0_seed_replication_unweighted_s20260826_v1/result.json",
+        "artifacts/spark/native_c0_closed_loop_v1/result.json"
+      ],
+      "selected_update_step": 160,
+      "selection_ce": 0.7373,
+      "selection_decisions": 256,
+      "stop_targets_on_surface": 3,
+      "closed_loop_arm": "unweighted_s20260826",
+      "closed_loop_episodes": 61,
+      "closed_loop_actions": 30500,
+      "closed_loop_action_histogram": {
+        "MOVE_FORWARD": 30500
+      },
+      "closed_loop_stop_rate": 0.0,
+      "closed_loop_step_cap_rate": 1.0,
+      "fields": [
+        "calibrations[].summary.mean_restricted_action_ce",
+        "calibrations[].per_decision[].target_action",
+        "checkpoint_summaries[arm].action_histogram",
+        "checkpoint_summaries[arm].stop_rate"
+      ]
+    },
+    {
+      "figure": "native_c0_closed_loop_behavior.pdf",
+      "sources": [
+        "artifacts/context/native_c0_closed_loop_analysis_v1/analysis.json"
+      ],
+      "constant_action_unweighted": [
+        61,
+        61,
+        60
+      ],
+      "constant_action_weighted": [
+        47,
+        42,
+        55
+      ],
+      "episode_count": 61,
+      "contrasts": [
+        {
+          "metric": "final error",
+          "point_delta": -0.6773,
+          "lower_95": -1.6154,
+          "upper_95": 0.0097
+        },
+        {
+          "metric": "closest approach",
+          "point_delta": 0.4061,
+          "lower_95": 0.0638,
+          "upper_95": 0.7542
+        }
+      ],
+      "fields": [
+        "checkpoint_behavior[arm].constant_action_episode_count",
+        "treatment_mean_scene_cluster_bootstrap.metrics[*].point_delta/lower_95/upper_95"
+      ]
+    },
+    {
+      "figure": "p1_trajectories.pdf",
+      "sources": [
+        "artifacts/spark/native_chunk_closed_loop_134k_v1"
+      ],
+      "episodes": 61,
+      "episodes_entering_radius": 13,
+      "goal_radius_m": 3.0,
+      "y_axis_clipped_to_m": 30.0,
+      "episodes_exceeding_clip": 1,
+      "max_distance_m": 77.7,
+      "fields": [
+        "steps[].distance_to_goal"
+      ]
+    }
+  ]
+}

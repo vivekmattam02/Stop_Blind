@@ -1,0 +1,22 @@
+\section{Exact ties in the action scorer}
+\label{app:ties}
+
+Every predicted action reported here is the action token with the lowest negative log-likelihood.
+The logits are in bfloat16 (BF16), and in every stored decision the two best scores are either equal or at least
+$0.125$ nats apart; an exact tie goes to the lowest official ID, so \textsc{stop} wins every tie it
+is in and \textsc{move\_forward} wins every tie with a turn. Recounted from the four scores stored
+for each decision, ties account for $2$ of the $28$ \textsc{stop} predictions at update~$0$; for
+$15$ of the $34$ and $3$ of the $23$ at the weighted spikes of Figure~\ref{fig:blind_metric}; for
+$2$ of seed $20260827$'s $6$ balanced \textsc{stop} hits and none of the other weighted seeds' $12$
+and $1$; and for $2$ of the $7$ closed-loop \textsc{stop} presses, one in each seed that stopped,
+both on step~$1$. Strict preferences alone give $26$, $19$ and $20$ predictions, balanced
+\textsc{stop} recall of $12/64$, $1/64$ and $4/64$, and $5$ presses; weighted balanced accuracy
+falls from a mean of $0.397$ to $0.375$. Both recall and accuracy still exceed the unweighted run in
+every pair. Many strict wins are narrow: $11$ more of the $34$ at the seed-$20260826$ spike win by a
+single BF16 step, and all seven presses won by at most $0.5$ nats, with restricted \textsc{stop}
+probability $0.28$--$0.40$. No zero \textsc{stop} count in this paper can hide a tie, because a tie that includes
+\textsc{stop} is scored as \textsc{stop}, and at every in-radius decision \textsc{stop} trailed the
+chosen action by at least $0.75$ nats. Unweighted seeds $20260825$ and $20260826$ have no tie in
+their $61{,}000$ closed-loop decisions; seed $20260827$ has five, each a step-$1$ tie between
+\textsc{move\_forward} and a turn in an episode that then matches always-forward. The chunk run's $99$ \textsc{stop} guesses (Appendix~\ref{app:probes}) cannot be split this way, because that run
+stored only counts.

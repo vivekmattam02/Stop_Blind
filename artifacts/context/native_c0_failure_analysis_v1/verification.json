@@ -1,0 +1,13 @@
+{
+  "analysis_gate": "native_qwen_c0_failure_analysis_v1",
+  "analysis_path": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/context/native_c0_failure_analysis_v1/analysis.json",
+  "analysis_reconstruction_performed": true,
+  "analysis_sha256": "7eec7ca24d8c1abe7c70b19c3c1f4603ec1825c5bc247b783f7c66c812b074bb",
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_qwen_c0_failure_analysis_verification_v1",
+  "recorded_at_utc": "2026-08-25T14:21:21.980888+00:00",
+  "schema_version": 1,
+  "selected_checkpoint_fully_hashed": true,
+  "status": "passed"
+}

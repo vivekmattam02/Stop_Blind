@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spatialvlm"
+version = "0.1.0"
+description = "Recovering Destroyed Spatial Intelligence in Foundation Models for Indoor Navigation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "torch>=2.7.0",
+    "transformers>=4.57.6",
+    "peft>=0.18.1",
+    "trl>=0.18.1",
+    "accelerate>=1.6.0",
+    "einops>=0.8.1",
+    "omegaconf==2.3.0",
+    "wandb==0.20.1",
+    "pytest==8.3.5",
+    "numpy==2.3.5",
+    "opt_einsum @ git+https://github.com/dgasmith/opt_einsum.git@1a984b7b75f3e532e7129f6aa13f7ddc3da66e10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5", "pytest-cov", "ruff", "mypy"]
+habitat = ["habitat-sim>=0.3", "habitat-lab>=0.3"]
+xformers = ["xformers>=0.0.31"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short -p no:deepeval -m 'not slow'"

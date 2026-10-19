@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "verified_at_utc": "2026-08-23T16:17:42Z",
+  "source_artifact_root": "artifacts/spark/habitat_expanded_v2",
+  "checks": {
+    "canonical_manifest_hash_matches": true,
+    "suite_and_progress_manifest_hash_match": true,
+    "suite_and_progress_summaries_match": true,
+    "episode_filename_set_matches_manifest": true,
+    "step_filename_set_matches_manifest": true,
+    "episode_reports_verified": 778,
+    "step_trace_hashes_verified": 778,
+    "locked_software_hashes_verified": 7,
+    "report_identity_runtime_sensor_replay_checks_all_pass": true,
+    "spl_shortest_path_matches_runtime_reset_geodesic_for_all_episodes": true,
+    "aggregate_summary_recomputed": true,
+    "errors": []
+  },
+  "source_sha256": {
+    "suite_manifest.json": "f12bb5819f4e78d4ee20a504a79639efe5933b18b6d808771f15531cce925323",
+    "suite.json": "6ecd859a2fa759b3d64a9b4c14b18e810cdaab5cf22f40c30b3021f0148ed7dc",
+    "progress.json": "717f1803b0d2062a310bad7fc530bf98c3a4fdcbb2ba0a5d8d505a48cfb6146b",
+    "canonical_manifest_payload": "69053d0ea8591565c8f24f7b1d61a6e88d72919a2cce7bc4d25e82992f6a134e"
+  },
+  "recomputed_summary": {
+    "completed_episode_count": 778,
+    "completed_scene_count": 53,
+    "failed_episode_count": 0,
+    "passed_episode_count": 778,
+    "remaining_episode_count": 0,
+    "maximum_location_error_m": 8.117741786718522e-06,
+    "minimum_ndtw": 0.9999988743872253,
+    "mean_success_rate": 1.0,
+    "mean_spl": 0.975375007692186,
+    "runtime_collision_count": 0
+  },
+  "release_metadata_geodesic_drift": {
+    "diagnostic_tolerance_m": 0.001,
+    "within_tolerance_episode_count": 742,
+    "above_tolerance_episode_count": 36,
+    "affected_trajectory_count": 12,
+    "affected_scene_count": 8,
+    "median_absolute_m": 0.0,
+    "p90_absolute_m": 4.76837158203125e-07,
+    "p95_absolute_m": 1.9073486328125e-06,
+    "p99_absolute_m": 0.4200439453125,
+    "mean_absolute_m": 0.012306430345942245,
+    "maximum_absolute_m": 0.48644065856933594,
+    "runtime_greater_episode_count": 18,
+    "runtime_smaller_episode_count": 18,
+    "affected_trajectories": [
+      {"trajectory_id": "5231", "episode_ids": ["533", "534", "535"], "scene_id": "2n8kARJN3HM", "signed_drift_m": -0.48644065856933594},
+      {"trajectory_id": "4884", "episode_ids": ["485", "486", "487"], "scene_id": "ur6pFq6Qu1A", "signed_drift_m": -0.4406394958496094},
+      {"trajectory_id": "2271", "episode_ids": ["221", "222", "223"], "scene_id": "ZMojNkEp431", "signed_drift_m": 0.4200439453125},
+      {"trajectory_id": "6923", "episode_ids": ["716", "717", "718"], "scene_id": "ur6pFq6Qu1A", "signed_drift_m": -0.3146476745605469},
+      {"trajectory_id": "7059", "episode_ids": ["734", "735", "736"], "scene_id": "kEZ7cmS4wCh", "signed_drift_m": 0.3134441375732422},
+      {"trajectory_id": "2021", "episode_ids": ["182", "183", "184"], "scene_id": "Vvot9Ly1tCj", "signed_drift_m": -0.3109130859375},
+      {"trajectory_id": "185", "episode_ids": ["19", "20", "21"], "scene_id": "kEZ7cmS4wCh", "signed_drift_m": 0.29865169525146484},
+      {"trajectory_id": "1333", "episode_ids": ["116", "117", "118"], "scene_id": "8WUmhLawc2A", "signed_drift_m": 0.20144176483154297},
+      {"trajectory_id": "1116", "episode_ids": ["92", "93", "94"], "scene_id": "r1Q1Z4BcV1o", "signed_drift_m": -0.1697378158569336},
+      {"trajectory_id": "1990", "episode_ids": ["179", "180", "181"], "scene_id": "Vvot9Ly1tCj", "signed_drift_m": 0.14387226104736328},
+      {"trajectory_id": "1181", "episode_ids": ["98", "99", "100"], "scene_id": "dhjEzFoUFzH", "signed_drift_m": -0.0770721435546875},
+      {"trajectory_id": "3980", "episode_ids": ["407", "408", "409"], "scene_id": "ZMojNkEp431", "signed_drift_m": 0.014544486999511719}
+    ]
+  },
+  "evidence_boundary": {
+    "established": "The locked modern Habitat-Sim runtime reproduces all released val_seen action, native-sensor, reset-pose, forward-position, STOP, success, and nDTW checks; SPL uses the runtime reset geodesic.",
+    "not_established": "Legacy-modern navmesh geodesic identity, legacy collision-flag identity, val_unseen parity, learned-policy quality, policy ordering, training correctness, or paper-level claims."
+  }
+}

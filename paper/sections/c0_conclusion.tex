@@ -1,0 +1,12 @@
+\section{Conclusion}
+
+We studied how checkpoints are selected when a VLM is fine-tuned to navigate, a task whose success
+depends on stopping at the goal. In all three unweighted runs, the teacher-forced validation loss
+selects the same checkpoint, and that checkpoint never predicts \textsc{stop}. In the simulator,
+two of those checkpoints match the always-forward baseline in every episode, the third differs in
+one, and none stops. The averaged loss gives no warning, because \textsc{stop} is only 3 of the 256
+decisions it averages. Balanced \textsc{stop} recall ($0/64$ without weighting) and the existence
+gate do warn. Executing all 37 distinct saved checkpoints yields a single success, by the untrained
+model in one episode, and no checkpoint was shown to navigate better than the selected one. We
+recommend reporting recall on the action that defines success alongside any validation loss used
+to select checkpoints.

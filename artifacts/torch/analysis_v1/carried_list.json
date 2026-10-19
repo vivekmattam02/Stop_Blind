@@ -1,0 +1,9 @@
+{
+  "carried": [],
+  "counted_for_m": [],
+  "m": 0,
+  "not_carried_rank_depends_on_missing_episodes": [],
+  "not_cleared_clearing_depends_on_missing_episodes": [],
+  "reached_bar_not_carried": [],
+  "schema_version": 4
+}

@@ -1,0 +1,42 @@
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Rare actions in navigation imitation losses.} The closest prior work concerns rare
+decisions under an unweighted imitation loss. In embodied question answering,
+\citet{wijmans2019eqa} warned that policies that repeat the previous action ``achieve very
+high validation accuracy for action prediction but miss every transition between actions''. The
+R2R-CE reference baseline, VLN-CE (VLN in Continuous Environments), trains with their inflection weighting, which upweights steps where the
+expert's action changes \citep{krantz2020beyond}. \citet{xiang2020l2stop} argued that
+\textsc{stop}, which occurs once per episode, ``will receive less attention if we treat all actions
+equally'', and added a dedicated stopping head. NaVILA, a VLM fine-tuned for R2R-CE, rebalances its
+labels, in particular because \textsc{stop} is underrepresented. Removing the rebalancing lowers success on
+\texttt{val\_unseen}, the split of unseen buildings that this study never opened, from $49.7$ to
+$30.0$ \citep{cheng2025navila}. A small VLM fine-tuned for aerial navigation was ``critically
+affected by a severe action imbalance in the training data'' \citep{tamazyan2025aerial}. On the
+discrete navigation graph, agents in four systems pass the goal without stopping
+\citep{zhao2023mindthegap}, and a case study of one agent finds that its errors reflect a forward
+bias learned in training \citep{yang2023behavioral}. These works change training or analyze trained
+agents. We instead measure which checkpoint plain cross-entropy selects for a VLM policy in continuous
+R2R-CE, where success depends on the rare \textsc{stop} action.
+
+\paragraph{Offline metrics and closed-loop competence.} In driving, offline prediction error need
+not correlate with driving quality \citep{codevilla2018offline}, and open-loop metrics on a modern
+planning benchmark favor planners that nearly ignore their input \citep{dauner2023parting}. In
+manipulation, checkpoints selected on validation data are $10$--$100\%$ worse than those selected by
+rollout \citep{mandlekar2021robomimic}, and choosing a trained policy's input-modality mask by
+lowest validation loss picked a mask with zero success in all three seeds \citep{hao2023masked}.
+Behavior-cloned policies can reach near-zero held-out error by relying on spurious cues that fail at
+deployment \citep{dehaan2019causal}, including collapse toward a dominant action
+\citep{codevilla2019exploring}. Two results narrow the gap: better-chosen validation data improve
+the correlation between offline and online scores \citep{codevilla2018offline}, and under log-loss
+with a discrete action vocabulary, compounding error grows at most polynomially with the horizon
+\citep{foster2024behavior}. Our setting differs from these studies in two ways: success in
+navigation hinges on one rare action, and the offline metric we test is plain cross-entropy used to
+select checkpoints.
+
+\paragraph{Checkpoint selection in R2R-CE.} R2R-CE papers that state a selection rule select on
+closed-loop \texttt{val\_unseen} performance \citep{krantz2020beyond}. NaVILA trains for one epoch
+and states no selection rule \citep{cheng2025navila}. We found no R2R-CE paper that selects
+checkpoints by teacher-forced loss. We select by it deliberately, execute every checkpoint it chose
+among, and leave \texttt{val\_unseen} sealed. Appendix~\ref{app:related} discusses this work in
+more detail.

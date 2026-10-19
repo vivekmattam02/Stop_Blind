@@ -1,0 +1,90 @@
+\section{Related work in full}
+\label{app:related}
+
+\paragraph{Offline metrics versus closed-loop competence.}
+In neighboring embodied domains, it is established that offline imitation metrics can fail to
+identify good closed-loop policies. In driving, offline prediction error is not necessarily
+correlated with driving quality, and two models with identical prediction error can differ widely
+when deployed \citep{codevilla2018offline}. Open-loop metrics on a modern planning benchmark favor
+degenerate planners that nearly ignore their input \citep{dauner2023parting}. In manipulation, the
+robomimic study reports that the best validation loss does not correspond to the best-performing
+policy, with validation-selected checkpoints $10$--$100\%$ worse than rollout-selected ones
+\citep{mandlekar2021robomimic}. \citet{hao2023masked} report that choosing a trained policy's
+input-modality mask by lowest validation loss picked a zero-success mask in all three seeds on a
+robomimic task, while choosing among separately trained policies by the same loss roughly doubled
+another baseline's success. \citet{simchowitz2025pitfalls} construct a setting in which rollout cost
+rises while validation loss falls throughout training. By 2026, a weak correlation between
+action-space validation error and success is described as a practitioner consensus
+\citep{huang2026critical}, although the same study finds raw validation error rank-consistent with
+rollout success when only the number of training steps varies. Behavior-cloned policies can reach
+near-zero held-out error while relying on spurious correlates that collapse under their own
+deployment distribution \citep{dehaan2019causal}, including collapse toward a dominant action
+regime overrepresented in demonstrations \citep{codevilla2019exploring}.
+\citet{codevilla2018offline} also show that the offline--online correlation improves substantially
+with better-chosen validation data and metrics. Our claim therefore concerns only the plain
+cross-entropy over decisions in their natural action frequencies, which general-purpose fine-tuning
+stacks compute when rollouts are unavailable. The divergence also has limits. Under log-loss with a
+discrete action vocabulary, compounding error is at most polynomial in the horizon
+\citep{foster2024behavior}, and the exponential-in-horizon bound of \citet{simchowitz2025pitfalls}
+applies to continuous actions only. The polynomial bound does not rule out compounding error, or
+the shift from expert to policy histories at deployment, and our experiments do not separate their
+contribution from action imbalance. The mechanism we point to, that a frequency-dominated
+cross-entropy is blind to a rare class, was stated for \textsc{stop} in the training loss by
+\citet{xiang2020l2stop} and for rare action changes in validation accuracy by
+\citet{wijmans2019eqa}, who also chose among five low-loss checkpoints by executing them and found
+inflection-weighted cross-entropy a better predictor of end-to-end performance than plain
+cross-entropy. None of this prior work on offline metrics combines instruction-following navigation,
+a VLM policy and a success criterion that depends on a single rare action, which is the combination
+studied here.
+
+\paragraph{The stopping problem in VLN.}
+Stopping failure is also documented within VLN, on the discrete navigation graph.
+\citet{zhao2023mindthegap} quantify a persistent gap between Oracle Success and Success (agents
+pass the goal and fail to stop) across four systems. Two further findings concern learned action
+regularities. A case study of one agent finds its errors reflect a systematic bias toward forward
+actions learned during training \citep{yang2023behavioral}, and \citet{thomason2019shifting} note
+that peaked action distributions in R2R training let agents memorize simple rules, such as moving
+forward an average number of steps. \citet{xiang2020l2stop} treat stopping as a distinct learning
+problem and add a dedicated head. For a VLM fine-tuned for R2R-CE, \citet{dang2026rynnbrain} report
+Oracle Success of $71.6\%$ against success of $58.6\%$ on \texttt{val\_unseen} and conclude that the
+model ``lacks the precision for the terminal stopping maneuver''. They evaluate a trained model and
+do not study how its checkpoint was chosen. Fine-tuning a small VLM for aerial navigation,
+\citet{tamazyan2025aerial} find performance ``critically affected by a severe action imbalance in
+the training data''. In VLM fine-tuning for R2R-CE, \citet{cheng2025navila} name the
+underrepresentation of the stop action as a label-imbalance problem and report that removing their
+data rebalancing lowers \texttt{val\_unseen} success from $49.7$ to $30.0$. Their remedy acts on the
+data blend. The failure reported here, never stopping at the goal, survives inverse-frequency
+\emph{loss} weighting (the weighted checkpoints press \textsc{stop} seven times, all outside the goal
+radius), and the object of our study is the selection metric. Poor stopping is already documented, and we add a closed-loop
+measurement, in continuous R2R-CE with a fine-tuned VLM and every saved
+checkpoint executed, of what an averaged selection loss reports while the policies it ranks lose the
+terminal action. The loss fell from $5.49$ nats to below $1$ in every run, and no checkpoint was
+shown to navigate better than the one it chose. Every trained unweighted checkpoint predicts
+\textsc{stop} on none of the $256$ selection decisions (update $0$ predicts it $28$ times), so in
+those runs any rule choosing among trained checkpoints picks one that never predicts \textsc{stop}
+there. The collapse is a training outcome, and the averaged loss did not flag it.
+
+\paragraph{VLM policies for continuous navigation.}
+Recent systems fine-tune large vision--language models to act directly in continuous environments,
+building on Room-to-Room (R2R) and R2R-CE \citep{anderson2018r2r,krantz2020beyond,hong2022bridging}.
+These systems differ widely in action interface, observation history and planning scaffolding, so we
+make no comparison to published success rates and report only within-protocol contrasts against
+references frozen in advance. R2R-CE papers that state a selection rule select on closed-loop
+\texttt{val\_unseen} performance, and VLN-CE performs early stopping on it
+\citep{krantz2020beyond}. NaVILA, a VLM policy, trains for one epoch and states no selection rule
+\citep{cheng2025navila}. We found no R2R-CE paper that selects by teacher-forced loss. We study that
+rule because it is what a general-purpose fine-tuning stack computes when rollouts are unavailable.
+The Hugging Face Trainer, asked to keep its best checkpoint, keeps the one with the lowest
+evaluation loss unless given another metric \citep{hf2026trainer}. Because \texttt{val\_unseen}
+stays sealed, the closed-loop evaluation on reserved trajectories is a diagnostic of the rule, and
+we make no leaderboard claim. Class-imbalance remedies such as re-weighting are standard
+\citep{cui2019classbalanced}, and our second treatment arm applies one and measures what it changes.
+The VLN-CE baseline itself trains with \emph{inflection weighting} \citep{wijmans2019eqa}, which
+upweights timesteps where the action changes. The two remedies are not interchangeable. On our
+$3{,}072$-decision training set every \textsc{stop} is an inflection, so inflection weighting would
+give it $2.48\times$ the weight of a non-inflection step ($2.55\times$ over the released split, and
+the VLN-CE baseline configures $3.2$ for R2R \citep{krantz2020beyond}), the same factor as any turn
+onset. The inverse-frequency weighting we test gives \textsc{stop} $28.5\times$ the weight of
+\textsc{move\_forward} on that same set. The two rules weight different groups of decisions, rare
+classes against changes of action, so these factors do not rank the remedies' strength. We did not
+test inflection weighting. The failure to stop at the goal survives the weighting we did test.

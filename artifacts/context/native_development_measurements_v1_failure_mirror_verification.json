@@ -1,0 +1,52 @@
+{
+  "accepted_optimizer_update_count": 0,
+  "checks": {
+    "failure_error_matches": true,
+    "failure_gate_matches": true,
+    "failure_status_matches": true,
+    "manifest_frozen": true,
+    "manifest_run_id_matches": true,
+    "result_absent": true,
+    "spark_hashes_match": true,
+    "updates_empty": true,
+    "verification_absent": true,
+    "v2_uses_public_action_token_id_api": true
+  },
+  "corrected_v2_source": {
+    "path": "scripts/run_spark_native_development_measurements.py",
+    "sha256": "64e0e8692b33096e5075a25d4c90feab2d3f1d3a04a8bf9fab2365b0384901ee"
+  },
+  "failure_boundary": "The source-locked inventory and all 144 H4 cache entries completed and exact Qwen loaded; the first restricted-loss call then raised before optimizer update 1.",
+  "files": {
+    "failure.json": {
+      "bytes": 1027,
+      "sha256": "611f54edf17bed25221fe80fd92f291a184a1dd0e1abb465d8a176e00d8507e5"
+    },
+    "inventory.json": {
+      "bytes": 38037,
+      "sha256": "2c543307d260314c043f3bdcb5a61290924bb02adb2059c63324d02929d030c5"
+    },
+    "launcher.pid": {
+      "bytes": 7,
+      "sha256": "3d3afaaa2560bc127ad5f3cbcc4d921dc1ad792c829bdacc0bff1bd6fbe01dbe"
+    },
+    "manifest.json": {
+      "bytes": 193739,
+      "sha256": "73b066a1d076459982fa041a3ca08f4d6d7e9bc72dbd18192c27f589d97e3322"
+    },
+    "run.log": {
+      "bytes": 283469,
+      "sha256": "9284a223c8a6e339a9dc0e5d68007ec1d27c12b3c5fe0cc411ab6ece785fe727"
+    },
+    "updates.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "gate": "independent_native_c0_development_measurements_v1_failure_mirror_verification_v1",
+  "observed_error": "'ActionTokenCodebook' object has no attribute 'tokens'",
+  "recorded_at_utc": "2026-08-25T04:24:47Z",
+  "schema_version": 1,
+  "source_spark_root": "/home/genie/Desktop/GridNav/artifacts/spark/native_development_measurements_v1",
+  "status": "passed"
+}

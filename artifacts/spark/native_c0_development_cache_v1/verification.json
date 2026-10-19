@@ -1,0 +1,17 @@
+{
+  "all_objects_fully_hashed": true,
+  "cache_index_path": "/artifacts/cache_index.json",
+  "cache_index_sha256": "eee53216e52774749d67d7a7d3763084b3622d6c2a8d9c18d834652f0cd304de",
+  "dataset_reconstruction_performed": true,
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_qwen_c0_content_cache_verification_v1",
+  "manifest_path": "/artifacts/manifest.json",
+  "manifest_sha256": "ec5f9bdbfee3430b115c210326dd42ba6770eb267fa530c46a4ff20fc2f023fe",
+  "object_root": "/cache_objects",
+  "recorded_at_utc": "2026-08-25T05:58:48.086529+00:00",
+  "result_path": "/artifacts/result.json",
+  "result_sha256": "87885623488b22c871675e948970d873df0b345cb869069d5ffc9141d88df9ef",
+  "schema_version": 1,
+  "status": "passed"
+}

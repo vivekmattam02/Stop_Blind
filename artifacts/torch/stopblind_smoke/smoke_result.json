@@ -1,0 +1,811 @@
+{
+  "code_commit": "63faec3a8c4125c9986c7a7a283ae7d78ac7ebec",
+  "code_sha256": "2149c3161f84d2056a71f7620b057f9d4cb230f57fb7fe60b319a5306d90bc33",
+  "constraint": "l40s",
+  "constraint_source": "guess",
+  "estimate": {
+    "basis": "phase-2 seconds per decision x 500 steps x 61 episodes, plus a 2-minute load",
+    "gpu_hours_main_upper": 26.5,
+    "hours_per_checkpoint_at_500_steps": 1.39,
+    "jobs_of_P": 19,
+    "seconds_per_decision_with_P_sharing": 0.1607,
+    "suggested_time_limit": "02:35:00"
+  },
+  "failures": [],
+  "gpu_driver": "610.43.02",
+  "gpu_name": "NVIDIA L40S",
+  "gpu_type": "l40s",
+  "gpu_uuids": [
+    "GPU-763e6765-c603-4670-b80d-bb33a8cb1873"
+  ],
+  "image_sha256": "e09f611873f6be749537db99c16f7a7571b9d0aee873c35521c65ea5e258f17b",
+  "image_test": "MATCH: 0 errors, 2 warnings",
+  "job": "19502191",
+  "job_resources": {
+    "basis": "the smoke job's SLURM_CPUS_PER_TASK and SLURM_MEM_PER_NODE; each sweep job asks for the same (submit.sh)",
+    "cpus_per_task": 16,
+    "mem_gb": 64
+  },
+  "memory": {
+    "gpu_memory_total_mib": 46068.0,
+    "max_workers": 2,
+    "memory_bound_workers": 2,
+    "peak_gpu_memory_mib": 20205.0,
+    "per_process_peak_mib": {
+      "p0": 18418.0,
+      "p1": 20205.0,
+      "p2-w1": 20205.0,
+      "p2-w2": 20205.0,
+      "p3-w1": 18418.0,
+      "p3-w2": 18418.0
+    },
+    "runner_peak_gpu_memory_mib": 20205.0,
+    "scorer_peak_gpu_memory_mib": 18418.0,
+    "source": "nvidia-smi per process",
+    "workers_per_gpu": 2
+  },
+  "node": "gl033.hpc.nyu.edu",
+  "numerics": {
+    "driver": "610.43.02",
+    "error": null,
+    "numerics": {
+      "cuda": "13.0",
+      "cudnn": 91400,
+      "cudnn_allow_tf32": true,
+      "cudnn_benchmark": false,
+      "cudnn_conv_fp32_precision": "tf32",
+      "cudnn_deterministic": false,
+      "deterministic_algorithms": false,
+      "env": {
+        "CUBLAS_WORKSPACE_CONFIG": null,
+        "CUDA_MODULE_LOADING": "LAZY",
+        "NVIDIA_TF32_OVERRIDE": null,
+        "PYTORCH_CUDA_ALLOC_CONF": null,
+        "TORCH_ALLOW_TF32_CUBLAS_OVERRIDE": "1"
+      },
+      "float32_matmul_precision": "high",
+      "matmul_allow_bf16_reduced_precision_reduction": true,
+      "matmul_allow_fp16_reduced_precision_reduction": true,
+      "matmul_allow_tf32": true,
+      "matmul_fp32_precision": "tf32",
+      "sdpa_enabled": {
+        "cudnn": true,
+        "flash": true,
+        "math": true,
+        "mem_efficient": true
+      },
+      "torch": "2.9.0a0+145a3a7bda.nv25.10"
+    }
+  },
+  "offline_criteria_used": true,
+  "phase_order": [
+    "4",
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "phases": {
+    "1": {
+      "all_driving": {
+        "fine": {
+          "max_mem_mib": 20224.0,
+          "mean_util": 70.3,
+          "min_util": 0.0,
+          "samples": 195,
+          "seconds": 396.5
+        }
+      },
+      "decisions": 4000,
+      "processes": 1,
+      "seconds_per_decision": 0.08429614832781954,
+      "whole_phase": {
+        "every_30s": {
+          "max_mem_mib": 20224.0,
+          "mean_util": 71.1,
+          "min_util": 0.0,
+          "samples": 14,
+          "seconds": 416.1
+        },
+        "fine": {
+          "max_mem_mib": 20224.0,
+          "mean_util": 67.3,
+          "min_util": 0.0,
+          "samples": 204,
+          "seconds": 416.1
+        }
+      }
+    },
+    "2": {
+      "all_driving": {
+        "fine": {
+          "max_mem_mib": 40444.0,
+          "mean_util": 93.7,
+          "min_util": 0.0,
+          "samples": 331,
+          "seconds": 673.4
+        }
+      },
+      "decisions": 8000,
+      "processes": 2,
+      "seconds_per_decision": 0.16066995886844235,
+      "whole_phase": {
+        "every_30s": {
+          "max_mem_mib": 40444.0,
+          "mean_util": 92.0,
+          "min_util": 5.0,
+          "samples": 23,
+          "seconds": 696.7
+        },
+        "fine": {
+          "max_mem_mib": 40444.0,
+          "mean_util": 90.8,
+          "min_util": 0.0,
+          "samples": 343,
+          "seconds": 696.7
+        }
+      }
+    },
+    "3": {
+      "all_driving": {
+        "fine": {
+          "max_mem_mib": 36850.0,
+          "mean_util": 94.3,
+          "min_util": 77.0,
+          "samples": 90,
+          "seconds": 182.1
+        }
+      },
+      "processes": 2,
+      "scores_equal_to_phase_0": 2,
+      "scoring_seconds_per_policy": 183.82194491452537,
+      "whole_phase": {
+        "every_30s": {
+          "max_mem_mib": 36850.0,
+          "mean_util": 80.7,
+          "min_util": 0.0,
+          "samples": 7,
+          "seconds": 205.7
+        },
+        "fine": {
+          "max_mem_mib": 36850.0,
+          "mean_util": 85.4,
+          "min_util": 0.0,
+          "samples": 101,
+          "seconds": 205.7
+        }
+      }
+    }
+  },
+  "preregistration_sha256": "074ec6775662d52967c65abf6bab4cc4425daf22210cb212677848c44318b4b8",
+  "processes": {
+    "p0": {
+      "adapter_dtypes": [
+        {
+          "torch.float32": 288
+        }
+      ],
+      "code_commits": [
+        "63faec3a8c4125c9986c7a7a283ae7d78ac7ebec"
+      ],
+      "completed_episodes": null,
+      "criteria": {
+        "K1_selection_ce": 0.9430186675788748,
+        "K2_natural_ce": 0.9722541540487025,
+        "K3_balanced_ce": 1.3028466220681123,
+        "K4_stop_recall_strict": 12,
+        "K4_stop_recall_tie_to_stop": 13,
+        "K5_selection_stop_predictions": 2,
+        "K6_conditions": {
+          "balanced_upper_95_below_uniform_minus_margin": false,
+          "natural_upper_95_below_blind_prior_minus_margin": false,
+          "stop_recall_at_or_above_non_mute_floor": false
+        },
+        "K6_gate_passed": false,
+        "balanced_upper_95_ce": 1.406687481077544,
+        "natural_upper_95_ce": 1.0064873959440026
+      },
+      "decisions": 0,
+      "episode_ids": [],
+      "episode_invocations": {},
+      "exit_codes": [
+        0
+      ],
+      "first_episode_start": null,
+      "gpu_names": [
+        "NVIDIA L40S"
+      ],
+      "gpu_uuids": [
+        "GPU-763e6765-c603-4670-b80d-bb33a8cb1873"
+      ],
+      "image_sha256": [
+        "e09f611873f6be749537db99c16f7a7571b9d0aee873c35521c65ea5e258f17b"
+      ],
+      "invocations": [
+        {
+          "completed_at_end": null,
+          "completed_at_start": null,
+          "exit_code": 0,
+          "index": 1,
+          "outcome": "completed"
+        }
+      ],
+      "last_episode_end": null,
+      "name": "p0",
+      "not_completed": null,
+      "peak_gpu_memory_mib_nvidia_smi": 18418.0,
+      "peak_torch_reserved_mib": 17900.0,
+      "pids": [
+        695975
+      ],
+      "policy_scored": true,
+      "preregistration_sha256": "074ec6775662d52967c65abf6bab4cc4425daf22210cb212677848c44318b4b8",
+      "scoring_end": 1791582282.720196,
+      "scoring_seconds": 113.80376387899742,
+      "scoring_start": 1791582168.9164321,
+      "seconds_per_decision": null,
+      "status": "completed",
+      "steps": []
+    },
+    "p1": {
+      "adapter_dtypes": [
+        {
+          "torch.float32": 288
+        },
+        {
+          "torch.float32": 288
+        }
+      ],
+      "code_commits": [
+        "63faec3a8c4125c9986c7a7a283ae7d78ac7ebec"
+      ],
+      "completed_episodes": 8,
+      "criteria": null,
+      "decisions": 4000,
+      "episode_ids": [
+        "4",
+        "5",
+        "10",
+        "11",
+        "13",
+        "14",
+        "16",
+        "17"
+      ],
+      "episode_invocations": {
+        "10": 1,
+        "11": 2,
+        "13": 2,
+        "14": 2,
+        "16": 2,
+        "17": 2,
+        "4": 1,
+        "5": 1
+      },
+      "exit_codes": [
+        75,
+        0
+      ],
+      "first_episode_start": 1791582315.98452,
+      "gpu_names": [
+        "NVIDIA L40S"
+      ],
+      "gpu_uuids": [
+        "GPU-763e6765-c603-4670-b80d-bb33a8cb1873"
+      ],
+      "image_sha256": [
+        "e09f611873f6be749537db99c16f7a7571b9d0aee873c35521c65ea5e258f17b"
+      ],
+      "invocations": [
+        {
+          "completed_at_end": 3,
+          "completed_at_start": 0,
+          "exit_code": 75,
+          "index": 1,
+          "outcome": "partial_forced_stop"
+        },
+        {
+          "completed_at_end": 8,
+          "completed_at_start": 3,
+          "exit_code": 0,
+          "index": 2,
+          "outcome": "completed"
+        }
+      ],
+      "last_episode_end": 1791582712.530315,
+      "name": "p1",
+      "not_completed": [],
+      "peak_gpu_memory_mib_nvidia_smi": 20205.0,
+      "peak_torch_reserved_mib": 17448.0,
+      "pids": [
+        700725,
+        706613
+      ],
+      "policy_scored": null,
+      "preregistration_sha256": "074ec6775662d52967c65abf6bab4cc4425daf22210cb212677848c44318b4b8",
+      "scoring_end": null,
+      "scoring_seconds": null,
+      "scoring_start": null,
+      "seconds_per_decision": 0.08429614832781954,
+      "status": "completed",
+      "steps": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ]
+    },
+    "p2-w1": {
+      "adapter_dtypes": [
+        {
+          "torch.float32": 288
+        }
+      ],
+      "code_commits": [
+        "63faec3a8c4125c9986c7a7a283ae7d78ac7ebec"
+      ],
+      "completed_episodes": 8,
+      "criteria": null,
+      "decisions": 4000,
+      "episode_ids": [
+        "4",
+        "5",
+        "10",
+        "11",
+        "13",
+        "14",
+        "16",
+        "17"
+      ],
+      "episode_invocations": {
+        "10": 1,
+        "11": 1,
+        "13": 1,
+        "14": 1,
+        "16": 1,
+        "17": 1,
+        "4": 1,
+        "5": 1
+      },
+      "exit_codes": [
+        0
+      ],
+      "first_episode_start": 1791582732.9175947,
+      "gpu_names": [
+        "NVIDIA L40S"
+      ],
+      "gpu_uuids": [
+        "GPU-763e6765-c603-4670-b80d-bb33a8cb1873"
+      ],
+      "image_sha256": [
+        "e09f611873f6be749537db99c16f7a7571b9d0aee873c35521c65ea5e258f17b"
+      ],
+      "invocations": [
+        {
+          "completed_at_end": 8,
+          "completed_at_start": 0,
+          "exit_code": 0,
+          "index": 1,
+          "outcome": "completed"
+        }
+      ],
+      "last_episode_end": 1791583407.549363,
+      "name": "p2-w1",
+      "not_completed": [],
+      "peak_gpu_memory_mib_nvidia_smi": 20205.0,
+      "peak_torch_reserved_mib": 17326.0,
+      "pids": [
+        718021
+      ],
+      "policy_scored": null,
+      "preregistration_sha256": "074ec6775662d52967c65abf6bab4cc4425daf22210cb212677848c44318b4b8",
+      "scoring_end": null,
+      "scoring_seconds": null,
+      "scoring_start": null,
+      "seconds_per_decision": 0.16065297430282227,
+      "status": "completed",
+      "steps": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ]
+    },
+    "p2-w2": {
+      "adapter_dtypes": [
+        {
+          "torch.float32": 288
+        }
+      ],
+      "code_commits": [
+        "63faec3a8c4125c9986c7a7a283ae7d78ac7ebec"
+      ],
+      "completed_episodes": 8,
+      "criteria": null,
+      "decisions": 4000,
+      "episode_ids": [
+        "4",
+        "5",
+        "10",
+        "11",
+        "13",
+        "14",
+        "16",
+        "17"
+      ],
+      "episode_invocations": {
+        "10": 1,
+        "11": 1,
+        "13": 1,
+        "14": 1,
+        "16": 1,
+        "17": 1,
+        "4": 1,
+        "5": 1
+      },
+      "exit_codes": [
+        0
+      ],
+      "first_episode_start": 1791582731.7118583,
+      "gpu_names": [
+        "NVIDIA L40S"
+      ],
+      "gpu_uuids": [
+        "GPU-763e6765-c603-4670-b80d-bb33a8cb1873"
+      ],
+      "image_sha256": [
+        "e09f611873f6be749537db99c16f7a7571b9d0aee873c35521c65ea5e258f17b"
+      ],
+      "invocations": [
+        {
+          "completed_at_end": 8,
+          "completed_at_start": 0,
+          "exit_code": 0,
+          "index": 1,
+          "outcome": "completed"
+        }
+      ],
+      "last_episode_end": 1791583406.356565,
+      "name": "p2-w2",
+      "not_completed": [],
+      "peak_gpu_memory_mib_nvidia_smi": 20205.0,
+      "peak_torch_reserved_mib": 17326.0,
+      "pids": [
+        717905
+      ],
+      "policy_scored": null,
+      "preregistration_sha256": "074ec6775662d52967c65abf6bab4cc4425daf22210cb212677848c44318b4b8",
+      "scoring_end": null,
+      "scoring_seconds": null,
+      "scoring_start": null,
+      "seconds_per_decision": 0.16068694343406242,
+      "status": "completed",
+      "steps": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ]
+    },
+    "p3-w1": {
+      "adapter_dtypes": [
+        {
+          "torch.float32": 288
+        }
+      ],
+      "code_commits": [
+        "63faec3a8c4125c9986c7a7a283ae7d78ac7ebec"
+      ],
+      "completed_episodes": null,
+      "criteria": {
+        "K1_selection_ce": 0.9430186675788748,
+        "K2_natural_ce": 0.9722541540487025,
+        "K3_balanced_ce": 1.3028466220681123,
+        "K4_stop_recall_strict": 12,
+        "K4_stop_recall_tie_to_stop": 13,
+        "K5_selection_stop_predictions": 2,
+        "K6_conditions": {
+          "balanced_upper_95_below_uniform_minus_margin": false,
+          "natural_upper_95_below_blind_prior_minus_margin": false,
+          "stop_recall_at_or_above_non_mute_floor": false
+        },
+        "K6_gate_passed": false,
+        "balanced_upper_95_ce": 1.406687481077544,
+        "natural_upper_95_ce": 1.0064873959440026
+      },
+      "decisions": 0,
+      "episode_ids": [],
+      "episode_invocations": {},
+      "exit_codes": [
+        0
+      ],
+      "first_episode_start": null,
+      "gpu_names": [
+        "NVIDIA L40S"
+      ],
+      "gpu_uuids": [
+        "GPU-763e6765-c603-4670-b80d-bb33a8cb1873"
+      ],
+      "image_sha256": [
+        "e09f611873f6be749537db99c16f7a7571b9d0aee873c35521c65ea5e258f17b"
+      ],
+      "invocations": [
+        {
+          "completed_at_end": null,
+          "completed_at_start": null,
+          "exit_code": 0,
+          "index": 1,
+          "outcome": "completed"
+        }
+      ],
+      "last_episode_end": null,
+      "name": "p3-w1",
+      "not_completed": null,
+      "peak_gpu_memory_mib_nvidia_smi": 18418.0,
+      "peak_torch_reserved_mib": 17900.0,
+      "pids": [
+        745449
+      ],
+      "policy_scored": true,
+      "preregistration_sha256": "074ec6775662d52967c65abf6bab4cc4425daf22210cb212677848c44318b4b8",
+      "scoring_end": 1791583613.894386,
+      "scoring_seconds": 183.8326465189457,
+      "scoring_start": 1791583430.0617394,
+      "seconds_per_decision": null,
+      "status": "completed",
+      "steps": []
+    },
+    "p3-w2": {
+      "adapter_dtypes": [
+        {
+          "torch.float32": 288
+        }
+      ],
+      "code_commits": [
+        "63faec3a8c4125c9986c7a7a283ae7d78ac7ebec"
+      ],
+      "completed_episodes": null,
+      "criteria": {
+        "K1_selection_ce": 0.9430186675788748,
+        "K2_natural_ce": 0.9722541540487025,
+        "K3_balanced_ce": 1.3028466220681123,
+        "K4_stop_recall_strict": 12,
+        "K4_stop_recall_tie_to_stop": 13,
+        "K5_selection_stop_predictions": 2,
+        "K6_conditions": {
+          "balanced_upper_95_below_uniform_minus_margin": false,
+          "natural_upper_95_below_blind_prior_minus_margin": false,
+          "stop_recall_at_or_above_non_mute_floor": false
+        },
+        "K6_gate_passed": false,
+        "balanced_upper_95_ce": 1.406687481077544,
+        "natural_upper_95_ce": 1.0064873959440026
+      },
+      "decisions": 0,
+      "episode_ids": [],
+      "episode_invocations": {},
+      "exit_codes": [
+        0
+      ],
+      "first_episode_start": null,
+      "gpu_names": [
+        "NVIDIA L40S"
+      ],
+      "gpu_uuids": [
+        "GPU-763e6765-c603-4670-b80d-bb33a8cb1873"
+      ],
+      "image_sha256": [
+        "e09f611873f6be749537db99c16f7a7571b9d0aee873c35521c65ea5e258f17b"
+      ],
+      "invocations": [
+        {
+          "completed_at_end": null,
+          "completed_at_start": null,
+          "exit_code": 0,
+          "index": 1,
+          "outcome": "completed"
+        }
+      ],
+      "last_episode_end": null,
+      "name": "p3-w2",
+      "not_completed": null,
+      "peak_gpu_memory_mib_nvidia_smi": 18418.0,
+      "peak_torch_reserved_mib": 17900.0,
+      "pids": [
+        745464
+      ],
+      "policy_scored": true,
+      "preregistration_sha256": "074ec6775662d52967c65abf6bab4cc4425daf22210cb212677848c44318b4b8",
+      "scoring_end": 1791583612.175704,
+      "scoring_seconds": 183.81124331010506,
+      "scoring_start": 1791583428.3644607,
+      "seconds_per_decision": null,
+      "status": "completed",
+      "steps": []
+    }
+  },
+  "progress_gaps": {
+    "basis": "each process's progress.json read every poll_seconds by the smoke's monitor (lib.sh, sb_progress_monitor), from the process's start to its end",
+    "hang_min": 30.0,
+    "limit_seconds": 900.0,
+    "longest_process": "p2-w1",
+    "longest_seconds": 95.2,
+    "poll_seconds": 5.0,
+    "processes": {
+      "p0": {
+        "ended": true,
+        "invocations": 1,
+        "longest_seconds": 15.0,
+        "updates": 16
+      },
+      "p1": {
+        "ended": true,
+        "invocations": 2,
+        "longest_seconds": 60.1,
+        "updates": 12
+      },
+      "p2-w1": {
+        "ended": true,
+        "invocations": 1,
+        "longest_seconds": 95.2,
+        "updates": 10
+      },
+      "p2-w2": {
+        "ended": true,
+        "invocations": 1,
+        "longest_seconds": 95.2,
+        "updates": 10
+      },
+      "p3-w1": {
+        "ended": true,
+        "invocations": 1,
+        "longest_seconds": 20.1,
+        "updates": 15
+      },
+      "p3-w2": {
+        "ended": true,
+        "invocations": 1,
+        "longest_seconds": 20.0,
+        "updates": 15
+      }
+    }
+  },
+  "reproducibility_reported_not_required": {
+    "by_episode": {
+      "across": {
+        "10": true,
+        "11": true,
+        "13": true,
+        "14": true,
+        "16": true,
+        "17": true,
+        "4": true,
+        "5": true
+      },
+      "phase_1_vs_phase_2": {
+        "10": true,
+        "11": true,
+        "13": true,
+        "14": true,
+        "16": true,
+        "17": true,
+        "4": true,
+        "5": true
+      }
+    },
+    "episodes": 8,
+    "episodes_identical_across_the_P_processes": 8,
+    "episodes_identical_between_phase_1_and_phase_2": 8
+  },
+  "run_id": "native_c0_sweep_torch_smoke_v1",
+  "scene_check": {
+    "checks": {
+      "confirmation_every_episode_loads_and_runs": true,
+      "main_always_forward_ran_on_all_61": true,
+      "main_always_forward_reaches_the_500_step_cap": true,
+      "main_replay_final_distance_within_0_25_m_of_the_spark_s": true,
+      "main_replay_ran_on_all_61": true,
+      "main_replay_succeeds_and_stops_with_the_spark_s_step_count": true
+    },
+    "exit_code": 0,
+    "failures": [],
+    "reported_not_required": {
+      "confirmation_always_forward_at_the_cap": 61,
+      "confirmation_replay": {
+        "episodes_run": 61,
+        "spark_conformance": "778 of 778 val_seen replays succeeded on the Spark",
+        "stopped": 61,
+        "succeeded": 61
+      },
+      "main_always_forward_against_the_spark": {
+        "episodes_compared": 61,
+        "episodes_with_a_step_more_than_1e-4_m_apart": 1,
+        "episodes_with_another_step_count": 0,
+        "final_distances_bit_identical": 57,
+        "largest_final_distance_difference_m": 9.5367431640625e-07,
+        "largest_position_difference_m": 0.02348864079005736,
+        "traces_bit_identical": 32
+      },
+      "main_replay_against_the_spark": {
+        "episodes_compared": 61,
+        "episodes_with_a_step_more_than_1e-4_m_apart": 0,
+        "episodes_with_another_step_count": 0,
+        "final_distances_bit_identical": 17,
+        "largest_final_distance_difference_m": 3.1888484954833984e-06,
+        "largest_position_difference_m": 8.117741786718522e-06,
+        "traces_bit_identical": 2
+      },
+      "runs": 244,
+      "runs_passed": 244,
+      "scene_loads": 87,
+      "seconds_per_run_with_a_scene_load": 8.493531374747855,
+      "seconds_total": 833.4082963438705
+    },
+    "status": "completed",
+    "time_budget": {
+      "max_hours": 0.75,
+      "ran_out": false,
+      "runs_not_run": 0
+    },
+    "time_limits": {
+      "cap_hours": 0.75,
+      "grace_s": 900,
+      "hard_limit_s": 3600,
+      "max_hours_given": 0.75
+    },
+    "tolerances": {
+      "final_distance_m": 0.25,
+      "position_reported_above_m": 0.0001
+    },
+    "verdict": "passed"
+  },
+  "schema_version": 2,
+  "scorer_check": {
+    "bit_identical_decisions": 3,
+    "changed_actions_by_recorded_margin": {
+      "0": 20,
+      "0.125": 9,
+      "0.25": 0,
+      "0.375 to 0.875": 0,
+      "1.0 or more": 0
+    },
+    "compared": 3,
+    "decisions": 1152,
+    "largest_mean_ce_difference": 0.004851457504738477,
+    "largest_token_nll_difference": 0.24497509002685547,
+    "margin_bar_nats": 1.0,
+    "mean_ce_bar_nats": 0.05,
+    "passed": true
+  },
+  "smoke_gate": {
+    "failures": [],
+    "largest_recorded_margin_of_a_changed_action": 0.125,
+    "largest_token_nll_difference": 0.24497509002685547,
+    "margin_bar_nats": 0.75,
+    "passed": true,
+    "token_nll_bar_nats": 0.5
+  },
+  "test_mode": false,
+  "test_overrides": "",
+  "utilisation_lines": {
+    "basis": "gl-node:nyu-docs",
+    "cancel": 50.0,
+    "margin": 10.0,
+    "required_phase_2": 60.0,
+    "warn": 70.0
+  },
+  "verdict": "SMOKE PASS",
+  "workers_per_gpu": 2
+}

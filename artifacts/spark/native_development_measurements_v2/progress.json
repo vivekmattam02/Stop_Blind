@@ -1,0 +1,9 @@
+{
+  "calibration_seconds": 3.53628181386739,
+  "checkpoint_seconds": 0.5046315840445459,
+  "completed_updates": 8,
+  "recorded_at_utc": "2026-08-25T04:49:06.615597+00:00",
+  "status": "passed",
+  "timed_update_p50_seconds": 10.227297840407118,
+  "timed_update_p95_nearest_rank_seconds": 10.594828923931345
+}

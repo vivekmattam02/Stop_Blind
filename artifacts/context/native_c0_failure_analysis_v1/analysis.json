@@ -1,0 +1,765 @@
+{
+  "balanced_diagnostic": {
+    "confusion_matrix_by_target": {
+      "MOVE_FORWARD": {
+        "MOVE_FORWARD": 58,
+        "STOP": 0,
+        "TURN_LEFT": 2,
+        "TURN_RIGHT": 4
+      },
+      "STOP": {
+        "MOVE_FORWARD": 64,
+        "STOP": 0,
+        "TURN_LEFT": 0,
+        "TURN_RIGHT": 0
+      },
+      "TURN_LEFT": {
+        "MOVE_FORWARD": 48,
+        "STOP": 0,
+        "TURN_LEFT": 16,
+        "TURN_RIGHT": 0
+      },
+      "TURN_RIGHT": {
+        "MOVE_FORWARD": 54,
+        "STOP": 0,
+        "TURN_LEFT": 0,
+        "TURN_RIGHT": 10
+      }
+    },
+    "decision_count": 256,
+    "descriptive_accuracy": 0.328125,
+    "distinct_predicted_action_count": 3,
+    "macro_recall_over_present_actions": 0.328125,
+    "mean_restricted_action_ce": 1.7671635118916424,
+    "mean_restricted_entropy_nats": 0.753253404407818,
+    "mean_target_restricted_probability": 0.32329736745668924,
+    "mean_top_two_margin_nats": 1.6118164058716502,
+    "per_target_action": {
+      "MOVE_FORWARD": {
+        "correct": 58,
+        "count": 64,
+        "mean_predicted_distribution": {
+          "MOVE_FORWARD": 0.7219593413174152,
+          "STOP": 0.018076111078698887,
+          "TURN_LEFT": 0.1156526276608929,
+          "TURN_RIGHT": 0.1443119191826554
+        },
+        "mean_restricted_action_ce": 0.35574469808091036,
+        "mean_target_restricted_probability": 0.7219593413174152,
+        "median_restricted_action_ce": 0.2688522153251984,
+        "recall": 0.90625
+      },
+      "STOP": {
+        "correct": 0,
+        "count": 64,
+        "mean_predicted_distribution": {
+          "MOVE_FORWARD": 0.750069179572165,
+          "STOP": 0.048660732034477405,
+          "TURN_LEFT": 0.1033106978284195,
+          "TURN_RIGHT": 0.09795938921160996
+        },
+        "mean_restricted_action_ce": 3.3029900091941244,
+        "mean_target_restricted_probability": 0.048660732034477405,
+        "median_restricted_action_ce": 3.370597313052154,
+        "recall": 0.0
+      },
+      "TURN_LEFT": {
+        "correct": 16,
+        "count": 64,
+        "mean_predicted_distribution": {
+          "MOVE_FORWARD": 0.6083037990611047,
+          "STOP": 0.017480565260484582,
+          "TURN_LEFT": 0.2927155114011839,
+          "TURN_RIGHT": 0.08150012599435286
+        },
+        "mean_restricted_action_ce": 1.584590552563339,
+        "mean_target_restricted_probability": 0.2927155114011839,
+        "median_restricted_action_ce": 1.930505647918471,
+        "recall": 0.25
+      },
+      "TURN_RIGHT": {
+        "correct": 10,
+        "count": 64,
+        "mean_predicted_distribution": {
+          "MOVE_FORWARD": 0.6780623092781752,
+          "STOP": 0.014729134261870058,
+          "TURN_LEFT": 0.07735467361999326,
+          "TURN_RIGHT": 0.22985388507368043
+        },
+        "mean_restricted_action_ce": 1.8253287877281978,
+        "mean_target_restricted_probability": 0.22985388507368043,
+        "median_restricted_action_ce": 2.085682780204711,
+        "recall": 0.15625
+      }
+    },
+    "predicted_action_histogram": {
+      "MOVE_FORWARD": 224,
+      "STOP": 0,
+      "TURN_LEFT": 18,
+      "TURN_RIGHT": 14
+    },
+    "scene_count": 53,
+    "target_action_histogram": {
+      "MOVE_FORWARD": 64,
+      "STOP": 64,
+      "TURN_LEFT": 64,
+      "TURN_RIGHT": 64
+    }
+  },
+  "confirmed_descriptive_observations": {
+    "balanced_gate_passed": false,
+    "balanced_mean_ce_above_uniform_reference": true,
+    "balanced_missing_predicted_stop": true,
+    "balanced_stop_never_argmax": true,
+    "natural_gate_passed": true,
+    "stop_non_mute_gate_passed": false
+  },
+  "evidence_boundary": {
+    "established_if_verified": "Per-action confusion, recall, probability, CE, prediction-support, and training-distribution summaries reconstruct from the already-opened verified C0 result.",
+    "not_established": "A causal mechanism for the failure, action-prior collapse, closed-loop navigation competence, superiority of a balancing intervention, or any C1-C4 claim."
+  },
+  "gate": "native_qwen_c0_failure_analysis_v1",
+  "input_evidence": {
+    "development_run_id": "native_c0_development_v1",
+    "independent_verification_status": "passed",
+    "manifest_sha256": "726952465b43827384ecb6bc20a41d867fbb83a3027c4cae30ebe00ccb38ab7b",
+    "result_sha256": "88bbd74f41eb6bb9d673e12fb3aa094accc5b4a93e5e6c0fe81c8352a3339c61",
+    "scientific_result": "not_demonstrated",
+    "updates_sha256": "366fa5f5e0cfc75d225621c8d1fb4f2350b58c0c014349ea97ac149fe71e6de8",
+    "verification_sha256": "4f9116045645ecfbd84638f09d3e94b0db50b77d42d7a3cafdba6bbcfae230c8"
+  },
+  "primary_natural": {
+    "confusion_matrix_by_target": {
+      "MOVE_FORWARD": {
+        "MOVE_FORWARD": 409,
+        "STOP": 0,
+        "TURN_LEFT": 16,
+        "TURN_RIGHT": 15
+      },
+      "STOP": {
+        "MOVE_FORWARD": 10,
+        "STOP": 0,
+        "TURN_LEFT": 0,
+        "TURN_RIGHT": 0
+      },
+      "TURN_LEFT": {
+        "MOVE_FORWARD": 63,
+        "STOP": 0,
+        "TURN_LEFT": 27,
+        "TURN_RIGHT": 0
+      },
+      "TURN_RIGHT": {
+        "MOVE_FORWARD": 77,
+        "STOP": 0,
+        "TURN_LEFT": 0,
+        "TURN_RIGHT": 23
+      }
+    },
+    "decision_count": 640,
+    "descriptive_accuracy": 0.7171875,
+    "distinct_predicted_action_count": 3,
+    "macro_recall_over_present_actions": 0.3648863636363636,
+    "mean_restricted_action_ce": 0.7445255718313809,
+    "mean_restricted_entropy_nats": 0.7368594309167051,
+    "mean_target_restricted_probability": 0.5916207243513781,
+    "mean_top_two_margin_nats": 1.5970703134080395,
+    "per_target_action": {
+      "MOVE_FORWARD": {
+        "correct": 409,
+        "count": 440,
+        "mean_predicted_distribution": {
+          "MOVE_FORWARD": 0.7321719560433518,
+          "STOP": 0.020839378559718503,
+          "TURN_LEFT": 0.12322470735631544,
+          "TURN_RIGHT": 0.12376395202538168
+        },
+        "mean_restricted_action_ce": 0.3354188920600858,
+        "mean_target_restricted_probability": 0.7321719560433518,
+        "median_restricted_action_ce": 0.26922974970141944,
+        "recall": 0.9295454545454546
+      },
+      "STOP": {
+        "correct": 0,
+        "count": 10,
+        "mean_predicted_distribution": {
+          "MOVE_FORWARD": 0.7414418399333954,
+          "STOP": 0.03430816568434238,
+          "TURN_LEFT": 0.11931395456194878,
+          "TURN_RIGHT": 0.10493601486086845
+        },
+        "mean_restricted_action_ce": 3.475688212699636,
+        "mean_target_restricted_probability": 0.03430816568434238,
+        "median_restricted_action_ce": 3.455028341906247,
+        "recall": 0.0
+      },
+      "TURN_LEFT": {
+        "correct": 27,
+        "count": 90,
+        "mean_predicted_distribution": {
+          "MOVE_FORWARD": 0.5947838664054871,
+          "STOP": 0.017121364313384724,
+          "TURN_LEFT": 0.3169371949715747,
+          "TURN_RIGHT": 0.07115756930886871
+        },
+        "mean_restricted_action_ce": 1.5135774547773624,
+        "mean_target_restricted_probability": 0.3169371949715747,
+        "median_restricted_action_ce": 1.807837596372727,
+        "recall": 0.3
+      },
+      "TURN_RIGHT": {
+        "correct": 23,
+        "count": 100,
+        "mean_predicted_distribution": {
+          "MOVE_FORWARD": 0.6339848920702934,
+          "STOP": 0.01671084077679552,
+          "TURN_LEFT": 0.07316253193188459,
+          "TURN_RIGHT": 0.27614173721522095
+        },
+        "mean_restricted_action_ce": 1.5793320040868688,
+        "mean_target_restricted_probability": 0.27614173721522095,
+        "median_restricted_action_ce": 1.7624664371977428,
+        "recall": 0.23
+      }
+    },
+    "predicted_action_histogram": {
+      "MOVE_FORWARD": 559,
+      "STOP": 0,
+      "TURN_LEFT": 43,
+      "TURN_RIGHT": 38
+    },
+    "scene_count": 58,
+    "target_action_histogram": {
+      "MOVE_FORWARD": 440,
+      "STOP": 10,
+      "TURN_LEFT": 90,
+      "TURN_RIGHT": 100
+    }
+  },
+  "recorded_at_utc": "2026-08-25T14:21:21.751331+00:00",
+  "schema_version": 1,
+  "selected_checkpoint_mirror": {
+    "bytes": 368423613,
+    "path": "/Users/vivekmattam/Desktop/GI/GridNav/checkpoints/native_c0_development_v1/step_0160.pt",
+    "relative_path": "step_0160.pt",
+    "sha256": "a4a58cd34409e24c805c847249cd921da17d11c2bef96e37a20bf7c50a86987d",
+    "source_record_relative_path": "step_0160.pt",
+    "update_step": 160
+  },
+  "selected_update": 160,
+  "selection_calibration_trace": [
+    {
+      "descriptive_accuracy": 0.44921875,
+      "macro_recall_over_present_actions": 0.3284566184246744,
+      "mean_restricted_action_ce": 5.4871982944148145,
+      "per_target_action": {
+        "MOVE_FORWARD": {
+          "correct": 97,
+          "count": 173,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.5524238226516832,
+            "STOP": 0.11566196807062225,
+            "TURN_LEFT": 0.25048074068525233,
+            "TURN_RIGHT": 0.08143347333820146
+          },
+          "mean_restricted_action_ce": 4.787211372822541,
+          "mean_target_restricted_probability": 0.5524238226516832,
+          "median_restricted_action_ce": 0.12696163267807298,
+          "recall": 0.5606936416184971
+        },
+        "STOP": {
+          "correct": 1,
+          "count": 3,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.33818598588307697,
+            "STOP": 0.31307880612592953,
+            "TURN_LEFT": 0.3483675323551931,
+            "TURN_RIGHT": 0.0003677175741358951
+          },
+          "mean_restricted_action_ce": 8.021472279493596,
+          "mean_target_restricted_probability": 0.31307880612592953,
+          "median_restricted_action_ce": 9.75165853217755,
+          "recall": 0.3333333333333333
+        },
+        "TURN_LEFT": {
+          "correct": 11,
+          "count": 42,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.5307970693126757,
+            "STOP": 0.08880400592337334,
+            "TURN_LEFT": 0.29363096714963766,
+            "TURN_RIGHT": 0.08676795535079374
+          },
+          "mean_restricted_action_ce": 5.746734920604743,
+          "mean_target_restricted_probability": 0.29363096714963766,
+          "median_restricted_action_ce": 4.14459048026299,
+          "recall": 0.2619047619047619
+        },
+        "TURN_RIGHT": {
+          "correct": 6,
+          "count": 38,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.48789435955236726,
+            "STOP": 0.08025200600474303,
+            "TURN_LEFT": 0.28837666506855486,
+            "TURN_RIGHT": 0.14347696701523668
+          },
+          "mean_restricted_action_ce": 8.187050325474033,
+          "mean_target_restricted_probability": 0.14347696701523668,
+          "median_restricted_action_ce": 8.770108446631403,
+          "recall": 0.15789473684210525
+        }
+      },
+      "predicted_action_histogram": {
+        "MOVE_FORWARD": 140,
+        "STOP": 28,
+        "TURN_LEFT": 65,
+        "TURN_RIGHT": 23
+      },
+      "update_step": 0
+    },
+    {
+      "descriptive_accuracy": 0.71484375,
+      "macro_recall_over_present_actions": 0.36148898257203704,
+      "mean_restricted_action_ce": 0.7795032584610804,
+      "per_target_action": {
+        "MOVE_FORWARD": {
+          "correct": 163,
+          "count": 173,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7498549967142888,
+            "STOP": 0.012234430488285129,
+            "TURN_LEFT": 0.12560215157408244,
+            "TURN_RIGHT": 0.11230841054005085
+          },
+          "mean_restricted_action_ce": 0.3175392382488159,
+          "mean_target_restricted_probability": 0.7498549967142888,
+          "median_restricted_action_ce": 0.2261435378049478,
+          "recall": 0.9421965317919075
+        },
+        "STOP": {
+          "correct": 0,
+          "count": 3,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7774712443351746,
+            "STOP": 0.010677544244875511,
+            "TURN_LEFT": 0.09550619125366211,
+            "TURN_RIGHT": 0.11634501690665881
+          },
+          "mean_restricted_action_ce": 4.591021511312501,
+          "mean_target_restricted_probability": 0.010677544244875511,
+          "median_restricted_action_ce": 4.711832649496863,
+          "recall": 0.0
+        },
+        "TURN_LEFT": {
+          "correct": 9,
+          "count": 42,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6269703989937192,
+            "STOP": 0.010943409027753486,
+            "TURN_LEFT": 0.25576239859773997,
+            "TURN_RIGHT": 0.10632378279808022
+          },
+          "mean_restricted_action_ce": 1.6366670399774366,
+          "mean_target_restricted_probability": 0.25576239859773997,
+          "median_restricted_action_ce": 1.824074091522523,
+          "recall": 0.21428571428571427
+        },
+        "TURN_RIGHT": {
+          "correct": 11,
+          "count": 38,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6007772660569141,
+            "STOP": 0.011017582979739496,
+            "TURN_LEFT": 0.10510928526912865,
+            "TURN_RIGHT": 0.2830958737942733
+          },
+          "mean_restricted_action_ce": 1.634354361473727,
+          "mean_target_restricted_probability": 0.2830958737942733,
+          "median_restricted_action_ce": 1.7243091593442665,
+          "recall": 0.2894736842105263
+        }
+      },
+      "predicted_action_histogram": {
+        "MOVE_FORWARD": 226,
+        "STOP": 0,
+        "TURN_LEFT": 16,
+        "TURN_RIGHT": 14
+      },
+      "update_step": 32
+    },
+    {
+      "descriptive_accuracy": 0.71484375,
+      "macro_recall_over_present_actions": 0.36536971040317556,
+      "mean_restricted_action_ce": 0.8138722522709736,
+      "per_target_action": {
+        "MOVE_FORWARD": {
+          "correct": 162,
+          "count": 173,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6506318508545098,
+            "STOP": 0.07273696515859895,
+            "TURN_LEFT": 0.1439867688913566,
+            "TURN_RIGHT": 0.13264441466486523
+          },
+          "mean_restricted_action_ce": 0.45285069060395294,
+          "mean_target_restricted_probability": 0.6506318508545098,
+          "median_restricted_action_ce": 0.3820510849567245,
+          "recall": 0.9364161849710982
+        },
+        "STOP": {
+          "correct": 0,
+          "count": 3,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6838963031768799,
+            "STOP": 0.0759419600168864,
+            "TURN_LEFT": 0.10965671141942342,
+            "TURN_RIGHT": 0.13050503532091776
+          },
+          "mean_restricted_action_ce": 2.5900683531923643,
+          "mean_target_restricted_probability": 0.0759419600168864,
+          "median_restricted_action_ce": 2.4941895145996074,
+          "recall": 0.0
+        },
+        "TURN_LEFT": {
+          "correct": 11,
+          "count": 42,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.5593332974683671,
+            "STOP": 0.06776228374136346,
+            "TURN_LEFT": 0.269426762880314,
+            "TURN_RIGHT": 0.1034776551560277
+          },
+          "mean_restricted_action_ce": 1.5404559236639015,
+          "mean_target_restricted_probability": 0.269426762880314,
+          "median_restricted_action_ce": 1.7223220847690057,
+          "recall": 0.2619047619047619
+        },
+        "TURN_RIGHT": {
+          "correct": 10,
+          "count": 38,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.5426682159304619,
+            "STOP": 0.06574951131877146,
+            "TURN_LEFT": 0.10691758245229721,
+            "TURN_RIGHT": 0.2846646950040993
+          },
+          "mean_restricted_action_ce": 1.5141782435111681,
+          "mean_target_restricted_probability": 0.2846646950040993,
+          "median_restricted_action_ce": 1.6812746238476197,
+          "recall": 0.2631578947368421
+        }
+      },
+      "predicted_action_histogram": {
+        "MOVE_FORWARD": 224,
+        "STOP": 0,
+        "TURN_LEFT": 19,
+        "TURN_RIGHT": 13
+      },
+      "update_step": 64
+    },
+    {
+      "descriptive_accuracy": 0.703125,
+      "macro_recall_over_present_actions": 0.3462594347139525,
+      "mean_restricted_action_ce": 0.7732497459814565,
+      "per_target_action": {
+        "MOVE_FORWARD": {
+          "correct": 162,
+          "count": 173,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7488476280876667,
+            "STOP": 0.012769189030685694,
+            "TURN_LEFT": 0.1360305885359042,
+            "TURN_RIGHT": 0.10235258432998823
+          },
+          "mean_restricted_action_ce": 0.3073034676596027,
+          "mean_target_restricted_probability": 0.7488476280876667,
+          "median_restricted_action_ce": 0.24989989552538272,
+          "recall": 0.9364161849710982
+        },
+        "STOP": {
+          "correct": 0,
+          "count": 3,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.77483598391215,
+            "STOP": 0.013719613974293074,
+            "TURN_LEFT": 0.10572222868601482,
+            "TURN_RIGHT": 0.10572222868601482
+          },
+          "mean_restricted_action_ce": 4.339383949093047,
+          "mean_target_restricted_probability": 0.013719613974293074,
+          "median_restricted_action_ce": 4.352159005382979,
+          "recall": 0.0
+        },
+        "TURN_LEFT": {
+          "correct": 10,
+          "count": 42,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6500353231316521,
+            "STOP": 0.011478892948833249,
+            "TURN_LEFT": 0.26923285194096114,
+            "TURN_RIGHT": 0.06925292579191071
+          },
+          "mean_restricted_action_ce": 1.581508651153678,
+          "mean_target_restricted_probability": 0.26923285194096114,
+          "median_restricted_action_ce": 1.79947380022222,
+          "recall": 0.23809523809523808
+        },
+        "TURN_RIGHT": {
+          "correct": 8,
+          "count": 38,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6556262201384494,
+            "STOP": 0.011705062842290653,
+            "TURN_LEFT": 0.09037017096814356,
+            "TURN_RIGHT": 0.24229853845348484
+          },
+          "mean_restricted_action_ce": 1.7196557860633699,
+          "mean_target_restricted_probability": 0.24229853845348484,
+          "median_restricted_action_ce": 1.9223241642984,
+          "recall": 0.21052631578947367
+        }
+      },
+      "predicted_action_histogram": {
+        "MOVE_FORWARD": 227,
+        "STOP": 0,
+        "TURN_LEFT": 18,
+        "TURN_RIGHT": 11
+      },
+      "update_step": 96
+    },
+    {
+      "descriptive_accuracy": 0.703125,
+      "macro_recall_over_present_actions": 0.38031676010836346,
+      "mean_restricted_action_ce": 0.7572806992795822,
+      "per_target_action": {
+        "MOVE_FORWARD": {
+          "correct": 155,
+          "count": 173,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7197812738790678,
+            "STOP": 0.016269271805710188,
+            "TURN_LEFT": 0.16435124475315127,
+            "TURN_RIGHT": 0.09959820394183515
+          },
+          "mean_restricted_action_ce": 0.3711605274779227,
+          "mean_target_restricted_probability": 0.7197812738790678,
+          "median_restricted_action_ce": 0.25738439626842013,
+          "recall": 0.8959537572254336
+        },
+        "STOP": {
+          "correct": 0,
+          "count": 3,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7639625072479248,
+            "STOP": 0.020795715662340324,
+            "TURN_LEFT": 0.1132881020506223,
+            "TURN_RIGHT": 0.10195366541544597
+          },
+          "mean_restricted_action_ce": 3.9799468524559827,
+          "mean_target_restricted_probability": 0.020795715662340324,
+          "median_restricted_action_ce": 4.118355970264331,
+          "recall": 0.0
+        },
+        "TURN_LEFT": {
+          "correct": 13,
+          "count": 42,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.5734050795435905,
+            "STOP": 0.014206573101026672,
+            "TURN_LEFT": 0.3611155776750474,
+            "TURN_RIGHT": 0.05127276737420332
+          },
+          "mean_restricted_action_ce": 1.3198122887406265,
+          "mean_target_restricted_probability": 0.3611155776750474,
+          "median_restricted_action_ce": 1.4533295788253855,
+          "recall": 0.30952380952380953
+        },
+        "TURN_RIGHT": {
+          "correct": 12,
+          "count": 38,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.58735147157782,
+            "STOP": 0.013599966285064033,
+            "TURN_LEFT": 0.09215329121798277,
+            "TURN_RIGHT": 0.30689528015883344
+          },
+          "mean_restricted_action_ce": 1.638977133616267,
+          "mean_target_restricted_probability": 0.30689528015883344,
+          "median_restricted_action_ce": 1.712180880052566,
+          "recall": 0.3157894736842105
+        }
+      },
+      "predicted_action_histogram": {
+        "MOVE_FORWARD": 213,
+        "STOP": 0,
+        "TURN_LEFT": 25,
+        "TURN_RIGHT": 18
+      },
+      "update_step": 128
+    },
+    {
+      "descriptive_accuracy": 0.7109375,
+      "macro_recall_over_present_actions": 0.36392462369797324,
+      "mean_restricted_action_ce": 0.734222188973554,
+      "per_target_action": {
+        "MOVE_FORWARD": {
+          "correct": 161,
+          "count": 173,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7359164582856129,
+            "STOP": 0.017492390691297332,
+            "TURN_LEFT": 0.13642446022760663,
+            "TURN_RIGHT": 0.11016668486435806
+          },
+          "mean_restricted_action_ce": 0.3348706137682685,
+          "mean_target_restricted_probability": 0.7359164582856129,
+          "median_restricted_action_ce": 0.2601700040401298,
+          "recall": 0.930635838150289
+        },
+        "STOP": {
+          "correct": 0,
+          "count": 3,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7624334891637167,
+            "STOP": 0.02509905956685543,
+            "TURN_LEFT": 0.10800155748923619,
+            "TURN_RIGHT": 0.10446588943401973
+          },
+          "mean_restricted_action_ce": 3.90039267857736,
+          "mean_target_restricted_probability": 0.02509905956685543,
+          "median_restricted_action_ce": 4.118355970264331,
+          "recall": 0.0
+        },
+        "TURN_LEFT": {
+          "correct": 11,
+          "count": 42,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6062869266385124,
+            "STOP": 0.01632430514187685,
+            "TURN_LEFT": 0.31500041236480075,
+            "TURN_RIGHT": 0.0623883592862902
+          },
+          "mean_restricted_action_ce": 1.4667339978111071,
+          "mean_target_restricted_probability": 0.31500041236480075,
+          "median_restricted_action_ce": 1.6921512624028718,
+          "recall": 0.2619047619047619
+        },
+        "TURN_RIGHT": {
+          "correct": 10,
+          "count": 38,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6087759364592401,
+            "STOP": 0.015682591140686878,
+            "TURN_LEFT": 0.06316241244540403,
+            "TURN_RIGHT": 0.31237905992096976
+          },
+          "mean_restricted_action_ce": 1.4927436381979142,
+          "mean_target_restricted_probability": 0.31237905992096976,
+          "median_restricted_action_ce": 1.5905353760303234,
+          "recall": 0.2631578947368421
+        }
+      },
+      "predicted_action_histogram": {
+        "MOVE_FORWARD": 223,
+        "STOP": 0,
+        "TURN_LEFT": 19,
+        "TURN_RIGHT": 14
+      },
+      "update_step": 160
+    },
+    {
+      "descriptive_accuracy": 0.7109375,
+      "macro_recall_over_present_actions": 0.36392462369797324,
+      "mean_restricted_action_ce": 0.7410715471912778,
+      "per_target_action": {
+        "MOVE_FORWARD": {
+          "correct": 161,
+          "count": 173,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7567596304623377,
+            "STOP": 0.016029150465454885,
+            "TURN_LEFT": 0.12769613939073649,
+            "TURN_RIGHT": 0.09951507768693321
+          },
+          "mean_restricted_action_ce": 0.31486079246634846,
+          "mean_target_restricted_probability": 0.7567596304623377,
+          "median_restricted_action_ce": 0.2271347199396672,
+          "recall": 0.930635838150289
+        },
+        "STOP": {
+          "correct": 0,
+          "count": 3,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.7668946385383606,
+            "STOP": 0.033228508507212005,
+            "TURN_LEFT": 0.09239950279394786,
+            "TURN_RIGHT": 0.10747732470432918
+          },
+          "mean_restricted_action_ce": 3.8556364773484852,
+          "mean_target_restricted_probability": 0.033228508507212005,
+          "median_restricted_action_ce": 4.488254817275105,
+          "recall": 0.0
+        },
+        "TURN_LEFT": {
+          "correct": 11,
+          "count": 42,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6057100583400045,
+            "STOP": 0.016559719399083406,
+            "TURN_LEFT": 0.32064779058453585,
+            "TURN_RIGHT": 0.05708243308444729
+          },
+          "mean_restricted_action_ce": 1.543612293453337,
+          "mean_target_restricted_probability": 0.32064779058453585,
+          "median_restricted_action_ce": 1.8303464748802525,
+          "recall": 0.2619047619047619
+        },
+        "TURN_RIGHT": {
+          "correct": 10,
+          "count": 38,
+          "mean_predicted_distribution": {
+            "MOVE_FORWARD": 0.6153749811806177,
+            "STOP": 0.013698498156277071,
+            "TURN_LEFT": 0.0664102156511753,
+            "TURN_RIGHT": 0.3045163092840659
+          },
+          "mean_restricted_action_ce": 1.5485466638737702,
+          "mean_target_restricted_probability": 0.3045163092840659,
+          "median_restricted_action_ce": 1.779415340512629,
+          "recall": 0.2631578947368421
+        }
+      },
+      "predicted_action_histogram": {
+        "MOVE_FORWARD": 223,
+        "STOP": 0,
+        "TURN_LEFT": 19,
+        "TURN_RIGHT": 14
+      },
+      "update_step": 192
+    }
+  ],
+  "source_locks": {
+    "scripts/analyze_native_c0_failure.py": "cbd3fcdc7714988ec42d132e3e1ee98cdb965e34a813f7bae07ca1fd8369ff73",
+    "scripts/check_native_c0_failure_analysis.py": "8bc6baf38877cf8ffb457fc4054e38cb56ec8af0845e329de2e2abd1373ad22c",
+    "src/spatialvlm/training/native_c0_failure_analysis.py": "3e7e8a61156e62937125952fbdf8a83f200b9e2fdc1586ed424b4c2f3fd85e1e",
+    "tests/test_native_c0_failure_analysis.py": "b91f0c397e500ac054807be668564ddd0a918c76408cdfe3c0f1beb59a8e3e12"
+  },
+  "status": "passed",
+  "training_inventory": {
+    "decision_count": 3072,
+    "inverse_frequency_weights_normalized_to_expected_one": {
+      "MOVE_FORWARD": 0.3794466403162055,
+      "STOP": 10.816901408450704,
+      "TURN_LEFT": 1.4301675977653632,
+      "TURN_RIGHT": 1.7454545454545454
+    },
+    "physical_trajectory_count": 2451,
+    "target_action_histogram": {
+      "MOVE_FORWARD": 2024,
+      "STOP": 71,
+      "TURN_LEFT": 537,
+      "TURN_RIGHT": 440
+    },
+    "weighting_status": "descriptive_candidate_only_not_an_authorized_intervention"
+  }
+}

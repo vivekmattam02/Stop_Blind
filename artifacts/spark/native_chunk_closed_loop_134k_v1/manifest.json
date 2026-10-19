@@ -1,0 +1,16 @@
+{
+  "run_id": "native_chunk_closed_loop_v1",
+  "status_boundary": "exploratory_capability_pilot_not_a_paper_artifact",
+  "checkpoint": "/w/artifacts/spark/native_chunk_scale_134k_v1/best.pt",
+  "checkpoint_update": 3000,
+  "checkpoint_selection_ce": 0.5954648949826757,
+  "chunk_size": 4,
+  "step_cap": 500,
+  "episode_count": 61,
+  "model_id": "Qwen/Qwen3-VL-8B-Instruct",
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "scorer_method": "autoregressive_kv_cached_restricted_chunk_decode_v1",
+  "split": "val_seen",
+  "val_unseen_referenced": false,
+  "started_unix": 1788132719.4940746
+}

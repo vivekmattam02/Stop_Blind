@@ -1,0 +1,277 @@
+\begin{thebibliography}{35}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agarwal et~al.(2021)Agarwal, Schwarzer, Castro, Courville, and
+  Bellemare]{agarwal2021rliable}
+Rishabh Agarwal, Max Schwarzer, Pablo~Samuel Castro, Aaron Courville, and
+  Marc~G. Bellemare.
+\newblock Deep reinforcement learning at the edge of the statistical precipice.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2021.
+\newblock arXiv:2108.13264.
+
+\bibitem[Anderson et~al.(2018)Anderson, Wu, Teney, Bruce, Johnson,
+  S{\"u}nderhauf, Reid, Gould, and van~den Hengel]{anderson2018r2r}
+Peter Anderson, Qi~Wu, Damien Teney, Jake Bruce, Mark Johnson, Niko
+  S{\"u}nderhauf, Ian Reid, Stephen Gould, and Anton van~den Hengel.
+\newblock Vision-and-language navigation: Interpreting visually-grounded
+  navigation instructions in real environments.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, 2018.
+
+\bibitem[Bai et~al.(2025)Bai, Cai, Chen, et~al.]{bai2025qwen3vl}
+Shuai Bai, Yuxuan Cai, Ruizhe Chen, et~al.
+\newblock {Qwen3-VL} technical report.
+\newblock \emph{arXiv preprint arXiv:2511.21631}, 2025.
+
+\bibitem[Chang et~al.(2017)Chang, Dai, Funkhouser, Halber, Nie{\ss}ner, Savva,
+  Song, Zeng, and Zhang]{chang2017matterport3d}
+Angel Chang, Angela Dai, Thomas Funkhouser, Maciej Halber, Matthias
+  Nie{\ss}ner, Manolis Savva, Shuran Song, Andy Zeng, and Yinda Zhang.
+\newblock {Matterport3D}: Learning from {RGB-D} data in indoor environments.
+\newblock In \emph{International Conference on 3D Vision (3DV)}, 2017.
+
+\bibitem[Cheng et~al.(2025)Cheng, Ji, Yang, Gongye, Zou, Kautz, B{\i}y{\i}k,
+  Yin, Liu, and Wang]{cheng2025navila}
+An-Chieh Cheng, Yandong Ji, Zhaojing Yang, Zaitian Gongye, Xueyan Zou, Jan
+  Kautz, Erdem B{\i}y{\i}k, Hongxu Yin, Sifei Liu, and Xiaolong Wang.
+\newblock {NaVILA}: Legged robot vision-language-action model for navigation.
+\newblock In \emph{Robotics: Science and Systems (RSS)}, 2025.
+\newblock arXiv:2412.04453.
+
+\bibitem[Codevilla et~al.(2018)Codevilla, L{\'o}pez, Koltun, and
+  Dosovitskiy]{codevilla2018offline}
+Felipe Codevilla, Antonio~M. L{\'o}pez, Vladlen Koltun, and Alexey Dosovitskiy.
+\newblock On offline evaluation of vision-based driving models.
+\newblock In \emph{European Conference on Computer Vision (ECCV)}, 2018.
+\newblock arXiv:1809.04843.
+
+\bibitem[Codevilla et~al.(2019)Codevilla, Santana, L{\'o}pez, and
+  Gaidon]{codevilla2019exploring}
+Felipe Codevilla, Eder Santana, Antonio~M. L{\'o}pez, and Adrien Gaidon.
+\newblock Exploring the limitations of behavior cloning for autonomous driving.
+\newblock In \emph{IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, 2019.
+\newblock arXiv:1904.08980.
+
+\bibitem[Cui et~al.(2019)Cui, Jia, Lin, Song, and
+  Belongie]{cui2019classbalanced}
+Yin Cui, Menglin Jia, Tsung-Yi Lin, Yang Song, and Serge Belongie.
+\newblock Class-balanced loss based on effective number of samples.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, 2019.
+
+\bibitem[Dang et~al.(2026)Dang, Guo, Hou, Leng, Li, Li,
+  et~al.]{dang2026rynnbrain}
+Ronghao Dang, Jiayan Guo, Bohan Hou, Sicong Leng, Kehan Li, Xin Li, et~al.
+\newblock {RynnBrain}: Open embodied foundation models.
+\newblock \emph{arXiv preprint arXiv:2602.14979}, 2026.
+
+\bibitem[Dauner et~al.(2023)Dauner, Hallgarten, Geiger, and
+  Chitta]{dauner2023parting}
+Daniel Dauner, Marcel Hallgarten, Andreas Geiger, and Kashyap Chitta.
+\newblock Parting with misconceptions about learning-based vehicle motion
+  planning.
+\newblock In \emph{Conference on Robot Learning (CoRL)}, 2023.
+\newblock arXiv:2306.07962.
+
+\bibitem[de~Haan et~al.(2019)de~Haan, Jayaraman, and Levine]{dehaan2019causal}
+Pim de~Haan, Dinesh Jayaraman, and Sergey Levine.
+\newblock Causal confusion in imitation learning.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2019.
+\newblock arXiv:1905.11979.
+
+\bibitem[Foster et~al.(2024)Foster, Block, and Misra]{foster2024behavior}
+Dylan~J. Foster, Adam Block, and Dipendra Misra.
+\newblock Is behavior cloning all you need? {U}nderstanding horizon in
+  imitation learning.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2024.
+\newblock arXiv:2407.15007.
+
+\bibitem[Hao et~al.(2023)Hao, Wang, Cao, Wang, Cui, and Sadigh]{hao2023masked}
+Yilun Hao, Ruinan Wang, Zhangjie Cao, Zihan Wang, Yuchen Cui, and Dorsa Sadigh.
+\newblock Masked imitation learning: Discovering environment-invariant
+  modalities in multimodal demonstrations.
+\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and
+  Systems (IROS)}, 2023.
+\newblock arXiv:2209.07682.
+
+\bibitem[Henderson et~al.(2018)Henderson, Islam, Bachman, Pineau, Precup, and
+  Meger]{henderson2018matters}
+Peter Henderson, Riashat Islam, Philip Bachman, Joelle Pineau, Doina Precup,
+  and David Meger.
+\newblock Deep reinforcement learning that matters.
+\newblock In \emph{AAAI Conference on Artificial Intelligence}, 2018.
+\newblock arXiv:1709.06560.
+
+\bibitem[Hommel and Krummenauer(1998)]{hommel1998improvements}
+Gerhard Hommel and Frank Krummenauer.
+\newblock Improvements and modifications of {T}arone's multiple test procedure
+  for discrete data.
+\newblock \emph{Biometrics}, 54\penalty0 (2):\penalty0 673--681, 1998.
+
+\bibitem[Hong et~al.(2022)Hong, Wang, Wu, and Gould]{hong2022bridging}
+Yicong Hong, Zun Wang, Qi~Wu, and Stephen Gould.
+\newblock Bridging the gap between learning in discrete and continuous
+  environments for vision-and-language navigation.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 15418--15428, 2022.
+\newblock arXiv:2203.02764.
+
+\bibitem[Hu et~al.(2022)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{hu2022lora}
+Edward~J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean
+  Wang, Lu~Wang, and Weizhu Chen.
+\newblock {LoRA}: Low-rank adaptation of large language models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2022.
+
+\bibitem[Huang et~al.(2026)Huang, Zheng, Chen, You, and Gao]{huang2026critical}
+Haoxu Huang, Tongsam Zheng, Yifan Chen, Jiacheng You, and Yang Gao.
+\newblock Critical interval {MSE}: Toward reliable offline validation for robot
+  manipulation policies.
+\newblock \emph{arXiv preprint arXiv:2606.29898}, 2026.
+
+\bibitem[{Hugging Face}(2026)]{hf2026trainer}
+{Hugging Face}.
+\newblock Trainer and {TrainingArguments}: \texttt{load\_best\_model\_at\_end}
+  and \texttt{metric\_for\_best\_model}.
+\newblock Transformers documentation,
+  \url{https://huggingface.co/docs/transformers/main_classes/trainer}, 2026.
+\newblock Accessed 30 September 2026.
+
+\bibitem[Ilharco et~al.(2019)Ilharco, Jain, Ku, Ie, and
+  Baldridge]{ilharco2019general}
+Gabriel Ilharco, Vihan Jain, Alexander Ku, Eugene Ie, and Jason Baldridge.
+\newblock General evaluation for instruction conditioned navigation using
+  dynamic time warping.
+\newblock In \emph{NeurIPS Visually Grounded Interaction and Language
+  Workshop}, 2019.
+
+\bibitem[Krantz et~al.(2020)Krantz, Wijmans, Majumdar, Batra, and
+  Lee]{krantz2020beyond}
+Jacob Krantz, Erik Wijmans, Arjun Majumdar, Dhruv Batra, and Stefan Lee.
+\newblock Beyond the nav-graph: Vision-and-language navigation in continuous
+  environments.
+\newblock In \emph{European Conference on Computer Vision (ECCV)}, 2020.
+
+\bibitem[Mandlekar et~al.(2021)Mandlekar, Xu, Wong, Nasiriany, Wang, Kulkarni,
+  Fei-Fei, Savarese, Zhu, and Mart{\'\i}n-Mart{\'\i}n]{mandlekar2021robomimic}
+Ajay Mandlekar, Danfei Xu, Josiah Wong, Soroush Nasiriany, Chen Wang, Rohun
+  Kulkarni, Li~Fei-Fei, Silvio Savarese, Yuke Zhu, and Roberto
+  Mart{\'\i}n-Mart{\'\i}n.
+\newblock What matters in learning from offline human demonstrations for robot
+  manipulation.
+\newblock In \emph{Conference on Robot Learning (CoRL)}, 2021.
+\newblock arXiv:2108.03298.
+
+\bibitem[{Matterport, Inc.}(2017)]{matterport2017tos}
+{Matterport, Inc.}
+\newblock Matterport end user license agreement for academic use of model data.
+\newblock Matterport3D terms of use,
+  \url{https://kaldir.vc.in.tum.de/matterport/MP_TOS.pdf}, 2017.
+
+\bibitem[Pushparaju et~al.(2026)Pushparaju, Mattam, and
+  Arab]{pushparaju2026selfcalibrating}
+Nishant Pushparaju, Vivek Mattam, and Aliasghar Arab.
+\newblock Self-calibrating depth fusion under time-of-flight failure for indoor
+  mobile robots.
+\newblock In \emph{2026 IEEE 22nd International Conference on Automation
+  Science and Engineering (CASE)}, pages 2091--2096, Shenyang, China, 2026.
+\newblock \doi{10.1109/CASE69030.2026.11704210}.
+
+\bibitem[Savva et~al.(2019)Savva, Kadian, Maksymets, Zhao, Wijmans, Jain,
+  Straub, Liu, Koltun, Malik, Parikh, and Batra]{savva2019habitat}
+Manolis Savva, Abhishek Kadian, Oleksandr Maksymets, Yili Zhao, Erik Wijmans,
+  Bhavana Jain, Julian Straub, Jia Liu, Vladlen Koltun, Jitendra Malik, Devi
+  Parikh, and Dhruv Batra.
+\newblock {Habitat}: A platform for embodied {AI} research.
+\newblock In \emph{IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, 2019.
+
+\bibitem[Simchowitz et~al.(2025)Simchowitz, Pfrommer, and
+  Jadbabaie]{simchowitz2025pitfalls}
+Max Simchowitz, Daniel Pfrommer, and Ali Jadbabaie.
+\newblock The pitfalls of imitation learning when actions are continuous.
+\newblock In \emph{Conference on Learning Theory (COLT)}, 2025.
+\newblock arXiv:2503.09722.
+
+\bibitem[Tamazyan et~al.(2025)Tamazyan, Nurijanyan, Martirosyan, and
+  Khachatrian]{tamazyan2025aerial}
+Hakob Tamazyan, Narek Nurijanyan, Boris Martirosyan, and Hrant Khachatrian.
+\newblock Towards fine-tuning a small vision-language model for aerial
+  navigation.
+\newblock In \emph{NeurIPS 2025 Workshop on Embodied World Models for Decision
+  Making}, 2025.
+
+\bibitem[Tarone(1990)]{tarone1990modified}
+Robert~E. Tarone.
+\newblock A modified {B}onferroni method for discrete data.
+\newblock \emph{Biometrics}, 46\penalty0 (2):\penalty0 515--522, 1990.
+
+\bibitem[Thomason et~al.(2019)Thomason, Gordon, and Bisk]{thomason2019shifting}
+Jesse Thomason, Daniel Gordon, and Yonatan Bisk.
+\newblock Shifting the baseline: Single modality performance on visual
+  navigation \& {QA}.
+\newblock In \emph{Conference of the North American Chapter of the Association
+  for Computational Linguistics (NAACL)}, 2019.
+\newblock arXiv:1811.00613.
+
+\bibitem[Wijmans et~al.(2019)Wijmans, Datta, Maksymets, Das, Gkioxari, Lee,
+  Essa, Parikh, and Batra]{wijmans2019eqa}
+Erik Wijmans, Samyak Datta, Oleksandr Maksymets, Abhishek Das, Georgia
+  Gkioxari, Stefan Lee, Irfan Essa, Devi Parikh, and Dhruv Batra.
+\newblock Embodied question answering in photorealistic environments with point
+  cloud perception.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, 2019.
+\newblock arXiv:1904.03461.
+
+\bibitem[Wu et~al.(2026)Wu, An, Liu, Zhou, Wu, Guan, Yu, Wang, and
+  Li]{softnav2026}
+Yi~Wu, Junjie An, Xiao Liu, Yiqun Zhou, Yuechen Wu, Xiaoqing Guan, Shuyang Yu,
+  You Wang, and Guang Li.
+\newblock {SoftNav}: Injecting {3D} scene tokens into {VLMs} for embodied
+  navigation.
+\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and
+  Systems (IROS)}, 2026.
+\newblock arXiv:2607.14586.
+
+\bibitem[Xiang et~al.(2020)Xiang, Wang, and Wang]{xiang2020l2stop}
+Jiannan Xiang, Xin~Eric Wang, and William~Yang Wang.
+\newblock Learning to stop: A simple yet effective approach to urban
+  vision-language navigation.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  EMNLP 2020}, pages 699--707, 2020.
+\newblock arXiv:2009.13112.
+
+\bibitem[Yang et~al.(2023)Yang, Majumdar, and Lee]{yang2023behavioral}
+Zijiao Yang, Arjun Majumdar, and Stefan Lee.
+\newblock Behavioral analysis of vision-and-language navigation agents.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, 2023.
+\newblock arXiv:2307.10790.
+
+\bibitem[Zhang et~al.(2025)]{zhang2025mapnav}
+Lingfeng Zhang et~al.
+\newblock {MapNav}: A novel memory representation via annotated semantic maps
+  for {VLM}-based vision-and-language navigation.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics (ACL)}, pages 13032--13056, 2025.
+\newblock arXiv:2502.13451.
+
+\bibitem[Zhao et~al.(2023)Zhao, Qi, and Wu]{zhao2023mindthegap}
+Chongyang Zhao, Yuankai Qi, and Qi~Wu.
+\newblock Mind the gap: Improving success rate of vision-and-language
+  navigation by revisiting oracle success routes.
+\newblock In \emph{ACM International Conference on Multimedia (ACM MM)}, pages
+  4349--4358, 2023.
+\newblock arXiv:2308.03244.
+
+\end{thebibliography}

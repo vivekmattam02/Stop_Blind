@@ -1,0 +1,88 @@
+\section{Executing every saved checkpoint}
+\label{app:sweep}
+
+\paragraph{Policies and hardware.}
+Each run saved seven checkpoints, at updates 0, 32, \dots, 192. In every update-0 file each adapter
+output matrix is exactly zero, so all six compute the frozen base model; the unweighted
+seed-20260825 copy stands for them. That leaves 37 distinct policies: the 30 trained checkpoints the
+rule did not select, the untrained model and the six selected checkpoints. All 37 ran on the same 61
+episodes, in the same order, with the same simulator settings, step cap and tie rule as the first
+closed-loop evaluation, on NVIDIA L40S GPUs (driver 610.43.02), two processes per GPU, in an Apptainer image of
+NVIDIA's PyTorch 25.10 container (torch 2.9.0a0, transformers 4.57.6, peft 0.18.1, habitat-sim 0.3.3). The
+preregistration was frozen in version control on 9 October 2026, before any unselected checkpoint
+was executed or scored. It was not filed with a public registry, and the frozen text is in the code
+release. Every result records the frozen version, the GPU's name and the container image's hash. Table~\ref{tab:sweep} gives every policy's \textsc{stop} presses and oracle successes. All
+$2{,}257$ episode runs completed, and none needed a retry after an error.
+
+\input{tables/native_c0_sweep}
+
+\paragraph{Pre-run check.}
+Before the preregistration was frozen, the weighted seed-20260825 checkpoint at update 192 was scored offline and
+executed on eight \texttt{val\_seen} episodes in neither suite (episodes 4, 5, 10, 11, 13, 14, 16
+and 17): alone, two at once on one GPU, and across a forced stop and resume. The same job replayed
+the expert and an always-forward policy on all 61 main and 61 confirmation episodes. Expert replay
+ended within $3.2\times10^{-6}$ m of the first platform's final distance on every main episode, the offline
+scores reproduced the training records within the preregistered bars, and two processes kept the
+GPU $94\%$ busy. An earlier run also passed; the freeze relies on a repeat after later code changes.
+
+\paragraph{Offline scores.}
+As the first job after the freeze, all 37 policies were scored on the 256 selection, 640 natural
+and 256 balanced decisions, before any rollout was read. Of the $14{,}848$ decisions training had
+also recorded, 90 are bit-identical; the largest change in a mean cross-entropy is $0.043$ nats,
+within the preregistered $0.05$, and no decision won by a nat or more changed its action.
+
+\paragraph{The first comparison: a better checkpoint.}
+For each of the 31 candidates the null hypothesis is that it succeeds on no more episodes than its
+comparator: its own run's selected checkpoint, and for the untrained model each of the six selected
+checkpoints, all of which it must beat. With $b$ the episodes only the candidate solves and $c$ those
+only its comparator solves, $p=P(\mathrm{Binomial}(b+c,1/2)\ge b)$, rejected under the
+alpha-consistent form of Tarone's screen \citep{tarone1990modified,hommel1998improvements}: with
+every comparator at zero successes, a candidate needs at least 5 of 61 when it is the only one that
+could reach significance. Every trained candidate has $b=c=0$, so $p=1$; the untrained model has
+$b=1$, $c=0$ against each selected checkpoint, so $p=0.5$. No candidate clears the bar, so
+none goes on to a confirmation run.
+
+\paragraph{The second comparison: choosing by balanced loss.}
+This rule takes, within each run, the checkpoint with the lowest balanced-set cross-entropy, ties to the
+earlier update. It was named before any unselected checkpoint was executed or scored, though after
+the selected checkpoints' balanced scores were known. The balanced-loss rule picks updates 64, 192 and 160 in the
+unweighted runs and 160, 192 and 160 in the weighted runs, the selection rule's own checkpoint in
+one run of six. Its picks solve no episode, nor do the selection rule's, so $b=c=0$ and $p=1$: the
+test fails, and the balanced loss is reported as a warning, not as a way to choose. Keeping each
+run's last checkpoint solves none either, so it did as well as the balanced-loss rule, and class balance is not shown
+to matter here. Two more rules are
+reported only as description, with unadjusted $p$-values.
+The lowest selection loss among checkpoints that pass the existence gate abstains in all six runs,
+because none passes. The highest strict balanced \textsc{stop} recall, ties to the lower balanced
+loss, picks the untrained model in the three unweighted runs and so solves one episode, 358, where
+the selection rule solves none ($p=0.5$, unadjusted, descriptive); this is not a test, and we do not
+call that rule better.
+
+\paragraph{Selection regret.}
+In each run, the most successes among its seven checkpoints minus the selected checkpoint's is $1$,
+in all six runs, from the untrained model's episode 358. This is biased upward: it is the largest of
+seven counts on the same 61 episodes.
+
+\paragraph{The offline \textsc{stop} count.}
+All 18 trained unweighted checkpoints predict \textsc{stop} on none of the 256 selection decisions.
+The three selected ones pressed it in no episode on the GB10, and again in none here. We predicted
+that the 15 unselected ones would press it in no episode either. The prediction failed at update 64
+of seed 20260825 (3 presses), updates 32 and 64 of seed 20260826 (8 and 5) and update 32 of seed
+20260827 (7): $23$ presses, all at the first step, $6.6$--$12.9$ m from the goal.
+
+\paragraph{Offline criteria against outcomes.}
+No criterion can be associated with success, which only one policy reached. Within runs, checkpoints
+with a higher selection cross-entropy pressed \textsc{stop} more often (mean within-run Spearman
+$0.56$, permutation $p=0.0011$, below the preregistered $0.0025$); the association with oracle
+success does not reach that threshold ($p=0.0027$). The existence gate failed at all 37 policies; balanced \textsc{stop}
+recall was at least 16 of 64 at three of them, none of which succeeded.
+
+\paragraph{The two platforms.}
+The six selected checkpoints ran on the GB10 first and on the L40S here. Of their 366 episodes, 347
+have identical action sequences and 364 identical success, oracle-success and stop flags; each of
+the other 19 first differs at a decision the GB10 won by $0.125$ nats or less, so the two machines
+agree up to near-ties. The two flag differences are in one weighted checkpoint: one episode ends in
+\textsc{stop} on the L40S only, and another enters the goal radius on the GB10 only; neither succeeds
+on either. The comparison cannot say why two rollouts differ: the GPU, its kernels, the renderer and
+the runner code all differ at once.
+

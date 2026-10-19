@@ -1,0 +1,315 @@
+"""RoPE monkey-patch: inject IcosahedralRoPE3D into Qwen3-VL's positional encoding.
+
+This module patches two methods in Qwen3-VL at runtime:
+1. **The Catcher** — patches Qwen3VLForConditionalGeneration.forward() to intercept
+   spatial_coords_3d and mm_token_type_ids from kwargs, stashing them on the
+   rotary embedding module for downstream use.
+
+2. **The Math** — patches Qwen3VLTextRotaryEmbedding.forward() to:
+   a. Compute standard M-RoPE cos/sin for all tokens (unchanged for text)
+   b. Retrieve stashed 3D coordinates
+   c. Compute IcosahedralRoPE3D (6 dirs, 8 freqs) -> [B, N_spatial, 96]
+   d. Build cos/sin from the icosahedral angles, pad to 128 with identity
+   e. Overwrite cos/sin at spatial token positions
+
+Design decisions:
+- Text tokens keep standard M-RoPE [24,20,20] = 64 pairs (128 dims)
+- Spatial tokens get icosahedral 48 pairs (96 dims) + 16 identity pairs (32 dims)
+- Identity pairs (cos=1, sin=0) make those dims position-agnostic for spatial tokens
+- During autoregressive generation, spatial tokens are in the KV cache from prefill;
+  only new text tokens are processed, so the patch is a no-op during decode.
+"""
+
+from __future__ import annotations
+
+import functools
+from typing import Any
+
+import torch
+
+from spatialvlm.geometry.gridcell_rope3d import IcosahedralRoPE3D
+
+# Module-level singleton — created once, moved to device as needed
+_icosahedral_rope3d: IcosahedralRoPE3D | None = None
+
+# Spatial token type ID used in mm_token_type_ids to identify our tokens
+# Qwen3-VL uses: 0=text, 1=image, 2=video. We use 3=spatial.
+SPATIAL_TOKEN_TYPE_ID: int = 3
+
+
+def _get_icosahedral_rope(device: torch.device) -> IcosahedralRoPE3D:
+    """Get or create the IcosahedralRoPE3D singleton on the correct device."""
+    global _icosahedral_rope3d
+    if _icosahedral_rope3d is None:
+        _icosahedral_rope3d = IcosahedralRoPE3D()
+    return _icosahedral_rope3d.to(device)
+
+
+def _build_icosahedral_cos_sin(
+    positions_3d: torch.Tensor,
+    head_dim: int,
+    dtype: torch.dtype,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Compute cos/sin from IcosahedralRoPE3D and pad to head_dim.
+
+    Parameters
+    ----------
+    positions_3d : Tensor[B, N_spatial, 3]
+        3D coordinates in metres.
+    head_dim : int
+        Full head dimension (128 for Qwen3-VL-8B).
+    dtype : torch.dtype
+        Output dtype.
+
+    Returns
+    -------
+    cos, sin : Tensor[B, N_spatial, head_dim]
+        Ready to overwrite into the full cos/sin tensors at spatial positions.
+    """
+    device = positions_3d.device
+    rope3d = _get_icosahedral_rope(device)
+
+    # IcosahedralRoPE3D returns interleaved [sin, cos, sin, cos, ...] angles
+    angles = rope3d(positions_3d)  # [B, N_spatial, 96]
+    bsz, n_spatial, rope_dims = angles.shape
+    assert rope_dims == 96, f"Expected 96 icosahedral dims, got {rope_dims}"
+
+    # Split interleaved sin/cos pairs: angles layout is [sin, cos, sin, cos, ...]
+    # Each pair occupies 2 consecutive dims
+    n_pairs = rope_dims // 2  # 48 pairs
+    angles_reshaped = angles.view(bsz, n_spatial, n_pairs, 2)  # [B, N, 48, 2]
+    sin_vals = angles_reshaped[..., 0]  # [B, N, 48] — the sin values
+    cos_vals = angles_reshaped[..., 1]  # [B, N, 48] — the cos values
+
+    # Pad to head_dim // 2 pairs with identity (cos=1, sin=0)
+    total_pairs = head_dim // 2  # 64 for head_dim=128
+    pad_pairs = total_pairs - n_pairs  # 16 identity pairs
+
+    if pad_pairs > 0:
+        # Keep the complete positional calculation in its FP32 encoding dtype.
+        # The final return below is the single boundary where it is cast to the
+        # Qwen attention dtype (normally BF16).
+        pad_sin = torch.zeros(
+            bsz, n_spatial, pad_pairs, device=device, dtype=sin_vals.dtype
+        )
+        pad_cos = torch.ones(
+            bsz, n_spatial, pad_pairs, device=device, dtype=cos_vals.dtype
+        )
+        sin_vals = torch.cat([sin_vals, pad_sin], dim=-1)  # [B, N, 64]
+        cos_vals = torch.cat([cos_vals, pad_cos], dim=-1)  # [B, N, 64]
+
+    # Duplicate to match RoPE convention: [cos, cos] for full head_dim
+    # Qwen3-VL does: emb = cat((freqs, freqs), dim=-1) -> cos/sin of shape [B, S, head_dim]
+    cos_out = torch.cat([cos_vals, cos_vals], dim=-1)  # [B, N, 128]
+    sin_out = torch.cat([sin_vals, sin_vals], dim=-1)  # [B, N, 128]
+
+    return cos_out.to(dtype=dtype), sin_out.to(dtype=dtype)
+
+
+def patch_rope_forward(
+    original_forward: Any,
+    rotary_emb_self: Any,
+    x: torch.Tensor,
+    position_ids: torch.Tensor,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Patched Qwen3VLTextRotaryEmbedding.forward().
+
+    Computes standard M-RoPE, then overwrites spatial token positions with
+    icosahedral cos/sin. No-op if no spatial coordinates are stashed.
+
+    Parameters
+    ----------
+    original_forward : callable
+        The original Qwen3VLTextRotaryEmbedding.forward method.
+    rotary_emb_self : Qwen3VLTextRotaryEmbedding
+        The rotary embedding module instance (has stashed attributes).
+    x : Tensor
+        Hidden states (for dtype/device reference).
+    position_ids : Tensor[3, B, seq_len]
+        M-RoPE position IDs.
+
+    Returns
+    -------
+    cos, sin : Tensor[B, seq_len, head_dim]
+        Position embeddings with spatial positions overwritten.
+    """
+    # Step 1: Standard M-RoPE for all tokens
+    cos, sin = original_forward(x, position_ids)  # [B, seq_len, head_dim]
+
+    # Step 2: Check for stashed spatial data
+    spatial_coords = getattr(rotary_emb_self, "_spatial_coords_3d", None)
+    spatial_mask = getattr(rotary_emb_self, "_spatial_token_mask", None)
+
+    if spatial_coords is None or spatial_mask is None:
+        return cos, sin
+
+    # spatial_mask: [B, seq_len] bool — True at spatial token positions
+    # spatial_coords: [B, N_spatial, 3] — 3D coordinates for spatial tokens
+    if not spatial_mask.any():
+        return cos, sin
+
+    # Step 3: Compute icosahedral cos/sin for spatial positions
+    head_dim = cos.shape[-1]
+    ico_cos, ico_sin = _build_icosahedral_cos_sin(
+        spatial_coords, head_dim=head_dim, dtype=cos.dtype
+    )  # [B, N_spatial, head_dim]
+
+    # Step 4: Overwrite spatial positions in the full cos/sin tensors
+    # spatial_mask: [B, seq_len] -> expand to [B, seq_len, head_dim]
+    cos = cos.clone()
+    sin = sin.clone()
+    mask_expanded = spatial_mask.unsqueeze(-1).expand_as(cos)  # [B, seq_len, head_dim]
+    cos[mask_expanded] = ico_cos.reshape(-1)
+    sin[mask_expanded] = ico_sin.reshape(-1)
+
+    # Step 5: Clear stashed data to avoid stale references
+    rotary_emb_self._spatial_coords_3d = None
+    rotary_emb_self._spatial_token_mask = None
+
+    return cos, sin
+
+
+def _deepstack_embedding_hook(
+    module: Any,
+    input: tuple,  # noqa: ARG001
+    output: torch.Tensor,
+) -> torch.Tensor:
+    """Forward hook on the embedding layer: splice fused visual tokens at spatial positions."""
+    visual_embeds = getattr(module, "_deepstack_visual_embeds", None)
+    spatial_mask = getattr(module, "_deepstack_spatial_mask", None)
+
+    if visual_embeds is not None and spatial_mask is not None:
+        # output: [B, seq_len, hidden_dim]  spatial_mask: [B, seq_len]
+        flat = visual_embeds.reshape(-1, output.shape[-1]).to(output.dtype)
+        output = output.clone()
+        output[spatial_mask] = flat
+        # Clear — one-shot per forward
+        module._deepstack_visual_embeds = None
+        module._deepstack_spatial_mask = None
+
+    return output
+
+
+def stash_spatial_forward_kwargs(model_self: Any, kwargs: dict[str, Any]) -> None:
+    """Pop SpatialVLM-only kwargs and stash for RoPE / DeepStack hooks.
+
+    Qwen3VLModel.forward passes ``deepstack_visual_embeds=<local>`` and ``**kwargs``
+    into the text stack; if ``kwargs`` still contains ``deepstack_visual_embeds``,
+    Python raises "multiple values for keyword argument". Call this on the outer
+    Peft / HF model **before** any forward so those keys never reach Qwen3VLModel.
+
+    Safe to call twice on the same ``kwargs`` dict (second call is a no-op).
+    """
+    if not any(
+        k in kwargs for k in ("spatial_coords_3d", "spatial_token_mask", "deepstack_visual_embeds")
+    ):
+        return
+
+    spatial_coords_3d = kwargs.pop("spatial_coords_3d", None)
+    spatial_token_mask = kwargs.pop("spatial_token_mask", None)
+    deepstack_visual_embeds = kwargs.pop("deepstack_visual_embeds", None)
+
+    if spatial_token_mask is None and spatial_coords_3d is not None:
+        mm_token_type_ids = kwargs.get("mm_token_type_ids", None)
+        if mm_token_type_ids is not None:
+            spatial_token_mask = mm_token_type_ids == SPATIAL_TOKEN_TYPE_ID
+
+    try:
+        rotary_emb = model_self.model.language_model.rotary_emb
+        rotary_emb._spatial_coords_3d = spatial_coords_3d
+        rotary_emb._spatial_token_mask = spatial_token_mask
+        if deepstack_visual_embeds is not None and spatial_token_mask is not None:
+            embed_module = _find_embed_tokens(model_self)
+            embed_module._deepstack_visual_embeds = deepstack_visual_embeds
+            embed_module._deepstack_spatial_mask = spatial_token_mask
+    except AttributeError:
+        pass
+
+
+def patch_model_forward(
+    original_forward: Any,
+    model_self: Any,
+    *args: Any,
+    **kwargs: Any,
+) -> Any:
+    """Patched Qwen3VLForConditionalGeneration.forward().
+
+    Intercepts spatial_coords_3d, spatial_token_mask, and deepstack_visual_embeds
+    from kwargs.  Stashes RoPE data on the rotary embedding module and visual
+    embeddings on the word-embedding module (consumed by a registered hook).
+    """
+    stash_spatial_forward_kwargs(model_self, kwargs)
+    return original_forward(*args, **kwargs)
+
+
+def _find_embed_tokens(model: Any) -> Any:
+    """Locate the word-embedding module (works through PEFT wrapping)."""
+    # Standard HuggingFace method (works for PeftModel too)
+    embed = getattr(model, "get_input_embeddings", None)
+    if callable(embed):
+        module = embed()
+        if module is not None:
+            return module
+
+    # Fallback: traverse known Qwen3-VL paths
+    for path in [
+        ("model", "language_model", "embed_tokens"),
+        ("model", "embed_tokens"),
+        ("base_model", "model", "model", "language_model", "embed_tokens"),
+    ]:
+        obj = model
+        try:
+            for attr in path:
+                obj = getattr(obj, attr)
+            return obj
+        except AttributeError:
+            continue
+
+    raise AttributeError("Cannot find embed_tokens module in model.")
+
+
+def apply_rope_patch(model: Any) -> None:
+    """Apply the RoPE monkey-patch to a Qwen3VLForConditionalGeneration model.
+
+    This modifies the model in-place by wrapping two methods:
+    1. model.forward() — catches spatial_coords_3d from kwargs
+    2. model.model.language_model.rotary_emb.forward() — injects icosahedral RoPE
+
+    Parameters
+    ----------
+    model : Qwen3VLForConditionalGeneration
+        The Qwen3-VL model instance to patch. Must have the standard
+        model.model.language_model.rotary_emb attribute chain.
+
+    Raises
+    ------
+    AttributeError
+        If the model doesn't have the expected attribute structure.
+    """
+    # Validate model structure
+    if not hasattr(model, "model"):
+        raise AttributeError("Model must have a 'model' attribute (Qwen3VLModel).")
+    if not hasattr(model.model, "language_model"):
+        raise AttributeError("Model.model must have a 'language_model' attribute.")
+    if not hasattr(model.model.language_model, "rotary_emb"):
+        raise AttributeError("Language model must have a 'rotary_emb' attribute.")
+
+    rotary_emb = model.model.language_model.rotary_emb
+
+    # Initialize stash attributes
+    rotary_emb._spatial_coords_3d = None
+    rotary_emb._spatial_token_mask = None
+
+    # Patch 1: RoPE forward (The Math)
+    original_rope_forward = rotary_emb.forward
+    rotary_emb.forward = functools.partial(patch_rope_forward, original_rope_forward, rotary_emb)
+
+    # Patch 2: Model forward (The Catcher + DeepStack stash)
+    original_model_forward = model.forward
+    model.forward = functools.partial(patch_model_forward, original_model_forward, model)
+
+    # Patch 3: Embedding hook (DeepStack injection — splices visual tokens into embeddings)
+    embed_tokens = _find_embed_tokens(model)
+    embed_tokens._deepstack_visual_embeds = None
+    embed_tokens._deepstack_spatial_mask = None
+    embed_tokens.register_forward_hook(_deepstack_embedding_hook)

@@ -1,0 +1,116 @@
+{
+  "generated_at_utc": "2026-08-31T01:13:21.080689+00:00",
+  "gate": "scale_ladder_verification_v1",
+  "method": "Every value re-derived from progress.jsonl, the sample manifests and the per-episode closed-loop artifacts. No run's result.json was opened.",
+  "frozen_reference": {
+    "min_selection_ce": 0.6843,
+    "at_update": 450,
+    "stop_recall": "0/4"
+  },
+  "rungs": [
+    {
+      "run": "native_chunk_scale_40k_v1",
+      "calibration_points": 20,
+      "min_selection_ce": 0.6070329621065563,
+      "min_at_update": 2700,
+      "final_update": 3000,
+      "minimum_is_on_final_update": false,
+      "stop_predicted_total": 0,
+      "stop_recall_numerator_total": 0,
+      "position_accuracy_range": [
+        0.7239583333333334,
+        0.765625
+      ],
+      "constant_chunks_range": [
+        174,
+        201
+      ],
+      "non_finite_train_rows": []
+    },
+    {
+      "run": "native_chunk_scale_134k_v1",
+      "calibration_points": 20,
+      "min_selection_ce": 0.5954648949826757,
+      "min_at_update": 3000,
+      "final_update": 3000,
+      "minimum_is_on_final_update": true,
+      "stop_predicted_total": 0,
+      "stop_recall_numerator_total": 0,
+      "position_accuracy_range": [
+        0.7229166666666667,
+        0.7604166666666666
+      ],
+      "constant_chunks_range": [
+        167,
+        213
+      ],
+      "non_finite_train_rows": []
+    }
+  ],
+  "prefix_nesting": {
+    "40k": {
+      "frozen_train_decisions": 3072,
+      "expanded_train_decisions": 40000,
+      "prefix_positions_matching": 3072,
+      "is_true_prefix": true,
+      "expansion_left_frozen_trajectories": [],
+      "trajectory_sets_identical": true,
+      "duplicate_decisions_in_expansion": 0,
+      "source_manifest_sha256_recorded": "ec5f9bdbfee3430b115c210326dd42ba6770eb267fa530c46a4ff20fc2f023fe",
+      "source_manifest_sha256_recomputed": "ec5f9bdbfee3430b115c210326dd42ba6770eb267fa530c46a4ff20fc2f023fe",
+      "source_manifest_is_the_frozen_one": true
+    },
+    "134k": {
+      "frozen_train_decisions": 3072,
+      "expanded_train_decisions": 134754,
+      "prefix_positions_matching": 3072,
+      "is_true_prefix": true,
+      "expansion_left_frozen_trajectories": [],
+      "trajectory_sets_identical": true,
+      "duplicate_decisions_in_expansion": 0,
+      "source_manifest_sha256_recorded": "ec5f9bdbfee3430b115c210326dd42ba6770eb267fa530c46a4ff20fc2f023fe",
+      "source_manifest_sha256_recomputed": "ec5f9bdbfee3430b115c210326dd42ba6770eb267fa530c46a4ff20fc2f023fe",
+      "source_manifest_is_the_frozen_one": true
+    }
+  },
+  "closed_loop_134k": {
+    "episodes": 61,
+    "success": 0,
+    "oracle_success": 13,
+    "episodes_ending_in_stop": 0,
+    "constant_action_episodes": 8,
+    "episodes_at_step_cap": 61,
+    "mean_navigation_error_m": 12.857268266990536,
+    "action_histogram": {
+      "MOVE_FORWARD": 17281,
+      "TURN_LEFT": 5757,
+      "TURN_RIGHT": 7462
+    },
+    "total_actions": 30500,
+    "stop_actions_emitted": 0
+  },
+  "closed_loop_pilot_u450": {
+    "episodes": 61,
+    "success": 0,
+    "oracle_success": 3,
+    "episodes_ending_in_stop": 0,
+    "constant_action_episodes": 39,
+    "episodes_at_step_cap": 61,
+    "mean_navigation_error_m": 12.168862620338064,
+    "action_histogram": {
+      "MOVE_FORWARD": 13431,
+      "TURN_LEFT": 11684,
+      "TURN_RIGHT": 5385
+    },
+    "total_actions": 30500,
+    "stop_actions_emitted": 0
+  },
+  "findings": {
+    "stop_predicted_across_all_calibration_points": 0,
+    "boundary_selected_rungs": [
+      "native_chunk_scale_134k_v1"
+    ],
+    "any_non_finite_train_loss": false,
+    "all_nesting_checks_pass": true
+  }
+}

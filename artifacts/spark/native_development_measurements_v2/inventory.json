@@ -1,0 +1,1295 @@
+{
+  "baselines": {
+    "instruction_prior_balanced_ce_nats": 2.0344563554907533,
+    "instruction_prior_natural_ce_nats": 0.9246155266541638,
+    "physical_prior_balanced_ce_nats": 2.0343420697069923,
+    "physical_prior_natural_ce_nats": 0.924707095699516,
+    "uniform_balanced_ce_nats": 1.3862943611198906
+  },
+  "evidence_boundary": {
+    "established_if_passed": "Exact released-train scene, physical-trajectory, instruction, H4-eligible decision, action-frequency, overlap, and balanced-allocation capacity counts.",
+    "not_established": "Final development sample sizes, cluster-aware power, model learning, runtime, closed-loop competence, or any val_seen/val_unseen result."
+  },
+  "gate": "native_c0_development_measurements_v2",
+  "inventory_sha256": "596bdcc05f3ff948ca2299fd585e3d0391ed62b5111d09463f46cb061ac4fda7",
+  "protocol": {
+    "history_contract": "H4_CAUSAL",
+    "instruction_policy": "inventory all released instructions but group and partition by physical trajectory_id",
+    "max_replay_prefix_actions": 96,
+    "min_decision_step": 3,
+    "prefix_policy": "exclude a decision when its visible replay prefix contains STOP",
+    "sealed_splits": [
+      "val_seen",
+      "val_unseen"
+    ],
+    "stop_definition": "official terminal STOP decision in released ground truth"
+  },
+  "release_manifest": {
+    "episodes_path": "/datasets/GridNav/episodes/R2R_VLNCE_v1-3_preprocessed/train/train.json.gz",
+    "episodes_sha256": "340a80133b2157520354ab055a91d98feb2f42e4bbda17b200c911f8788492ea",
+    "ground_truth_count": 10819,
+    "ground_truth_path": "/datasets/GridNav/episodes/R2R_VLNCE_v1-3_preprocessed/train/train_gt.json.gz",
+    "ground_truth_sha256": "b63fa10e5c57d1b80b241c49bdeddc3d481bbe54b41ca0d59f9584c10da7bd5d",
+    "release_id": "R2R_VLNCE_v1-3",
+    "selected_episode_count": 10819,
+    "source_episode_count": 10819,
+    "split": "train"
+  },
+  "scene_inventory": [
+    {
+      "eligible_instruction_decision_count": 2736,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 577,
+        "STOP": 25,
+        "TURN_LEFT": 165,
+        "TURN_RIGHT": 145
+      },
+      "eligible_physical_decision_count": 912,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 25,
+        "STOP": 25,
+        "TURN_LEFT": 22,
+        "TURN_RIGHT": 23
+      },
+      "instruction_episode_count": 75,
+      "physical_trajectory_count": 25,
+      "scene_id": "mp3d/17DRP5sb8fy/17DRP5sb8fy.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 8253,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1917,
+        "STOP": 54,
+        "TURN_LEFT": 435,
+        "TURN_RIGHT": 345
+      },
+      "eligible_physical_decision_count": 2751,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 54,
+        "STOP": 54,
+        "TURN_LEFT": 53,
+        "TURN_RIGHT": 54
+      },
+      "instruction_episode_count": 162,
+      "physical_trajectory_count": 54,
+      "scene_id": "mp3d/1LXtFkjw3qL/1LXtFkjw3qL.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 15729,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3394,
+        "STOP": 81,
+        "TURN_LEFT": 978,
+        "TURN_RIGHT": 770
+      },
+      "eligible_physical_decision_count": 5223,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 85,
+        "STOP": 81,
+        "TURN_LEFT": 82,
+        "TURN_RIGHT": 85
+      },
+      "instruction_episode_count": 256,
+      "physical_trajectory_count": 85,
+      "scene_id": "mp3d/1pXnuDYAj8r/1pXnuDYAj8r.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 7059,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1504,
+        "STOP": 64,
+        "TURN_LEFT": 371,
+        "TURN_RIGHT": 414
+      },
+      "eligible_physical_decision_count": 2353,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 64,
+        "STOP": 64,
+        "TURN_LEFT": 64,
+        "TURN_RIGHT": 64
+      },
+      "instruction_episode_count": 192,
+      "physical_trajectory_count": 64,
+      "scene_id": "mp3d/29hnd4uzFmX/29hnd4uzFmX.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 14881,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3308,
+        "STOP": 88,
+        "TURN_LEFT": 825,
+        "TURN_RIGHT": 715
+      },
+      "eligible_physical_decision_count": 4936,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 89,
+        "STOP": 88,
+        "TURN_LEFT": 87,
+        "TURN_RIGHT": 85
+      },
+      "instruction_episode_count": 268,
+      "physical_trajectory_count": 89,
+      "scene_id": "mp3d/2n8kARJN3HM/2n8kARJN3HM.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 13575,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3075,
+        "STOP": 80,
+        "TURN_LEFT": 695,
+        "TURN_RIGHT": 675
+      },
+      "eligible_physical_decision_count": 4525,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 81,
+        "STOP": 80,
+        "TURN_LEFT": 80,
+        "TURN_RIGHT": 81
+      },
+      "instruction_episode_count": 243,
+      "physical_trajectory_count": 81,
+      "scene_id": "mp3d/5LpN3gDmAk7/5LpN3gDmAk7.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 6945,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1569,
+        "STOP": 50,
+        "TURN_LEFT": 318,
+        "TURN_RIGHT": 378
+      },
+      "eligible_physical_decision_count": 2315,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 50,
+        "STOP": 50,
+        "TURN_LEFT": 50,
+        "TURN_RIGHT": 46
+      },
+      "instruction_episode_count": 150,
+      "physical_trajectory_count": 50,
+      "scene_id": "mp3d/5q7pvUzZiYa/5q7pvUzZiYa.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 14430,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3219,
+        "STOP": 65,
+        "TURN_LEFT": 723,
+        "TURN_RIGHT": 803
+      },
+      "eligible_physical_decision_count": 4810,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 70,
+        "STOP": 65,
+        "TURN_LEFT": 69,
+        "TURN_RIGHT": 70
+      },
+      "instruction_episode_count": 210,
+      "physical_trajectory_count": 70,
+      "scene_id": "mp3d/759xd9YjKW5/759xd9YjKW5.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 10421,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2301,
+        "STOP": 64,
+        "TURN_LEFT": 521,
+        "TURN_RIGHT": 564
+      },
+      "eligible_physical_decision_count": 3450,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 65,
+        "STOP": 64,
+        "TURN_LEFT": 65,
+        "TURN_RIGHT": 65
+      },
+      "instruction_episode_count": 196,
+      "physical_trajectory_count": 65,
+      "scene_id": "mp3d/7y3sRwLe3Va/7y3sRwLe3Va.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 10113,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2146,
+        "STOP": 65,
+        "TURN_LEFT": 531,
+        "TURN_RIGHT": 629
+      },
+      "eligible_physical_decision_count": 3371,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 65,
+        "STOP": 65,
+        "TURN_LEFT": 64,
+        "TURN_RIGHT": 64
+      },
+      "instruction_episode_count": 195,
+      "physical_trajectory_count": 65,
+      "scene_id": "mp3d/82sE5b5pLXE/82sE5b5pLXE.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 15342,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3291,
+        "STOP": 86,
+        "TURN_LEFT": 935,
+        "TURN_RIGHT": 802
+      },
+      "eligible_physical_decision_count": 5114,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 93,
+        "STOP": 86,
+        "TURN_LEFT": 91,
+        "TURN_RIGHT": 87
+      },
+      "instruction_episode_count": 279,
+      "physical_trajectory_count": 93,
+      "scene_id": "mp3d/8WUmhLawc2A/8WUmhLawc2A.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 12657,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2983,
+        "STOP": 84,
+        "TURN_LEFT": 603,
+        "TURN_RIGHT": 549
+      },
+      "eligible_physical_decision_count": 4219,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 84,
+        "STOP": 84,
+        "TURN_LEFT": 79,
+        "TURN_RIGHT": 82
+      },
+      "instruction_episode_count": 252,
+      "physical_trajectory_count": 84,
+      "scene_id": "mp3d/B6ByNegPMKs/B6ByNegPMKs.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 1345,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 275,
+        "STOP": 11,
+        "TURN_LEFT": 92,
+        "TURN_RIGHT": 58
+      },
+      "eligible_physical_decision_count": 436,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 11,
+        "STOP": 11,
+        "TURN_LEFT": 11,
+        "TURN_RIGHT": 11
+      },
+      "instruction_episode_count": 34,
+      "physical_trajectory_count": 11,
+      "scene_id": "mp3d/D7G3Y4RVNrH/D7G3Y4RVNrH.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 11190,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2394,
+        "STOP": 66,
+        "TURN_LEFT": 644,
+        "TURN_RIGHT": 626
+      },
+      "eligible_physical_decision_count": 3730,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 67,
+        "STOP": 66,
+        "TURN_LEFT": 66,
+        "TURN_RIGHT": 67
+      },
+      "instruction_episode_count": 201,
+      "physical_trajectory_count": 67,
+      "scene_id": "mp3d/D7N2EKCX4Sj/D7N2EKCX4Sj.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 19972,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 4875,
+        "STOP": 69,
+        "TURN_LEFT": 849,
+        "TURN_RIGHT": 846
+      },
+      "eligible_physical_decision_count": 6639,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 88,
+        "STOP": 69,
+        "TURN_LEFT": 88,
+        "TURN_RIGHT": 87
+      },
+      "instruction_episode_count": 265,
+      "physical_trajectory_count": 88,
+      "scene_id": "mp3d/E9uDoFAP3SH/E9uDoFAP3SH.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 11868,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2580,
+        "STOP": 83,
+        "TURN_LEFT": 730,
+        "TURN_RIGHT": 563
+      },
+      "eligible_physical_decision_count": 3956,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 83,
+        "STOP": 83,
+        "TURN_LEFT": 83,
+        "TURN_RIGHT": 79
+      },
+      "instruction_episode_count": 249,
+      "physical_trajectory_count": 83,
+      "scene_id": "mp3d/EDJbREhghzL/EDJbREhghzL.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 717,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 157,
+        "STOP": 7,
+        "TURN_LEFT": 38,
+        "TURN_RIGHT": 37
+      },
+      "eligible_physical_decision_count": 239,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 7,
+        "STOP": 7,
+        "TURN_LEFT": 7,
+        "TURN_RIGHT": 7
+      },
+      "instruction_episode_count": 21,
+      "physical_trajectory_count": 7,
+      "scene_id": "mp3d/GdvgFV5R1Z5/GdvgFV5R1Z5.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 561,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 94,
+        "STOP": 5,
+        "TURN_LEFT": 49,
+        "TURN_RIGHT": 39
+      },
+      "eligible_physical_decision_count": 187,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 5,
+        "STOP": 5,
+        "TURN_LEFT": 5,
+        "TURN_RIGHT": 5
+      },
+      "instruction_episode_count": 15,
+      "physical_trajectory_count": 5,
+      "scene_id": "mp3d/HxpKQynjfin/HxpKQynjfin.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 4179,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 999,
+        "STOP": 18,
+        "TURN_LEFT": 184,
+        "TURN_RIGHT": 192
+      },
+      "eligible_physical_decision_count": 1393,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 21,
+        "STOP": 18,
+        "TURN_LEFT": 19,
+        "TURN_RIGHT": 20
+      },
+      "instruction_episode_count": 63,
+      "physical_trajectory_count": 21,
+      "scene_id": "mp3d/JF19kD82Mey/JF19kD82Mey.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 13392,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2880,
+        "STOP": 93,
+        "TURN_LEFT": 805,
+        "TURN_RIGHT": 686
+      },
+      "eligible_physical_decision_count": 4464,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 93,
+        "STOP": 93,
+        "TURN_LEFT": 93,
+        "TURN_RIGHT": 91
+      },
+      "instruction_episode_count": 279,
+      "physical_trajectory_count": 93,
+      "scene_id": "mp3d/JeFG25nYj2p/JeFG25nYj2p.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 10890,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2228,
+        "STOP": 70,
+        "TURN_LEFT": 686,
+        "TURN_RIGHT": 646
+      },
+      "eligible_physical_decision_count": 3630,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 70,
+        "STOP": 70,
+        "TURN_LEFT": 70,
+        "TURN_RIGHT": 70
+      },
+      "instruction_episode_count": 210,
+      "physical_trajectory_count": 70,
+      "scene_id": "mp3d/JmbYfDe2QKZ/JmbYfDe2QKZ.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 14082,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3096,
+        "STOP": 71,
+        "TURN_LEFT": 767,
+        "TURN_RIGHT": 760
+      },
+      "eligible_physical_decision_count": 4694,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 80,
+        "STOP": 71,
+        "TURN_LEFT": 80,
+        "TURN_RIGHT": 79
+      },
+      "instruction_episode_count": 240,
+      "physical_trajectory_count": 80,
+      "scene_id": "mp3d/PX4nDJXEHrG/PX4nDJXEHrG.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 834,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 176,
+        "STOP": 8,
+        "TURN_LEFT": 44,
+        "TURN_RIGHT": 50
+      },
+      "eligible_physical_decision_count": 278,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 8,
+        "STOP": 8,
+        "TURN_LEFT": 8,
+        "TURN_RIGHT": 8
+      },
+      "instruction_episode_count": 24,
+      "physical_trajectory_count": 8,
+      "scene_id": "mp3d/Pm6F8kyY3z2/Pm6F8kyY3z2.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 4476,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1057,
+        "STOP": 12,
+        "TURN_LEFT": 227,
+        "TURN_RIGHT": 196
+      },
+      "eligible_physical_decision_count": 1492,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 19,
+        "STOP": 12,
+        "TURN_LEFT": 19,
+        "TURN_RIGHT": 19
+      },
+      "instruction_episode_count": 57,
+      "physical_trajectory_count": 19,
+      "scene_id": "mp3d/PuKPg4mmafe/PuKPg4mmafe.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 11784,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2418,
+        "STOP": 82,
+        "TURN_LEFT": 647,
+        "TURN_RIGHT": 781
+      },
+      "eligible_physical_decision_count": 3928,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 82,
+        "STOP": 82,
+        "TURN_LEFT": 82,
+        "TURN_RIGHT": 82
+      },
+      "instruction_episode_count": 246,
+      "physical_trajectory_count": 82,
+      "scene_id": "mp3d/S9hNv5qa7GM/S9hNv5qa7GM.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 13402,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3063,
+        "STOP": 75,
+        "TURN_LEFT": 679,
+        "TURN_RIGHT": 636
+      },
+      "eligible_physical_decision_count": 4453,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 77,
+        "STOP": 75,
+        "TURN_LEFT": 76,
+        "TURN_RIGHT": 74
+      },
+      "instruction_episode_count": 232,
+      "physical_trajectory_count": 77,
+      "scene_id": "mp3d/SN83YJsR3w2/SN83YJsR3w2.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 10230,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2159,
+        "STOP": 78,
+        "TURN_LEFT": 629,
+        "TURN_RIGHT": 544
+      },
+      "eligible_physical_decision_count": 3410,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 78,
+        "STOP": 78,
+        "TURN_LEFT": 74,
+        "TURN_RIGHT": 72
+      },
+      "instruction_episode_count": 234,
+      "physical_trajectory_count": 78,
+      "scene_id": "mp3d/ULsKaCPVFJR/ULsKaCPVFJR.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 14106,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3134,
+        "STOP": 68,
+        "TURN_LEFT": 788,
+        "TURN_RIGHT": 712
+      },
+      "eligible_physical_decision_count": 4702,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 76,
+        "STOP": 68,
+        "TURN_LEFT": 76,
+        "TURN_RIGHT": 76
+      },
+      "instruction_episode_count": 228,
+      "physical_trajectory_count": 76,
+      "scene_id": "mp3d/Uxmj2M2itWa/Uxmj2M2itWa.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 10833,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2274,
+        "STOP": 65,
+        "TURN_LEFT": 613,
+        "TURN_RIGHT": 659
+      },
+      "eligible_physical_decision_count": 3611,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 66,
+        "STOP": 65,
+        "TURN_LEFT": 66,
+        "TURN_RIGHT": 65
+      },
+      "instruction_episode_count": 198,
+      "physical_trajectory_count": 66,
+      "scene_id": "mp3d/V2XKFyX4ASd/V2XKFyX4ASd.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 8742,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1943,
+        "STOP": 50,
+        "TURN_LEFT": 471,
+        "TURN_RIGHT": 450
+      },
+      "eligible_physical_decision_count": 2914,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 50,
+        "STOP": 50,
+        "TURN_LEFT": 49,
+        "TURN_RIGHT": 50
+      },
+      "instruction_episode_count": 150,
+      "physical_trajectory_count": 50,
+      "scene_id": "mp3d/VFuaQ6m2Qom/VFuaQ6m2Qom.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 10965,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2457,
+        "STOP": 47,
+        "TURN_LEFT": 611,
+        "TURN_RIGHT": 540
+      },
+      "eligible_physical_decision_count": 3655,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 54,
+        "STOP": 47,
+        "TURN_LEFT": 53,
+        "TURN_RIGHT": 53
+      },
+      "instruction_episode_count": 162,
+      "physical_trajectory_count": 54,
+      "scene_id": "mp3d/VLzqgDo317F/VLzqgDo317F.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 4278,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 932,
+        "STOP": 35,
+        "TURN_LEFT": 272,
+        "TURN_RIGHT": 187
+      },
+      "eligible_physical_decision_count": 1426,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 35,
+        "STOP": 35,
+        "TURN_LEFT": 34,
+        "TURN_RIGHT": 34
+      },
+      "instruction_episode_count": 105,
+      "physical_trajectory_count": 35,
+      "scene_id": "mp3d/VVfe2KiqLaN/VVfe2KiqLaN.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 15192,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3486,
+        "STOP": 92,
+        "TURN_LEFT": 796,
+        "TURN_RIGHT": 690
+      },
+      "eligible_physical_decision_count": 5064,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 92,
+        "STOP": 92,
+        "TURN_LEFT": 88,
+        "TURN_RIGHT": 92
+      },
+      "instruction_episode_count": 276,
+      "physical_trajectory_count": 92,
+      "scene_id": "mp3d/Vvot9Ly1tCj/Vvot9Ly1tCj.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 12645,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2855,
+        "STOP": 77,
+        "TURN_LEFT": 609,
+        "TURN_RIGHT": 674
+      },
+      "eligible_physical_decision_count": 4215,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 79,
+        "STOP": 77,
+        "TURN_LEFT": 76,
+        "TURN_RIGHT": 77
+      },
+      "instruction_episode_count": 237,
+      "physical_trajectory_count": 79,
+      "scene_id": "mp3d/VzqfbhrpDEA/VzqfbhrpDEA.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 906,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 199,
+        "STOP": 6,
+        "TURN_LEFT": 54,
+        "TURN_RIGHT": 43
+      },
+      "eligible_physical_decision_count": 302,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 6,
+        "STOP": 6,
+        "TURN_LEFT": 6,
+        "TURN_RIGHT": 6
+      },
+      "instruction_episode_count": 18,
+      "physical_trajectory_count": 6,
+      "scene_id": "mp3d/XcA2TqTSSAj/XcA2TqTSSAj.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 342,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 86,
+        "STOP": 3,
+        "TURN_LEFT": 18,
+        "TURN_RIGHT": 7
+      },
+      "eligible_physical_decision_count": 114,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 3,
+        "STOP": 3,
+        "TURN_LEFT": 2,
+        "TURN_RIGHT": 1
+      },
+      "instruction_episode_count": 9,
+      "physical_trajectory_count": 3,
+      "scene_id": "mp3d/YmJkqBEsHnH/YmJkqBEsHnH.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 13812,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3138,
+        "STOP": 72,
+        "TURN_LEFT": 795,
+        "TURN_RIGHT": 599
+      },
+      "eligible_physical_decision_count": 4604,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 75,
+        "STOP": 72,
+        "TURN_LEFT": 75,
+        "TURN_RIGHT": 75
+      },
+      "instruction_episode_count": 225,
+      "physical_trajectory_count": 75,
+      "scene_id": "mp3d/ZMojNkEp431/ZMojNkEp431.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 7739,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1828,
+        "STOP": 48,
+        "TURN_LEFT": 366,
+        "TURN_RIGHT": 316
+      },
+      "eligible_physical_decision_count": 2558,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 48,
+        "STOP": 48,
+        "TURN_LEFT": 44,
+        "TURN_RIGHT": 46
+      },
+      "instruction_episode_count": 145,
+      "physical_trajectory_count": 48,
+      "scene_id": "mp3d/aayBHfsNo7d/aayBHfsNo7d.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 18417,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 4149,
+        "STOP": 84,
+        "TURN_LEFT": 1054,
+        "TURN_RIGHT": 852
+      },
+      "eligible_physical_decision_count": 6139,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 91,
+        "STOP": 84,
+        "TURN_LEFT": 91,
+        "TURN_RIGHT": 91
+      },
+      "instruction_episode_count": 273,
+      "physical_trajectory_count": 91,
+      "scene_id": "mp3d/ac26ZMwG7aT/ac26ZMwG7aT.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 8091,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1870,
+        "STOP": 44,
+        "TURN_LEFT": 405,
+        "TURN_RIGHT": 378
+      },
+      "eligible_physical_decision_count": 2697,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 48,
+        "STOP": 44,
+        "TURN_LEFT": 46,
+        "TURN_RIGHT": 47
+      },
+      "instruction_episode_count": 144,
+      "physical_trajectory_count": 48,
+      "scene_id": "mp3d/b8cTxDM8gDG/b8cTxDM8gDG.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 7170,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1475,
+        "STOP": 49,
+        "TURN_LEFT": 437,
+        "TURN_RIGHT": 429
+      },
+      "eligible_physical_decision_count": 2390,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 49,
+        "STOP": 49,
+        "TURN_LEFT": 48,
+        "TURN_RIGHT": 49
+      },
+      "instruction_episode_count": 147,
+      "physical_trajectory_count": 49,
+      "scene_id": "mp3d/cV4RVeZvu5T/cV4RVeZvu5T.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 2094,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 522,
+        "STOP": 11,
+        "TURN_LEFT": 90,
+        "TURN_RIGHT": 75
+      },
+      "eligible_physical_decision_count": 698,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 11,
+        "STOP": 11,
+        "TURN_LEFT": 11,
+        "TURN_RIGHT": 11
+      },
+      "instruction_episode_count": 33,
+      "physical_trajectory_count": 11,
+      "scene_id": "mp3d/dhjEzFoUFzH/dhjEzFoUFzH.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 6576,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1391,
+        "STOP": 47,
+        "TURN_LEFT": 420,
+        "TURN_RIGHT": 334
+      },
+      "eligible_physical_decision_count": 2192,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 47,
+        "STOP": 47,
+        "TURN_LEFT": 46,
+        "TURN_RIGHT": 46
+      },
+      "instruction_episode_count": 141,
+      "physical_trajectory_count": 47,
+      "scene_id": "mp3d/e9zR4mvMWw7/e9zR4mvMWw7.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 13291,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3120,
+        "STOP": 63,
+        "TURN_LEFT": 634,
+        "TURN_RIGHT": 588
+      },
+      "eligible_physical_decision_count": 4405,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 67,
+        "STOP": 63,
+        "TURN_LEFT": 67,
+        "TURN_RIGHT": 66
+      },
+      "instruction_episode_count": 202,
+      "physical_trajectory_count": 67,
+      "scene_id": "mp3d/gTV8FGcVJC9/gTV8FGcVJC9.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 84,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 17,
+        "STOP": 1,
+        "TURN_LEFT": 4,
+        "TURN_RIGHT": 6
+      },
+      "eligible_physical_decision_count": 28,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 1,
+        "STOP": 1,
+        "TURN_LEFT": 1,
+        "TURN_RIGHT": 1
+      },
+      "instruction_episode_count": 3,
+      "physical_trajectory_count": 1,
+      "scene_id": "mp3d/gZ6f7yhEvPG/gZ6f7yhEvPG.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 8346,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1653,
+        "STOP": 59,
+        "TURN_LEFT": 599,
+        "TURN_RIGHT": 471
+      },
+      "eligible_physical_decision_count": 2782,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 59,
+        "STOP": 59,
+        "TURN_LEFT": 59,
+        "TURN_RIGHT": 57
+      },
+      "instruction_episode_count": 177,
+      "physical_trajectory_count": 59,
+      "scene_id": "mp3d/i5noydFURQK/i5noydFURQK.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 6774,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1478,
+        "STOP": 49,
+        "TURN_LEFT": 327,
+        "TURN_RIGHT": 404
+      },
+      "eligible_physical_decision_count": 2258,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 49,
+        "STOP": 49,
+        "TURN_LEFT": 49,
+        "TURN_RIGHT": 48
+      },
+      "instruction_episode_count": 147,
+      "physical_trajectory_count": 49,
+      "scene_id": "mp3d/jh4fc5c5qoQ/jh4fc5c5qoQ.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 12230,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2760,
+        "STOP": 58,
+        "TURN_LEFT": 620,
+        "TURN_RIGHT": 621
+      },
+      "eligible_physical_decision_count": 4059,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 65,
+        "STOP": 58,
+        "TURN_LEFT": 65,
+        "TURN_RIGHT": 65
+      },
+      "instruction_episode_count": 196,
+      "physical_trajectory_count": 65,
+      "scene_id": "mp3d/kEZ7cmS4wCh/kEZ7cmS4wCh.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 11979,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2571,
+        "STOP": 89,
+        "TURN_LEFT": 643,
+        "TURN_RIGHT": 690
+      },
+      "eligible_physical_decision_count": 3993,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 89,
+        "STOP": 89,
+        "TURN_LEFT": 86,
+        "TURN_RIGHT": 89
+      },
+      "instruction_episode_count": 267,
+      "physical_trajectory_count": 89,
+      "scene_id": "mp3d/mJXqzFtmKg4/mJXqzFtmKg4.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 13255,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3005,
+        "STOP": 61,
+        "TURN_LEFT": 687,
+        "TURN_RIGHT": 634
+      },
+      "eligible_physical_decision_count": 4387,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 67,
+        "STOP": 61,
+        "TURN_LEFT": 67,
+        "TURN_RIGHT": 66
+      },
+      "instruction_episode_count": 202,
+      "physical_trajectory_count": 67,
+      "scene_id": "mp3d/p5wJjkQkbXX/p5wJjkQkbXX.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 6978,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1406,
+        "STOP": 45,
+        "TURN_LEFT": 358,
+        "TURN_RIGHT": 517
+      },
+      "eligible_physical_decision_count": 2326,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 45,
+        "STOP": 45,
+        "TURN_LEFT": 43,
+        "TURN_RIGHT": 44
+      },
+      "instruction_episode_count": 135,
+      "physical_trajectory_count": 45,
+      "scene_id": "mp3d/pRbA3pwrgk9/pRbA3pwrgk9.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 8634,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1734,
+        "STOP": 58,
+        "TURN_LEFT": 549,
+        "TURN_RIGHT": 537
+      },
+      "eligible_physical_decision_count": 2878,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 58,
+        "STOP": 58,
+        "TURN_LEFT": 57,
+        "TURN_RIGHT": 57
+      },
+      "instruction_episode_count": 174,
+      "physical_trajectory_count": 58,
+      "scene_id": "mp3d/qoiz87JEwZ2/qoiz87JEwZ2.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 15414,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3651,
+        "STOP": 62,
+        "TURN_LEFT": 752,
+        "TURN_RIGHT": 673
+      },
+      "eligible_physical_decision_count": 5138,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 74,
+        "STOP": 62,
+        "TURN_LEFT": 73,
+        "TURN_RIGHT": 74
+      },
+      "instruction_episode_count": 222,
+      "physical_trajectory_count": 74,
+      "scene_id": "mp3d/r1Q1Z4BcV1o/r1Q1Z4BcV1o.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 14490,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3187,
+        "STOP": 93,
+        "TURN_LEFT": 784,
+        "TURN_RIGHT": 766
+      },
+      "eligible_physical_decision_count": 4830,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 93,
+        "STOP": 93,
+        "TURN_LEFT": 92,
+        "TURN_RIGHT": 88
+      },
+      "instruction_episode_count": 279,
+      "physical_trajectory_count": 93,
+      "scene_id": "mp3d/r47D5H71a5s/r47D5H71a5s.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 10515,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2223,
+        "STOP": 77,
+        "TURN_LEFT": 650,
+        "TURN_RIGHT": 555
+      },
+      "eligible_physical_decision_count": 3505,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 77,
+        "STOP": 77,
+        "TURN_LEFT": 77,
+        "TURN_RIGHT": 75
+      },
+      "instruction_episode_count": 231,
+      "physical_trajectory_count": 77,
+      "scene_id": "mp3d/rPc6DW4iMge/rPc6DW4iMge.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 5073,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1041,
+        "STOP": 27,
+        "TURN_LEFT": 353,
+        "TURN_RIGHT": 270
+      },
+      "eligible_physical_decision_count": 1691,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 28,
+        "STOP": 27,
+        "TURN_LEFT": 28,
+        "TURN_RIGHT": 27
+      },
+      "instruction_episode_count": 84,
+      "physical_trajectory_count": 28,
+      "scene_id": "mp3d/s8pcmisQ38h/s8pcmisQ38h.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 11277,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2453,
+        "STOP": 79,
+        "TURN_LEFT": 543,
+        "TURN_RIGHT": 684
+      },
+      "eligible_physical_decision_count": 3759,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 79,
+        "STOP": 79,
+        "TURN_LEFT": 77,
+        "TURN_RIGHT": 79
+      },
+      "instruction_episode_count": 237,
+      "physical_trajectory_count": 79,
+      "scene_id": "mp3d/sKLMLpTHeUy/sKLMLpTHeUy.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 12237,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 2779,
+        "STOP": 84,
+        "TURN_LEFT": 667,
+        "TURN_RIGHT": 549
+      },
+      "eligible_physical_decision_count": 4079,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 84,
+        "STOP": 84,
+        "TURN_LEFT": 82,
+        "TURN_RIGHT": 78
+      },
+      "instruction_episode_count": 252,
+      "physical_trajectory_count": 84,
+      "scene_id": "mp3d/sT4fr6TAbpF/sT4fr6TAbpF.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 7941,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 1750,
+        "STOP": 51,
+        "TURN_LEFT": 373,
+        "TURN_RIGHT": 473
+      },
+      "eligible_physical_decision_count": 2647,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 53,
+        "STOP": 51,
+        "TURN_LEFT": 48,
+        "TURN_RIGHT": 52
+      },
+      "instruction_episode_count": 159,
+      "physical_trajectory_count": 53,
+      "scene_id": "mp3d/uNb9QFRL6hY/uNb9QFRL6hY.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 16626,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3928,
+        "STOP": 89,
+        "TURN_LEFT": 788,
+        "TURN_RIGHT": 737
+      },
+      "eligible_physical_decision_count": 5542,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 93,
+        "STOP": 89,
+        "TURN_LEFT": 91,
+        "TURN_RIGHT": 93
+      },
+      "instruction_episode_count": 279,
+      "physical_trajectory_count": 93,
+      "scene_id": "mp3d/ur6pFq6Qu1A/ur6pFq6Qu1A.glb"
+    },
+    {
+      "eligible_instruction_decision_count": 14877,
+      "eligible_physical_action_counts": {
+        "MOVE_FORWARD": 3318,
+        "STOP": 73,
+        "TURN_LEFT": 841,
+        "TURN_RIGHT": 727
+      },
+      "eligible_physical_decision_count": 4959,
+      "eligible_unique_trajectory_counts": {
+        "MOVE_FORWARD": 78,
+        "STOP": 73,
+        "TURN_LEFT": 77,
+        "TURN_RIGHT": 76
+      },
+      "instruction_episode_count": 234,
+      "physical_trajectory_count": 78,
+      "scene_id": "mp3d/vyrNrziPKCB/vyrNrziPKCB.glb"
+    }
+  ],
+  "schema_version": 1,
+  "status": "passed",
+  "summary": {
+    "eligible_action_cooccurrence_by_trajectory": {
+      "MOVE_FORWARD": {
+        "MOVE_FORWARD": 3603,
+        "STOP": 3470,
+        "TURN_LEFT": 3537,
+        "TURN_RIGHT": 3531
+      },
+      "STOP": {
+        "MOVE_FORWARD": 3470,
+        "STOP": 3470,
+        "TURN_LEFT": 3404,
+        "TURN_RIGHT": 3398
+      },
+      "TURN_LEFT": {
+        "MOVE_FORWARD": 3537,
+        "STOP": 3404,
+        "TURN_LEFT": 3537,
+        "TURN_RIGHT": 3476
+      },
+      "TURN_RIGHT": {
+        "MOVE_FORWARD": 3531,
+        "STOP": 3398,
+        "TURN_LEFT": 3476,
+        "TURN_RIGHT": 3531
+      }
+    },
+    "eligible_decisions_per_trajectory": {
+      "maximum": 94,
+      "median": 53,
+      "minimum": 18,
+      "p95_nearest_rank": 90.0
+    },
+    "eligible_instruction_action_counts": {
+      "MOVE_FORWARD": 395096,
+      "STOP": 10419,
+      "TURN_LEFT": 96518,
+      "TURN_RIGHT": 90959
+    },
+    "eligible_instruction_action_prior": {
+      "MOVE_FORWARD": 0.6662754303599374,
+      "STOP": 0.01757022017160434,
+      "TURN_LEFT": 0.16276442177972048,
+      "TURN_RIGHT": 0.1533899276887378
+    },
+    "eligible_instruction_decision_count": 592992,
+    "eligible_physical_action_counts": {
+      "MOVE_FORWARD": 131548,
+      "STOP": 3470,
+      "TURN_LEFT": 32141,
+      "TURN_RIGHT": 30296
+    },
+    "eligible_physical_action_prior": {
+      "MOVE_FORWARD": 0.6662176192043757,
+      "STOP": 0.017573624370109644,
+      "TURN_LEFT": 0.16277632878377352,
+      "TURN_RIGHT": 0.15343242764174114
+    },
+    "eligible_physical_decision_count": 197455,
+    "eligible_unique_trajectory_counts": {
+      "MOVE_FORWARD": 3603,
+      "STOP": 3470,
+      "TURN_LEFT": 3537,
+      "TURN_RIGHT": 3531
+    },
+    "full_action_sequence_length": {
+      "maximum": 183,
+      "median": 56,
+      "minimum": 21,
+      "p95_nearest_rank": 93.0
+    },
+    "full_physical_action_counts": {
+      "MOVE_FORWARD": 134818,
+      "STOP": 3603,
+      "TURN_LEFT": 37022,
+      "TURN_RIGHT": 34751
+    },
+    "instruction_episode_count": 10819,
+    "instruction_multiplicity_histogram": {
+      "3": 3593,
+      "4": 10
+    },
+    "maximum_balanced_globally_disjoint_total": 3600,
+    "maximum_balanced_globally_disjoint_trajectories_per_action": 900,
+    "physical_trajectory_count": 3603,
+    "scene_count": 61,
+    "trajectory_action_availability_histogram": {
+      "MOVE_FORWARD|STOP": 11,
+      "MOVE_FORWARD|STOP|TURN_LEFT": 61,
+      "MOVE_FORWARD|STOP|TURN_LEFT|TURN_RIGHT": 3343,
+      "MOVE_FORWARD|STOP|TURN_RIGHT": 55,
+      "MOVE_FORWARD|TURN_LEFT|TURN_RIGHT": 133
+    }
+  }
+}

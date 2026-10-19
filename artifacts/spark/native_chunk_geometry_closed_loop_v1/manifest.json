@@ -1,0 +1,18 @@
+{
+  "run_id": "native_chunk_geometry_closed_loop_v1",
+  "status_boundary": "exploratory_capability_pilot_not_a_paper_artifact",
+  "checkpoint": "/w/artifacts/spark/native_chunk_geometry_134k_v1/best.pt",
+  "checkpoint_update": 3000,
+  "checkpoint_selection_ce": 0.6407147437489281,
+  "chunk_size": 4,
+  "step_cap": 500,
+  "episode_count": 61,
+  "model_id": "Qwen/Qwen3-VL-8B-Instruct",
+  "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+  "scorer_method": "geometry_autoregressive_kv_cached_restricted_chunk_decode_v1",
+  "geometry_tokens_per_decision": 256,
+  "geometry_param_count": 17634096,
+  "split": "val_seen",
+  "val_unseen_referenced": false,
+  "started_unix": 1788191260.7219934
+}

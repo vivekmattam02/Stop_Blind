@@ -1,0 +1,24 @@
+\section{Exploratory probes}
+\label{sec:probes}
+
+We ran three single-seed probes, each aimed at another possible cause of the collapse: a training
+objective that rewards constant behavior, too little data, or a model without spatial grounding
+(Appendix~\ref{app:probes}). All three train the model to predict a chunk of four actions at a
+time. Chunking makes a constant guess much less rewarding, since always giving the most common
+answer matches \PrConstSingle\% of single decisions but only \PrConstChunk\% of exact chunks.
+In the simulator, the chunk policy then uses all three movement actions, and constant-action
+episodes fall from $61/61$ to \PrPilotClConst$/61$. Two runs train on \PrFortyN{} and \PrBigN{}
+decisions (the larger set contains the smaller) and reach best selection losses of
+\PrFortyMinCE{} and \PrBigMinCE{}; the chunk run above, trained longer on the original set, reaches
+\PrPilotMinCE{}. Each is one seed, so we do not rank them. A third run adds a branch that feeds
+metric 3D geometry to the model, and the trained model uses it, since hiding those inputs
+raises its selection loss from \PrGeoMinCE{} to \PrGeoMasked{}. The branch reads the simulator's
+depth. On a robot it would take depth from a pipeline built for indoor time-of-flight failure, such
+as our self-calibrating fusion \citep{pushparaju2026selfcalibrating}.
+
+These probes cannot test stopping. A chunk needs four future actions, so the data loader dropped
+every decision whose target was \textsc{stop}, which is the last action of every expert trajectory.
+\textsc{stop} then appeared in training only as the fourth action of a chunk, at $0.47$--$0.57\%$ of
+supervised positions, and in only $4$ of the selection set's $960$ positions. No checkpoint that the
+two scaled runs and the geometry run scored during training predicted \textsc{stop}, and in the
+simulator all three probe policies ran \PrBigClActs{} actions each without pressing it.

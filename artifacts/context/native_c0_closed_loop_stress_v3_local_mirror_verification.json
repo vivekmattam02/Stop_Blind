@@ -1,0 +1,35 @@
+{
+  "artifact_file_count": 7,
+  "audit_boundary": "This Mac audit re-hashes the transferred stress artifacts, reconstructs the 32-step arithmetic mean and latency-selected scope, and matches the stressed checkpoint, its source result chain, the control manifest, and all 14 executed source locks. The dependency-bound producing verifier ran on Spark and is linked here; it was not rerun on this Mac because the available Python runtime has no Torch installation.",
+  "checkpoint_sha256": "a4a58cd34409e24c805c847249cd921da17d11c2bef96e37a20bf7c50a86987d",
+  "checkpoint_source_chain_matched": true,
+  "control_manifest_matched": true,
+  "error_count": 0,
+  "errors": [],
+  "gate": "native_c0_closed_loop_stress_v3_local_mirror_verification_v1",
+  "manifest_sha256": "6f8e91cd64c49c992a102f128e1e04407f1c68b08b08c9ab036e5f84628d8bfb",
+  "reconstructed_closed_loop_seconds_mean": 0.25243097158090677,
+  "reconstructed_episode_run_count": 366,
+  "reconstructed_scope": {
+    "branch_id": "all_six_61_episodes",
+    "checkpoint_count": 6,
+    "episode_count": 61
+  },
+  "recorded_at_utc": "2026-08-26T03:18:58Z",
+  "result_sha256": "2a91efb4c91c097f0191f190f2d00aa1c6ef1820630a46d691b216c8e5e417c5",
+  "schema_version": 1,
+  "source_lock_count": 14,
+  "source_lock_match_count": 14,
+  "status": "passed",
+  "timing_row_count": 32,
+  "timing_step_indices_exact": true,
+  "timings_sha256": "78aa24932577b184780882e39c8d659eea0b9266651c572e2474ee1315350c2c",
+  "transferred_verification": {
+    "checkpoint_fully_hashed": true,
+    "error_count": 0,
+    "scope_reconstruction_performed": true,
+    "status": "passed",
+    "timing_reconstruction_performed": true,
+    "verification_sha256": "926339c977af5b68b84a85e9343081ef6bb0706bcebdd4d7ec8b3d3850c7509e"
+  }
+}

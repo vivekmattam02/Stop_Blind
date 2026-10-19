@@ -1,0 +1,20 @@
+{
+  "cache_index_path": "/artifacts/cache_index.json",
+  "cache_index_sha256": "eee53216e52774749d67d7a7d3763084b3622d6c2a8d9c18d834652f0cd304de",
+  "completed_at_utc": "2026-08-25T05:58:38.210919+00:00",
+  "content_addressed": true,
+  "elapsed_seconds": 516.6995259770192,
+  "evidence_boundary": {
+    "established_if_passed": "All 4,224 frozen train-release decisions have validated immutable H4 RGB objects keyed by decision plus release and simulator/render identity.",
+    "not_established": "Qwen loading, optimization, checkpoint selection, C0 learning, closed-loop navigation, or val_unseen performance."
+  },
+  "gate": "native_qwen_c0_content_addressed_cache_v1",
+  "manifest_sha256": "ec5f9bdbfee3430b115c210326dd42ba6770eb267fa530c46a4ff20fc2f023fe",
+  "object_count": 4224,
+  "rendered_object_count_this_invocation": 4224,
+  "resumable_at_object_boundary": true,
+  "reused_object_count_this_invocation": 0,
+  "run_id": "native_c0_development_cache_v1",
+  "schema_version": 1,
+  "status": "passed"
+}

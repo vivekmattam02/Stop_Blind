@@ -1,0 +1,15 @@
+{
+  "all_preregistered_seeds_reported": true,
+  "all_six_upstream_results_hash_linked": true,
+  "analysis_gate": "native_qwen_c0_seed_replication_analysis_v1",
+  "analysis_path": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/context/native_c0_seed_replication_analysis_v1/analysis.json",
+  "analysis_reconstruction_performed": true,
+  "analysis_sha256": "0c614733238bd6f49a148f562d537cc0687a0087d4024cd1243c4bcc040b1db6",
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_qwen_c0_seed_replication_analysis_verification_v1",
+  "paired_initialization_reconstructed": true,
+  "recorded_at_utc": "2026-08-26T00:32:20.648820+00:00",
+  "schema_version": 1,
+  "status": "passed"
+}

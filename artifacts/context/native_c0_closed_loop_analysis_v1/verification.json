@@ -1,0 +1,15 @@
+{
+  "all_366_episode_reports_fully_hashed": true,
+  "all_61_always_forward_control_reports_fully_hashed": true,
+  "analysis_path": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/context/native_c0_closed_loop_analysis_v1/analysis.json",
+  "analysis_reconstruction_performed": true,
+  "analysis_sha256": "cc5d3a8d77b852f107f7c81bd48a22138c4d9a47c4caf055cd736093c24c11ac",
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_qwen_c0_closed_loop_analysis_verification_v1",
+  "recorded_at_utc": "2026-08-26T17:32:25.192180+00:00",
+  "schema_version": 1,
+  "source_result_sha256": "be7ec8bd979ce587813243b53620b7c367128fc3f75066dec84d92786a3e361c",
+  "source_verification_sha256": "ec83a14132c281a18f25088fa4dd5499c5189fca2b2688c640638a31affdbfa0",
+  "status": "passed"
+}

@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Closed-loop behavior under the official step cap on the same 61 \texttt{val\_seen} episodes. Counts are episodes per seed. Stopped: the episode ends with \textsc{stop}. Constant: one action repeated for the whole episode. AF exact: the same action sequence as the always-forward baseline.}
+\label{tab:closed-loop-behavior}
+\begin{tabular}{llccccc}
+\toprule
+Treatment & Seed & SR & OSR (episode) & Stopped & Constant & AF exact \\
+\midrule
+Unweighted & 20260825 & 0/61 & 1/61 (562) & 0/61 & 61/61 & 61/61 \\
+ & 20260826 & 0/61 & 1/61 (562) & 0/61 & 61/61 & 61/61 \\
+ & 20260827 & 0/61 & 1/61 (562) & 0/61 & 60/61 & 60/61 \\
+\midrule
+Weighted & 20260825 & 0/61 & 1/61 (394) & 5/61 & 47/61 & 13/61 \\
+ & 20260826 & 0/61 & 1/61 (394) & 0/61 & 42/61 & 14/61 \\
+ & 20260827 & 0/61 & 1/61 (394) & 2/61 & 55/61 & 20/61 \\
+\bottomrule
+\end{tabular}
+\par\vspace{4pt}
+\parbox[t]{0.98\linewidth}{\footnotesize All six checkpoints have SPL and SDTW equal to zero.}
+\end{table}

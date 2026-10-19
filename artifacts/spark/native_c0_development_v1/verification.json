@@ -1,0 +1,17 @@
+{
+  "all_checkpoint_files_fully_loaded_and_hashed": true,
+  "dataset_reconstruction_performed": true,
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_qwen_c0_development_verification_v1",
+  "manifest_path": "/artifacts/manifest.json",
+  "manifest_sha256": "726952465b43827384ecb6bc20a41d867fbb83a3027c4cae30ebe00ccb38ab7b",
+  "outcome_reconstruction_performed": true,
+  "recorded_at_utc": "2026-08-25T13:28:47.865636+00:00",
+  "result_path": "/artifacts/result.json",
+  "result_sha256": "88bbd74f41eb6bb9d673e12fb3aa094accc5b4a93e5e6c0fe81c8352a3339c61",
+  "schema_version": 1,
+  "status": "passed",
+  "updates_path": "/artifacts/updates.jsonl",
+  "updates_sha256": "366fa5f5e0cfc75d225621c8d1fb4f2350b58c0c014349ea97ac149fe71e6de8"
+}

@@ -1,0 +1,1439 @@
+{
+  "run_id": "native_chunk_geometry_134k_v1",
+  "status": "completed",
+  "completed_updates": 3000,
+  "elapsed_seconds": 49607.5087659359,
+  "final": {
+    "update": 3000,
+    "train_chunk_ce_mean": 0.5204318426549435,
+    "gradient_l2_norm": 8.059163047684892,
+    "geometry_gradient_l2_norm": 5.345830686454756,
+    "geometry_params_with_grad": 408,
+    "elapsed_seconds": 49462.626323223114,
+    "epoch_fraction": 0.37599580138021793,
+    "calibration": {
+      "selection_chunk_ce_mean": 0.6407147437489281,
+      "position_accuracy": 0.7270833333333333,
+      "constant_predicted_chunks": 201,
+      "exact_chunk_match": 75,
+      "per_action": {
+        "STOP": {
+          "predicted_count": 0,
+          "recall_numerator": 0,
+          "recall_denominator": 4
+        },
+        "MOVE_FORWARD": {
+          "predicted_count": 843,
+          "recall_numerator": 623,
+          "recall_denominator": 662
+        },
+        "TURN_LEFT": {
+          "predicted_count": 56,
+          "recall_numerator": 30,
+          "recall_denominator": 136
+        },
+        "TURN_RIGHT": {
+          "predicted_count": 61,
+          "recall_numerator": 45,
+          "recall_denominator": 158
+        }
+      },
+      "scored_decisions": 240,
+      "geometry_masked": {
+        "selection_chunk_ce_mean": 1.0624971405202814,
+        "position_accuracy": 0.584375,
+        "constant_predicted_chunks": 84,
+        "exact_chunk_match": 55,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 553,
+            "recall_numerator": 413,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 186,
+            "recall_numerator": 60,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 221,
+            "recall_numerator": 88,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240
+      }
+    }
+  },
+  "calibration_points": [
+    {
+      "update": 150,
+      "train_chunk_ce_mean": 0.8415391221642494,
+      "gradient_l2_norm": 8.674122212405672,
+      "geometry_gradient_l2_norm": 25.550914616214072,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 2879.224559545517,
+      "epoch_fraction": 0.018799790069010894,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.8583867988238733,
+        "position_accuracy": 0.6885416666666667,
+        "constant_predicted_chunks": 238,
+        "exact_chunk_match": 67,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 957,
+            "recall_numerator": 660,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 2,
+            "recall_numerator": 0,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 1,
+            "recall_numerator": 1,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 2.610963632768062,
+          "position_accuracy": 0.54375,
+          "constant_predicted_chunks": 46,
+          "exact_chunk_match": 32,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 59,
+              "recall_numerator": 3,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 618,
+              "recall_numerator": 446,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 157,
+              "recall_numerator": 38,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 126,
+              "recall_numerator": 35,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 300,
+      "train_chunk_ce_mean": 0.6891984064131975,
+      "gradient_l2_norm": 1.2946582583886577,
+      "geometry_gradient_l2_norm": 4.5910172051360005,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 5391.478655338287,
+      "epoch_fraction": 0.03759958013802179,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.8482446315387885,
+        "position_accuracy": 0.6916666666666667,
+        "constant_predicted_chunks": 238,
+        "exact_chunk_match": 67,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 958,
+            "recall_numerator": 662,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 2,
+            "recall_numerator": 2,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 2.011248777796724,
+          "position_accuracy": 0.55,
+          "constant_predicted_chunks": 46,
+          "exact_chunk_match": 35,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 64,
+              "recall_numerator": 3,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 619,
+              "recall_numerator": 450,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 153,
+              "recall_numerator": 37,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 124,
+              "recall_numerator": 38,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 450,
+      "train_chunk_ce_mean": 0.7686933390796185,
+      "gradient_l2_norm": 5.637352714132867,
+      "geometry_gradient_l2_norm": 10.041010823441361,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 8117.286411523819,
+      "epoch_fraction": 0.05639937020703269,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.8063569461926818,
+        "position_accuracy": 0.6979166666666666,
+        "constant_predicted_chunks": 228,
+        "exact_chunk_match": 69,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 936,
+            "recall_numerator": 654,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 14,
+            "recall_numerator": 9,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 10,
+            "recall_numerator": 7,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.5404054367644373,
+          "position_accuracy": 0.58125,
+          "constant_predicted_chunks": 61,
+          "exact_chunk_match": 37,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 39,
+              "recall_numerator": 2,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 664,
+              "recall_numerator": 480,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 138,
+              "recall_numerator": 37,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 119,
+              "recall_numerator": 39,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 600,
+      "train_chunk_ce_mean": 0.8544080061838031,
+      "gradient_l2_norm": 2.8151340816308017,
+      "geometry_gradient_l2_norm": 4.598373755919657,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 10548.855568170547,
+      "epoch_fraction": 0.07519916027604358,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.7821717369680603,
+        "position_accuracy": 0.7010416666666667,
+        "constant_predicted_chunks": 224,
+        "exact_chunk_match": 70,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 903,
+            "recall_numerator": 639,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 28,
+            "recall_numerator": 15,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 29,
+            "recall_numerator": 19,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.2761196824002885,
+          "position_accuracy": 0.6104166666666667,
+          "constant_predicted_chunks": 82,
+          "exact_chunk_match": 42,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 17,
+              "recall_numerator": 1,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 683,
+              "recall_numerator": 498,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 136,
+              "recall_numerator": 40,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 124,
+              "recall_numerator": 47,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 750,
+      "train_chunk_ce_mean": 0.7613906487822533,
+      "gradient_l2_norm": 1.4299320418526857,
+      "geometry_gradient_l2_norm": 0.2823445406073915,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 12935.611982345581,
+      "epoch_fraction": 0.09399895034505448,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.7674834170689185,
+        "position_accuracy": 0.6989583333333333,
+        "constant_predicted_chunks": 217,
+        "exact_chunk_match": 69,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 895,
+            "recall_numerator": 634,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 23,
+            "recall_numerator": 13,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 42,
+            "recall_numerator": 24,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.3296301789198575,
+          "position_accuracy": 0.6020833333333333,
+          "constant_predicted_chunks": 70,
+          "exact_chunk_match": 41,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 15,
+              "recall_numerator": 1,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 636,
+              "recall_numerator": 472,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 157,
+              "recall_numerator": 51,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 152,
+              "recall_numerator": 54,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 900,
+      "train_chunk_ce_mean": 0.6581965815275908,
+      "gradient_l2_norm": 19.480529324772107,
+      "geometry_gradient_l2_norm": 6.618311160175365,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 15324.18143582344,
+      "epoch_fraction": 0.11279874041406537,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.7446817973007759,
+        "position_accuracy": 0.7145833333333333,
+        "constant_predicted_chunks": 214,
+        "exact_chunk_match": 70,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 884,
+            "recall_numerator": 636,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 41,
+            "recall_numerator": 25,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 35,
+            "recall_numerator": 25,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.2828132565208459,
+          "position_accuracy": 0.6,
+          "constant_predicted_chunks": 73,
+          "exact_chunk_match": 43,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 12,
+              "recall_numerator": 1,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 635,
+              "recall_numerator": 469,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 151,
+              "recall_numerator": 51,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 162,
+              "recall_numerator": 55,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 1050,
+      "train_chunk_ce_mean": 0.9178012479096651,
+      "gradient_l2_norm": 2.7487259833663824,
+      "geometry_gradient_l2_norm": 1.502785313603391,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 17900.544116973877,
+      "epoch_fraction": 0.13159853048307626,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.7526487612475952,
+        "position_accuracy": 0.7041666666666667,
+        "constant_predicted_chunks": 228,
+        "exact_chunk_match": 70,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 928,
+            "recall_numerator": 653,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 24,
+            "recall_numerator": 16,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 8,
+            "recall_numerator": 7,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.2277413540216002,
+          "position_accuracy": 0.625,
+          "constant_predicted_chunks": 85,
+          "exact_chunk_match": 52,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 2,
+              "recall_numerator": 1,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 667,
+              "recall_numerator": 494,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 143,
+              "recall_numerator": 52,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 148,
+              "recall_numerator": 53,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 1200,
+      "train_chunk_ce_mean": 0.6670700553804636,
+      "gradient_l2_norm": 1.2932829808709951,
+      "geometry_gradient_l2_norm": 0.49439930152090034,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 20308.114139795303,
+      "epoch_fraction": 0.15039832055208716,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.718588128965348,
+        "position_accuracy": 0.725,
+        "constant_predicted_chunks": 198,
+        "exact_chunk_match": 75,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 828,
+            "recall_numerator": 613,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 75,
+            "recall_numerator": 40,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 57,
+            "recall_numerator": 43,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.2583136667938257,
+          "position_accuracy": 0.6020833333333333,
+          "constant_predicted_chunks": 75,
+          "exact_chunk_match": 50,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 583,
+              "recall_numerator": 443,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 210,
+              "recall_numerator": 71,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 167,
+              "recall_numerator": 64,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 1350,
+      "train_chunk_ce_mean": 0.6799706220626831,
+      "gradient_l2_norm": 2.4022378569981493,
+      "geometry_gradient_l2_norm": 0.643190695715568,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 22701.138852119446,
+      "epoch_fraction": 0.16919811062109807,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6939283680791656,
+        "position_accuracy": 0.7208333333333333,
+        "constant_predicted_chunks": 202,
+        "exact_chunk_match": 74,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 854,
+            "recall_numerator": 624,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 46,
+            "recall_numerator": 27,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 60,
+            "recall_numerator": 41,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.4488995633756228,
+          "position_accuracy": 0.5302083333333333,
+          "constant_predicted_chunks": 53,
+          "exact_chunk_match": 39,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 517,
+              "recall_numerator": 377,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 263,
+              "recall_numerator": 63,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 180,
+              "recall_numerator": 69,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 1500,
+      "train_chunk_ce_mean": 0.5950788278132677,
+      "gradient_l2_norm": 2.2501940273501355,
+      "geometry_gradient_l2_norm": 0.6187848401315887,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 25091.800908088684,
+      "epoch_fraction": 0.18799790069010897,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6789559114103516,
+        "position_accuracy": 0.7260416666666667,
+        "constant_predicted_chunks": 214,
+        "exact_chunk_match": 71,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 875,
+            "recall_numerator": 637,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 39,
+            "recall_numerator": 26,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 46,
+            "recall_numerator": 34,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.3606166034448506,
+          "position_accuracy": 0.6,
+          "constant_predicted_chunks": 78,
+          "exact_chunk_match": 57,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 625,
+              "recall_numerator": 459,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 173,
+              "recall_numerator": 51,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 162,
+              "recall_numerator": 66,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 1650,
+      "train_chunk_ce_mean": 0.5335176745429635,
+      "gradient_l2_norm": 5.062681766333443,
+      "geometry_gradient_l2_norm": 1.6828662658318796,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 27483.68261551857,
+      "epoch_fraction": 0.20679769075911986,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.678906637771676,
+        "position_accuracy": 0.7208333333333333,
+        "constant_predicted_chunks": 210,
+        "exact_chunk_match": 72,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 870,
+            "recall_numerator": 632,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 40,
+            "recall_numerator": 24,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 50,
+            "recall_numerator": 36,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.316264436505541,
+          "position_accuracy": 0.55,
+          "constant_predicted_chunks": 56,
+          "exact_chunk_match": 37,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 532,
+              "recall_numerator": 391,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 175,
+              "recall_numerator": 50,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 253,
+              "recall_numerator": 87,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 1800,
+      "train_chunk_ce_mean": 0.7599115469492972,
+      "gradient_l2_norm": 3.4631396559349987,
+      "geometry_gradient_l2_norm": 0.5565040863102403,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 29874.575565576553,
+      "epoch_fraction": 0.22559748082813075,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6701560209815701,
+        "position_accuracy": 0.7239583333333334,
+        "constant_predicted_chunks": 185,
+        "exact_chunk_match": 74,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 814,
+            "recall_numerator": 606,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 61,
+            "recall_numerator": 35,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 85,
+            "recall_numerator": 54,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.357352165623888,
+          "position_accuracy": 0.56875,
+          "constant_predicted_chunks": 75,
+          "exact_chunk_match": 50,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 534,
+              "recall_numerator": 400,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 187,
+              "recall_numerator": 60,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 239,
+              "recall_numerator": 86,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 1950,
+      "train_chunk_ce_mean": 0.5882665193639696,
+      "gradient_l2_norm": 3.1565388540128807,
+      "geometry_gradient_l2_norm": 0.8890817066466095,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 32268.91939353943,
+      "epoch_fraction": 0.24439727089714164,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6758550547684232,
+        "position_accuracy": 0.7239583333333334,
+        "constant_predicted_chunks": 204,
+        "exact_chunk_match": 73,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 841,
+            "recall_numerator": 620,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 38,
+            "recall_numerator": 24,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 81,
+            "recall_numerator": 51,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.1686218119119682,
+          "position_accuracy": 0.6072916666666667,
+          "constant_predicted_chunks": 87,
+          "exact_chunk_match": 63,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 614,
+              "recall_numerator": 455,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 148,
+              "recall_numerator": 47,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 198,
+              "recall_numerator": 81,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 2100,
+      "train_chunk_ce_mean": 0.7745460327714682,
+      "gradient_l2_norm": 4.943369814514518,
+      "geometry_gradient_l2_norm": 1.8353433924830476,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 34660.326357126236,
+      "epoch_fraction": 0.26319706096615253,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.680438625284781,
+        "position_accuracy": 0.7125,
+        "constant_predicted_chunks": 206,
+        "exact_chunk_match": 70,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 863,
+            "recall_numerator": 625,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 46,
+            "recall_numerator": 25,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 51,
+            "recall_numerator": 34,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.1676126289292976,
+          "position_accuracy": 0.5979166666666667,
+          "constant_predicted_chunks": 77,
+          "exact_chunk_match": 50,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 585,
+              "recall_numerator": 436,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 198,
+              "recall_numerator": 59,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 177,
+              "recall_numerator": 79,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 2250,
+      "train_chunk_ce_mean": 0.6737946188077331,
+      "gradient_l2_norm": 7.7888328486850025,
+      "geometry_gradient_l2_norm": 6.667110752260994,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 37053.95154571533,
+      "epoch_fraction": 0.2819968510351634,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6531702018653353,
+        "position_accuracy": 0.7364583333333333,
+        "constant_predicted_chunks": 208,
+        "exact_chunk_match": 73,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 859,
+            "recall_numerator": 634,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 49,
+            "recall_numerator": 32,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 52,
+            "recall_numerator": 41,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.1987003446600284,
+          "position_accuracy": 0.5760416666666667,
+          "constant_predicted_chunks": 66,
+          "exact_chunk_match": 44,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 554,
+              "recall_numerator": 410,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 221,
+              "recall_numerator": 64,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 185,
+              "recall_numerator": 79,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 2400,
+      "train_chunk_ce_mean": 0.6112188985571265,
+      "gradient_l2_norm": 1.4187866736594679,
+      "geometry_gradient_l2_norm": 0.3382090171717646,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 39445.665722608566,
+      "epoch_fraction": 0.3007966411041743,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6660184264803927,
+        "position_accuracy": 0.7260416666666667,
+        "constant_predicted_chunks": 208,
+        "exact_chunk_match": 73,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 866,
+            "recall_numerator": 633,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 49,
+            "recall_numerator": 29,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 45,
+            "recall_numerator": 35,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.211263107091266,
+          "position_accuracy": 0.546875,
+          "constant_predicted_chunks": 54,
+          "exact_chunk_match": 31,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 504,
+              "recall_numerator": 375,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 198,
+              "recall_numerator": 60,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 258,
+              "recall_numerator": 90,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 2550,
+      "train_chunk_ce_mean": 0.6132795959711075,
+      "gradient_l2_norm": 1.7135989575363155,
+      "geometry_gradient_l2_norm": 0.40831950387934784,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 41835.96068429947,
+      "epoch_fraction": 0.31959643117318526,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6639241057137648,
+        "position_accuracy": 0.7322916666666667,
+        "constant_predicted_chunks": 199,
+        "exact_chunk_match": 75,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 802,
+            "recall_numerator": 606,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 73,
+            "recall_numerator": 40,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 85,
+            "recall_numerator": 57,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.2393481529924126,
+          "position_accuracy": 0.5510416666666667,
+          "constant_predicted_chunks": 49,
+          "exact_chunk_match": 32,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 521,
+              "recall_numerator": 385,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 243,
+              "recall_numerator": 64,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 196,
+              "recall_numerator": 80,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 2700,
+      "train_chunk_ce_mean": 0.6664453940466046,
+      "gradient_l2_norm": 3.5974494934730963,
+      "geometry_gradient_l2_norm": 1.3625388378961094,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 44490.29771780968,
+      "epoch_fraction": 0.33839622124219615,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6442768282567461,
+        "position_accuracy": 0.7427083333333333,
+        "constant_predicted_chunks": 204,
+        "exact_chunk_match": 74,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 838,
+            "recall_numerator": 627,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 46,
+            "recall_numerator": 28,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 76,
+            "recall_numerator": 58,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.1277787376214594,
+          "position_accuracy": 0.5822916666666667,
+          "constant_predicted_chunks": 80,
+          "exact_chunk_match": 52,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 566,
+              "recall_numerator": 419,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 172,
+              "recall_numerator": 54,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 222,
+              "recall_numerator": 86,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 2850,
+      "train_chunk_ce_mean": 0.6327857146970928,
+      "gradient_l2_norm": 2.912495749609364,
+      "geometry_gradient_l2_norm": 1.1176809332904565,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 47000.428891420364,
+      "epoch_fraction": 0.35719601131120704,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6463573535399821,
+        "position_accuracy": 0.7427083333333333,
+        "constant_predicted_chunks": 198,
+        "exact_chunk_match": 76,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 820,
+            "recall_numerator": 618,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 56,
+            "recall_numerator": 35,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 84,
+            "recall_numerator": 60,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.1140562501546811,
+          "position_accuracy": 0.575,
+          "constant_predicted_chunks": 78,
+          "exact_chunk_match": 47,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 531,
+              "recall_numerator": 400,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 178,
+              "recall_numerator": 59,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 251,
+              "recall_numerator": 93,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    },
+    {
+      "update": 3000,
+      "train_chunk_ce_mean": 0.5204318426549435,
+      "gradient_l2_norm": 8.059163047684892,
+      "geometry_gradient_l2_norm": 5.345830686454756,
+      "geometry_params_with_grad": 408,
+      "elapsed_seconds": 49462.626323223114,
+      "epoch_fraction": 0.37599580138021793,
+      "calibration": {
+        "selection_chunk_ce_mean": 0.6407147437489281,
+        "position_accuracy": 0.7270833333333333,
+        "constant_predicted_chunks": 201,
+        "exact_chunk_match": 75,
+        "per_action": {
+          "STOP": {
+            "predicted_count": 0,
+            "recall_numerator": 0,
+            "recall_denominator": 4
+          },
+          "MOVE_FORWARD": {
+            "predicted_count": 843,
+            "recall_numerator": 623,
+            "recall_denominator": 662
+          },
+          "TURN_LEFT": {
+            "predicted_count": 56,
+            "recall_numerator": 30,
+            "recall_denominator": 136
+          },
+          "TURN_RIGHT": {
+            "predicted_count": 61,
+            "recall_numerator": 45,
+            "recall_denominator": 158
+          }
+        },
+        "scored_decisions": 240,
+        "geometry_masked": {
+          "selection_chunk_ce_mean": 1.0624971405202814,
+          "position_accuracy": 0.584375,
+          "constant_predicted_chunks": 84,
+          "exact_chunk_match": 55,
+          "per_action": {
+            "STOP": {
+              "predicted_count": 0,
+              "recall_numerator": 0,
+              "recall_denominator": 4
+            },
+            "MOVE_FORWARD": {
+              "predicted_count": 553,
+              "recall_numerator": 413,
+              "recall_denominator": 662
+            },
+            "TURN_LEFT": {
+              "predicted_count": 186,
+              "recall_numerator": 60,
+              "recall_denominator": 136
+            },
+            "TURN_RIGHT": {
+              "predicted_count": 221,
+              "recall_numerator": 88,
+              "recall_denominator": 158
+            }
+          },
+          "scored_decisions": 240
+        }
+      }
+    }
+  ],
+  "best_selection_chunk_ce_mean": 0.6407147437489281,
+  "best_checkpoint_path": "/w/artifacts/spark/native_chunk_geometry_134k_v1/best.pt",
+  "retained_adapter_checkpoints": [
+    "adapter_u00150.pt",
+    "adapter_u00300.pt",
+    "adapter_u00450.pt",
+    "adapter_u00600.pt",
+    "adapter_u00750.pt",
+    "adapter_u00900.pt",
+    "adapter_u01050.pt",
+    "adapter_u01200.pt",
+    "adapter_u01350.pt",
+    "adapter_u01500.pt",
+    "adapter_u01650.pt",
+    "adapter_u01800.pt",
+    "adapter_u01950.pt",
+    "adapter_u02100.pt",
+    "adapter_u02250.pt",
+    "adapter_u02400.pt",
+    "adapter_u02550.pt",
+    "adapter_u02700.pt",
+    "adapter_u02850.pt",
+    "adapter_u03000.pt"
+  ]
+}

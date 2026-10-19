@@ -1,0 +1,38 @@
+{
+  "arm_result_hashes": {
+    "lr_1em05": "0aebdf6e82b3662ed0444f0c6f4adba9f19532881adc17f47c0bfe97a2947fe0",
+    "lr_5em05": "cfa766a6a4d829503f3b9f4d2e2c58288b0be389020ec89176b3c4cd1f71cefb",
+    "lr_5em06": "9c029a0d77d89825e1048fc64bfa890f2dab76657e34104faff3433726740ced"
+  },
+  "error_count": 0,
+  "errors": [],
+  "evidence_boundary": {
+    "established": "The compact evidence, current locked sources, and selected checkpoint copied from Spark match the identities independently verified on Spark.",
+    "not_established": "Local byte verification of the five intentionally unmirrored checkpoints, navigation performance, rollout improvement, generalization, or ablation effects."
+  },
+  "evidence_root": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/spark/stability_pilot_v1",
+  "gate": "stability_pilot_compact_mac_mirror_verification_v1",
+  "preflight_hashes": {
+    "action": "0015a825caae06759f73f5dfa75ff84add4001f5872df94ceabccab47c186a53",
+    "processor": "ea17d6386ddbbad45c6d5dfa816f14105ec8dd62febc2fe054b6f91dabe6b874"
+  },
+  "recorded_at_utc": "2026-08-23T22:04:58.459736+00:00",
+  "repo": "/Users/vivekmattam/Desktop/GI/GridNav",
+  "schema_version": 1,
+  "selected_checkpoint": {
+    "arm_id": "lr_5em05",
+    "bytes": 1490534181,
+    "path": "/Users/vivekmattam/Desktop/GI/GridNav/checkpoints/stability_pilot_v1/lr_5em05/step_0008.pt",
+    "sha256": "7abfc32e335695a5fc3c463641e56088296ef0e1ef8ad4bd86a2d9f3ff1a2a17",
+    "step": 8
+  },
+  "status": "passed",
+  "top_level_hashes": {
+    "manifest": "231b3531bb31f1af79385fae9c8ae2ec33f06bf5484fd8b3c64603e81a315f14",
+    "suite": "e56ba45425382d1219a98383f141c7cbc38c545f6ecb45fcf02179d9937b1249",
+    "verification_v1": "1a7bb80adab302d1d44cd104da25d566166dbc46293f0f3c77d79505be90b030",
+    "verification_v2": "8cc5e126752c16d8f2b2458add2f18f517e4f88c24e5030660e1c542ffe787ee"
+  },
+  "verified_manifest_source_lock_count": 41,
+  "verified_verifier_v2_source_lock_count": 3
+}

@@ -1,0 +1,1690 @@
+{
+  "checkpoint_locks": {
+    "inverse_frequency_s20260825": {
+      "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+      "checkpoint_sha256": "f21496af3bc35bcc9f680b142bb19b4eff7f92fb5e8b405837e50ff7181872dc",
+      "checkpoint_trainable_state_sha256": "67381fcef28903f537e985a064a6ab9088dde0764f6f5fcd51bc10efb71cbbbc",
+      "checkpoint_update_step": 192,
+      "source_manifest_sha256": "056284189286c66de34fbe0dd5b4b9f59ecc1d805688a49440692cfa5548867a",
+      "source_result_sha256": "ced3e7c213508bf0c80f1aeed60e732aaf71f2cd133eb056e716305a2a089866",
+      "source_verification_sha256": "2b572451daaf07bf64c6053229edaf059e0ffd5bba2a3bb6d762fdc3c71f18dd"
+    },
+    "inverse_frequency_s20260826": {
+      "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+      "checkpoint_sha256": "55380852648df9581c06b887f5399240f981245d4da7b868019fb6ea8a544260",
+      "checkpoint_trainable_state_sha256": "71f9a4bdc688b3bf2914d9c7f584d32e57f593d0f8e7f509b6a895c06a3c80c8",
+      "checkpoint_update_step": 128,
+      "source_manifest_sha256": "d78f32d8daa0548cdbe0feaacf2577b6dd488110119fcd648a248a74a1ccebee",
+      "source_result_sha256": "52ae0f71a5269ed92794b0412f87af9391ee25bff749b5c1dd553a18cc6f8aa0",
+      "source_verification_sha256": "663e721391f27347fc773013c82b281201fe933b9391b86ae601bec883135971"
+    },
+    "inverse_frequency_s20260827": {
+      "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+      "checkpoint_sha256": "77f6eb8695323db53cf7394125f33a4a78be0b9608c500dfe575b4078eec81fc",
+      "checkpoint_trainable_state_sha256": "36c807329351d3c60882a4728e7edfec7830c7cb57f440d32f2b065854b3639d",
+      "checkpoint_update_step": 192,
+      "source_manifest_sha256": "61312cc64871b81b0fc51f20681f85636b04b223539a60253bf5d1f6a47385fd",
+      "source_result_sha256": "46fe665925d94fd4070ee94d97b0b1e7657a214d78d4b9c2e0f8d6f2ebb2978c",
+      "source_verification_sha256": "4983a8b59a8caaa3eba0b885bc1d0d08762d18ca9ecebedd25cc94023969d4bf"
+    },
+    "unweighted_s20260825": {
+      "checkpoint_gate": "native_qwen_c0_development_v1",
+      "checkpoint_sha256": "a4a58cd34409e24c805c847249cd921da17d11c2bef96e37a20bf7c50a86987d",
+      "checkpoint_trainable_state_sha256": "1bbb8490f51ca79c5109058a943cfa5c011de9ce69cfaf088dcdff672d5d984f",
+      "checkpoint_update_step": 160,
+      "source_manifest_sha256": "726952465b43827384ecb6bc20a41d867fbb83a3027c4cae30ebe00ccb38ab7b",
+      "source_result_sha256": "88bbd74f41eb6bb9d673e12fb3aa094accc5b4a93e5e6c0fe81c8352a3339c61",
+      "source_verification_sha256": "4f9116045645ecfbd84638f09d3e94b0db50b77d42d7a3cafdba6bbcfae230c8"
+    },
+    "unweighted_s20260826": {
+      "checkpoint_gate": "native_qwen_c0_development_v1",
+      "checkpoint_sha256": "ac5b106093c3b7e0a30851f907bba094b0db35f382940394bbc6d95fd4b89413",
+      "checkpoint_trainable_state_sha256": "f9e43568acfe84bdef1ae311d3bed6beb7f47160d1ae9f5d43b0c4840a265c53",
+      "checkpoint_update_step": 160,
+      "source_manifest_sha256": "a6a2971b11aea148fa2158b02166f88bce1c5845a6496013e89bb0b61d8fdfb0",
+      "source_result_sha256": "946d05b33a7dc860c287be6b4675507767693a4a13191b63cd6aff872b497c69",
+      "source_verification_sha256": "e81dd23bb648976be0c2b02776fe34611ed9db0cd117051007f2a857f277b859"
+    },
+    "unweighted_s20260827": {
+      "checkpoint_gate": "native_qwen_c0_development_v1",
+      "checkpoint_sha256": "7264fdd47d9554ce9d21da8f29d7ccb73dbe3903560b587c26106297cf86da21",
+      "checkpoint_trainable_state_sha256": "9e56e84b11eeecacb6c8b8186a0e74e4d3d99f39933be61baa6b826a00a83fba",
+      "checkpoint_update_step": 160,
+      "source_manifest_sha256": "be24ec75a8913e7b527a84ecfb43d5e6aff143e52aa87f1b2dd7a4fc66d9117e",
+      "source_result_sha256": "65082403f55eda913fc9967e3dc37c1f578e999353a9afd12490c1b25370e139",
+      "source_verification_sha256": "c23ceb4f0008b694b93249640554bc370e8ef1e54c0aa03c75279db2c2d3b730"
+    }
+  },
+  "control_locks": {
+    "manifest_sha256": "cb75d6259e42decccc161d069df2e04fdadbb7b4f20c6c480bcbca575ec44af4",
+    "suite_sha256": "2fab8d96958f4abc9377a204f2e43bc1e49d58fc1c7422f60315cf35479557b9",
+    "verification_sha256": "9d07c3a20a335910d91b338d5e22eea715ae004aa2e998d8ad968967ffa889e5"
+  },
+  "docker": {
+    "image_id": "sha256:6d4f86090bcd1bf4d75709858194865353ebf7243e3564b359106518fcbecabf",
+    "image_ref": "gridnav-spark-habitat:hsim0.3.3"
+  },
+  "episodes": [
+    {
+      "artifact_stem": "0000-328",
+      "episode_id": "328",
+      "features": {
+        "action_count": 46,
+        "forward_steps": 32,
+        "maximum_forward_displacement_m": 0.2500000868459571,
+        "minimum_forward_displacement_m": 0.24999982569766707,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 9,
+        "turn_right_count": 4
+      },
+      "index": 0,
+      "parent_index": 0,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 8.25537395477295,
+      "scene_id": "mp3d/17DRP5sb8fy/17DRP5sb8fy.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "3228"
+    },
+    {
+      "artifact_stem": "0001-592",
+      "episode_id": "592",
+      "features": {
+        "action_count": 86,
+        "forward_steps": 61,
+        "maximum_forward_displacement_m": 0.25812789789197815,
+        "minimum_forward_displacement_m": 0.25,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 18,
+        "turn_right_count": 6
+      },
+      "index": 1,
+      "parent_index": 1,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 14.086759567260742,
+      "scene_id": "mp3d/1LXtFkjw3qL/1LXtFkjw3qL.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "5676"
+    },
+    {
+      "artifact_stem": "0002-253",
+      "episode_id": "253",
+      "features": {
+        "action_count": 111,
+        "forward_steps": 73,
+        "maximum_forward_displacement_m": 0.25001994104128644,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 9,
+        "turn_right_count": 28
+      },
+      "index": 2,
+      "parent_index": 2,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 12.800823211669922,
+      "scene_id": "mp3d/1pXnuDYAj8r/1pXnuDYAj8r.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2475"
+    },
+    {
+      "artifact_stem": "0003-91",
+      "episode_id": "91",
+      "features": {
+        "action_count": 49,
+        "forward_steps": 31,
+        "maximum_forward_displacement_m": 0.262280951583859,
+        "minimum_forward_displacement_m": 0.24999993250115948,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 1,
+        "turn_right_count": 16
+      },
+      "index": 3,
+      "parent_index": 3,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 6.6270222663879395,
+      "scene_id": "mp3d/29hnd4uzFmX/29hnd4uzFmX.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1110"
+    },
+    {
+      "artifact_stem": "0004-535",
+      "episode_id": "535",
+      "features": {
+        "action_count": 94,
+        "forward_steps": 53,
+        "maximum_forward_displacement_m": 0.2801053725757127,
+        "minimum_forward_displacement_m": 0.24999985655129967,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 25,
+        "turn_right_count": 15
+      },
+      "index": 4,
+      "parent_index": 4,
+      "release_metadata_geodesic_drift_m": 0.48644065856933594,
+      "runtime_reset_geodesic_m": 13.670717239379883,
+      "scene_id": "mp3d/2n8kARJN3HM/2n8kARJN3HM.glb",
+      "selection_reasons": [
+        "scene_coverage_stress",
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "5231"
+    },
+    {
+      "artifact_stem": "0005-694",
+      "episode_id": "694",
+      "features": {
+        "action_count": 85,
+        "forward_steps": 51,
+        "maximum_forward_displacement_m": 0.2830063510807395,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 18,
+        "turn_right_count": 15
+      },
+      "index": 5,
+      "parent_index": 5,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 13.039380073547363,
+      "scene_id": "mp3d/5LpN3gDmAk7/5LpN3gDmAk7.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "6746"
+    },
+    {
+      "artifact_stem": "0006-145",
+      "episode_id": "145",
+      "features": {
+        "action_count": 68,
+        "forward_steps": 42,
+        "maximum_forward_displacement_m": 0.30925359273528735,
+        "minimum_forward_displacement_m": 0.25,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 8,
+        "turn_right_count": 17
+      },
+      "index": 6,
+      "parent_index": 6,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 10.815557479858398,
+      "scene_id": "mp3d/5q7pvUzZiYa/5q7pvUzZiYa.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1707"
+    },
+    {
+      "artifact_stem": "0007-586",
+      "episode_id": "586",
+      "features": {
+        "action_count": 70,
+        "forward_steps": 52,
+        "maximum_forward_displacement_m": 0.25000018538226476,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 5,
+        "turn_right_count": 12
+      },
+      "index": 7,
+      "parent_index": 7,
+      "release_metadata_geodesic_drift_m": 9.5367431640625e-07,
+      "runtime_reset_geodesic_m": 13.035350799560547,
+      "scene_id": "mp3d/759xd9YjKW5/759xd9YjKW5.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "5634"
+    },
+    {
+      "artifact_stem": "0008-724",
+      "episode_id": "724",
+      "features": {
+        "action_count": 78,
+        "forward_steps": 50,
+        "maximum_forward_displacement_m": 0.2667963548271317,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 20,
+        "turn_right_count": 7
+      },
+      "index": 8,
+      "parent_index": 8,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 11.516365051269531,
+      "scene_id": "mp3d/7y3sRwLe3Va/7y3sRwLe3Va.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "6995"
+    },
+    {
+      "artifact_stem": "0009-373",
+      "episode_id": "373",
+      "features": {
+        "action_count": 71,
+        "forward_steps": 52,
+        "maximum_forward_displacement_m": 0.2890310258773371,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 11,
+        "turn_right_count": 7
+      },
+      "index": 9,
+      "parent_index": 9,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 13.210885047912598,
+      "scene_id": "mp3d/82sE5b5pLXE/82sE5b5pLXE.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "3755"
+    },
+    {
+      "artifact_stem": "0010-45",
+      "episode_id": "45",
+      "features": {
+        "action_count": 95,
+        "forward_steps": 70,
+        "maximum_forward_displacement_m": 0.2611001447496206,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 10,
+        "turn_right_count": 14
+      },
+      "index": 10,
+      "parent_index": 10,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 17.402450561523438,
+      "scene_id": "mp3d/8WUmhLawc2A/8WUmhLawc2A.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "519"
+    },
+    {
+      "artifact_stem": "0011-116",
+      "episode_id": "116",
+      "features": {
+        "action_count": 61,
+        "forward_steps": 32,
+        "maximum_forward_displacement_m": 0.2605137968284952,
+        "minimum_forward_displacement_m": 0.2499998874049853,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 20,
+        "turn_right_count": 8
+      },
+      "index": 11,
+      "parent_index": 204,
+      "release_metadata_geodesic_drift_m": 0.20144176483154297,
+      "runtime_reset_geodesic_m": 8.294631004333496,
+      "scene_id": "mp3d/8WUmhLawc2A/8WUmhLawc2A.glb",
+      "selection_reasons": [
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "1333"
+    },
+    {
+      "artifact_stem": "0012-139",
+      "episode_id": "139",
+      "features": {
+        "action_count": 74,
+        "forward_steps": 61,
+        "maximum_forward_displacement_m": 0.2500005257310406,
+        "minimum_forward_displacement_m": 0.25,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 6,
+        "turn_right_count": 6
+      },
+      "index": 12,
+      "parent_index": 11,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 15.430036544799805,
+      "scene_id": "mp3d/B6ByNegPMKs/B6ByNegPMKs.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1563"
+    },
+    {
+      "artifact_stem": "0013-556",
+      "episode_id": "556",
+      "features": {
+        "action_count": 99,
+        "forward_steps": 67,
+        "maximum_forward_displacement_m": 0.284539955703863,
+        "minimum_forward_displacement_m": 0.2499998874049853,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 9,
+        "turn_right_count": 22
+      },
+      "index": 13,
+      "parent_index": 12,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 16.823421478271484,
+      "scene_id": "mp3d/D7N2EKCX4Sj/D7N2EKCX4Sj.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "5406"
+    },
+    {
+      "artifact_stem": "0014-478",
+      "episode_id": "478",
+      "features": {
+        "action_count": 88,
+        "forward_steps": 57,
+        "maximum_forward_displacement_m": 0.279320021977364,
+        "minimum_forward_displacement_m": 0.24999982569766707,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 18,
+        "turn_right_count": 12
+      },
+      "index": 14,
+      "parent_index": 13,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 14.403287887573242,
+      "scene_id": "mp3d/E9uDoFAP3SH/E9uDoFAP3SH.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "4765"
+    },
+    {
+      "artifact_stem": "0015-358",
+      "episode_id": "358",
+      "features": {
+        "action_count": 65,
+        "forward_steps": 36,
+        "maximum_forward_displacement_m": 0.25000010108861037,
+        "minimum_forward_displacement_m": 0.24999998372992263,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 23,
+        "turn_right_count": 5
+      },
+      "index": 15,
+      "parent_index": 14,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 8.813547134399414,
+      "scene_id": "mp3d/EDJbREhghzL/EDJbREhghzL.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "3513"
+    },
+    {
+      "artifact_stem": "0016-277",
+      "episode_id": "277",
+      "features": {
+        "action_count": 94,
+        "forward_steps": 69,
+        "maximum_forward_displacement_m": 0.25000031714062976,
+        "minimum_forward_displacement_m": 0.24999985655129967,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 18,
+        "turn_right_count": 6
+      },
+      "index": 16,
+      "parent_index": 15,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 16.480756759643555,
+      "scene_id": "mp3d/JF19kD82Mey/JF19kD82Mey.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2661"
+    },
+    {
+      "artifact_stem": "0017-130",
+      "episode_id": "130",
+      "features": {
+        "action_count": 76,
+        "forward_steps": 39,
+        "maximum_forward_displacement_m": 0.25000012767892815,
+        "minimum_forward_displacement_m": 0.24999984883788653,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 19,
+        "turn_right_count": 17
+      },
+      "index": 17,
+      "parent_index": 16,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 9.348247528076172,
+      "scene_id": "mp3d/JeFG25nYj2p/JeFG25nYj2p.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1366"
+    },
+    {
+      "artifact_stem": "0018-24",
+      "episode_id": "24",
+      "features": {
+        "action_count": 76,
+        "forward_steps": 40,
+        "maximum_forward_displacement_m": 0.26624061070048144,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 15,
+        "turn_right_count": 20
+      },
+      "index": 18,
+      "parent_index": 17,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 9.62505054473877,
+      "scene_id": "mp3d/PX4nDJXEHrG/PX4nDJXEHrG.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "193"
+    },
+    {
+      "artifact_stem": "0019-205",
+      "episode_id": "205",
+      "features": {
+        "action_count": 43,
+        "forward_steps": 37,
+        "maximum_forward_displacement_m": 0.28628806368016163,
+        "minimum_forward_displacement_m": 0.24999982569766707,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 1,
+        "turn_right_count": 4
+      },
+      "index": 19,
+      "parent_index": 18,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 9.468056678771973,
+      "scene_id": "mp3d/Pm6F8kyY3z2/Pm6F8kyY3z2.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2205"
+    },
+    {
+      "artifact_stem": "0020-445",
+      "episode_id": "445",
+      "features": {
+        "action_count": 80,
+        "forward_steps": 49,
+        "maximum_forward_displacement_m": 0.267393308673904,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 11,
+        "turn_right_count": 19
+      },
+      "index": 20,
+      "parent_index": 19,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 12.069669723510742,
+      "scene_id": "mp3d/S9hNv5qa7GM/S9hNv5qa7GM.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "4345"
+    },
+    {
+      "artifact_stem": "0021-286",
+      "episode_id": "286",
+      "features": {
+        "action_count": 50,
+        "forward_steps": 37,
+        "maximum_forward_displacement_m": 0.2532898577546537,
+        "minimum_forward_displacement_m": 0.24999990630122346,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 8,
+        "turn_right_count": 4
+      },
+      "index": 21,
+      "parent_index": 20,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 9.58128833770752,
+      "scene_id": "mp3d/SN83YJsR3w2/SN83YJsR3w2.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2737"
+    },
+    {
+      "artifact_stem": "0022-730",
+      "episode_id": "730",
+      "features": {
+        "action_count": 46,
+        "forward_steps": 34,
+        "maximum_forward_displacement_m": 0.2718920237537992,
+        "minimum_forward_displacement_m": 0.24999990630122346,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 4,
+        "turn_right_count": 7
+      },
+      "index": 22,
+      "parent_index": 21,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 8.62405014038086,
+      "scene_id": "mp3d/ULsKaCPVFJR/ULsKaCPVFJR.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "7037"
+    },
+    {
+      "artifact_stem": "0023-688",
+      "episode_id": "688",
+      "features": {
+        "action_count": 98,
+        "forward_steps": 66,
+        "maximum_forward_displacement_m": 0.2803056702797808,
+        "minimum_forward_displacement_m": 0.2499998874049853,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 21,
+        "turn_right_count": 10
+      },
+      "index": 23,
+      "parent_index": 22,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 16.212875366210938,
+      "scene_id": "mp3d/Uxmj2M2itWa/Uxmj2M2itWa.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "6700"
+    },
+    {
+      "artifact_stem": "0024-682",
+      "episode_id": "682",
+      "features": {
+        "action_count": 79,
+        "forward_steps": 52,
+        "maximum_forward_displacement_m": 0.2774981199761544,
+        "minimum_forward_displacement_m": 0.2499998507662395,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 15,
+        "turn_right_count": 11
+      },
+      "index": 24,
+      "parent_index": 23,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 13.301313400268555,
+      "scene_id": "mp3d/V2XKFyX4ASd/V2XKFyX4ASd.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "6618"
+    },
+    {
+      "artifact_stem": "0025-553",
+      "episode_id": "553",
+      "features": {
+        "action_count": 93,
+        "forward_steps": 57,
+        "maximum_forward_displacement_m": 0.26166542702645557,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 15,
+        "turn_right_count": 20
+      },
+      "index": 25,
+      "parent_index": 24,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 14.532719612121582,
+      "scene_id": "mp3d/VFuaQ6m2Qom/VFuaQ6m2Qom.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "5384"
+    },
+    {
+      "artifact_stem": "0026-508",
+      "episode_id": "508",
+      "features": {
+        "action_count": 79,
+        "forward_steps": 60,
+        "maximum_forward_displacement_m": 0.3023419766812483,
+        "minimum_forward_displacement_m": 0.25,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 5,
+        "turn_right_count": 13
+      },
+      "index": 26,
+      "parent_index": 25,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 15.360600471496582,
+      "scene_id": "mp3d/VLzqgDo317F/VLzqgDo317F.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "5051"
+    },
+    {
+      "artifact_stem": "0027-184",
+      "episode_id": "184",
+      "features": {
+        "action_count": 96,
+        "forward_steps": 67,
+        "maximum_forward_displacement_m": 0.2693583119161249,
+        "minimum_forward_displacement_m": 0.24999982569766707,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 19,
+        "turn_right_count": 9
+      },
+      "index": 27,
+      "parent_index": 26,
+      "release_metadata_geodesic_drift_m": 0.3109130859375,
+      "runtime_reset_geodesic_m": 16.818204879760742,
+      "scene_id": "mp3d/Vvot9Ly1tCj/Vvot9Ly1tCj.glb",
+      "selection_reasons": [
+        "scene_coverage_stress",
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "2021"
+    },
+    {
+      "artifact_stem": "0028-179",
+      "episode_id": "179",
+      "features": {
+        "action_count": 37,
+        "forward_steps": 25,
+        "maximum_forward_displacement_m": 0.2736822064123701,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 1,
+        "turn_right_count": 10
+      },
+      "index": 28,
+      "parent_index": 414,
+      "release_metadata_geodesic_drift_m": 0.14387226104736328,
+      "runtime_reset_geodesic_m": 6.598207473754883,
+      "scene_id": "mp3d/Vvot9Ly1tCj/Vvot9Ly1tCj.glb",
+      "selection_reasons": [
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "1990"
+    },
+    {
+      "artifact_stem": "0029-88",
+      "episode_id": "88",
+      "features": {
+        "action_count": 84,
+        "forward_steps": 56,
+        "maximum_forward_displacement_m": 0.2500005257310406,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 17,
+        "turn_right_count": 10
+      },
+      "index": 29,
+      "parent_index": 27,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 13.85936450958252,
+      "scene_id": "mp3d/VzqfbhrpDEA/VzqfbhrpDEA.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1043"
+    },
+    {
+      "artifact_stem": "0030-289",
+      "episode_id": "289",
+      "features": {
+        "action_count": 60,
+        "forward_steps": 35,
+        "maximum_forward_displacement_m": 0.354117426734502,
+        "minimum_forward_displacement_m": 0.24999990630122346,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 12,
+        "turn_right_count": 12
+      },
+      "index": 30,
+      "parent_index": 28,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 9.143217086791992,
+      "scene_id": "mp3d/XcA2TqTSSAj/XcA2TqTSSAj.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2754"
+    },
+    {
+      "artifact_stem": "0031-340",
+      "episode_id": "340",
+      "features": {
+        "action_count": 75,
+        "forward_steps": 53,
+        "maximum_forward_displacement_m": 0.2500005257310406,
+        "minimum_forward_displacement_m": 0.24999971472591187,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 5,
+        "turn_right_count": 16
+      },
+      "index": 31,
+      "parent_index": 29,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 13.466001510620117,
+      "scene_id": "mp3d/ZMojNkEp431/ZMojNkEp431.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "3257"
+    },
+    {
+      "artifact_stem": "0032-221",
+      "episode_id": "221",
+      "features": {
+        "action_count": 53,
+        "forward_steps": 29,
+        "maximum_forward_displacement_m": 0.2651106293297276,
+        "minimum_forward_displacement_m": 0.2499998874049853,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 11,
+        "turn_right_count": 12
+      },
+      "index": 32,
+      "parent_index": 450,
+      "release_metadata_geodesic_drift_m": 0.4200439453125,
+      "runtime_reset_geodesic_m": 7.4112653732299805,
+      "scene_id": "mp3d/ZMojNkEp431/ZMojNkEp431.glb",
+      "selection_reasons": [
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "2271"
+    },
+    {
+      "artifact_stem": "0033-407",
+      "episode_id": "407",
+      "features": {
+        "action_count": 74,
+        "forward_steps": 49,
+        "maximum_forward_displacement_m": 0.2500664387382843,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 9,
+        "turn_right_count": 15
+      },
+      "index": 33,
+      "parent_index": 458,
+      "release_metadata_geodesic_drift_m": 0.014544486999511719,
+      "runtime_reset_geodesic_m": 11.468507766723633,
+      "scene_id": "mp3d/ZMojNkEp431/ZMojNkEp431.glb",
+      "selection_reasons": [
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "3980"
+    },
+    {
+      "artifact_stem": "0034-733",
+      "episode_id": "733",
+      "features": {
+        "action_count": 83,
+        "forward_steps": 55,
+        "maximum_forward_displacement_m": 0.262355872836055,
+        "minimum_forward_displacement_m": 0.2499995231628418,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 23,
+        "turn_right_count": 4
+      },
+      "index": 34,
+      "parent_index": 30,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 11.889249801635742,
+      "scene_id": "mp3d/aayBHfsNo7d/aayBHfsNo7d.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "7047"
+    },
+    {
+      "artifact_stem": "0035-706",
+      "episode_id": "706",
+      "features": {
+        "action_count": 85,
+        "forward_steps": 53,
+        "maximum_forward_displacement_m": 0.26687451812330615,
+        "minimum_forward_displacement_m": 0.2499998874049853,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 15,
+        "turn_right_count": 16
+      },
+      "index": 35,
+      "parent_index": 31,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 12.88987922668457,
+      "scene_id": "mp3d/ac26ZMwG7aT/ac26ZMwG7aT.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "6797"
+    },
+    {
+      "artifact_stem": "0036-259",
+      "episode_id": "259",
+      "features": {
+        "action_count": 75,
+        "forward_steps": 55,
+        "maximum_forward_displacement_m": 0.28751204514327994,
+        "minimum_forward_displacement_m": 0.25,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 7,
+        "turn_right_count": 12
+      },
+      "index": 36,
+      "parent_index": 32,
+      "release_metadata_geodesic_drift_m": 1.9073486328125e-06,
+      "runtime_reset_geodesic_m": 13.75672721862793,
+      "scene_id": "mp3d/b8cTxDM8gDG/b8cTxDM8gDG.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2549"
+    },
+    {
+      "artifact_stem": "0037-463",
+      "episode_id": "463",
+      "features": {
+        "action_count": 69,
+        "forward_steps": 42,
+        "maximum_forward_displacement_m": 0.3273186658491268,
+        "minimum_forward_displacement_m": 0.2499998642647161,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 20,
+        "turn_right_count": 6
+      },
+      "index": 37,
+      "parent_index": 33,
+      "release_metadata_geodesic_drift_m": 9.5367431640625e-07,
+      "runtime_reset_geodesic_m": 11.064346313476562,
+      "scene_id": "mp3d/cV4RVeZvu5T/cV4RVeZvu5T.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "4616"
+    },
+    {
+      "artifact_stem": "0038-100",
+      "episode_id": "100",
+      "features": {
+        "action_count": 100,
+        "forward_steps": 75,
+        "maximum_forward_displacement_m": 0.25959834375383173,
+        "minimum_forward_displacement_m": 0.25,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 16,
+        "turn_right_count": 8
+      },
+      "index": 38,
+      "parent_index": 34,
+      "release_metadata_geodesic_drift_m": 0.0770721435546875,
+      "runtime_reset_geodesic_m": 17.841434478759766,
+      "scene_id": "mp3d/dhjEzFoUFzH/dhjEzFoUFzH.glb",
+      "selection_reasons": [
+        "scene_coverage_stress",
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "1181"
+    },
+    {
+      "artifact_stem": "0039-394",
+      "episode_id": "394",
+      "features": {
+        "action_count": 47,
+        "forward_steps": 29,
+        "maximum_forward_displacement_m": 0.30887259242830833,
+        "minimum_forward_displacement_m": 0.2499998874049853,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 11,
+        "turn_right_count": 6
+      },
+      "index": 39,
+      "parent_index": 35,
+      "release_metadata_geodesic_drift_m": 4.76837158203125e-07,
+      "runtime_reset_geodesic_m": 7.394726753234863,
+      "scene_id": "mp3d/e9zR4mvMWw7/e9zR4mvMWw7.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "3923"
+    },
+    {
+      "artifact_stem": "0040-691",
+      "episode_id": "691",
+      "features": {
+        "action_count": 88,
+        "forward_steps": 54,
+        "maximum_forward_displacement_m": 0.25749595605948533,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 17,
+        "turn_right_count": 16
+      },
+      "index": 40,
+      "parent_index": 36,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 12.917425155639648,
+      "scene_id": "mp3d/gTV8FGcVJC9/gTV8FGcVJC9.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "6742"
+    },
+    {
+      "artifact_stem": "0041-295",
+      "episode_id": "295",
+      "features": {
+        "action_count": 80,
+        "forward_steps": 41,
+        "maximum_forward_displacement_m": 0.2780382781400119,
+        "minimum_forward_displacement_m": 0.24999985655129967,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 20,
+        "turn_right_count": 18
+      },
+      "index": 41,
+      "parent_index": 37,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 10.07935905456543,
+      "scene_id": "mp3d/i5noydFURQK/i5noydFURQK.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2786"
+    },
+    {
+      "artifact_stem": "0042-103",
+      "episode_id": "103",
+      "features": {
+        "action_count": 76,
+        "forward_steps": 49,
+        "maximum_forward_displacement_m": 0.3102443863881372,
+        "minimum_forward_displacement_m": 0.25,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 11,
+        "turn_right_count": 15
+      },
+      "index": 42,
+      "parent_index": 38,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 12.540409088134766,
+      "scene_id": "mp3d/jh4fc5c5qoQ/jh4fc5c5qoQ.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1188"
+    },
+    {
+      "artifact_stem": "0043-505",
+      "episode_id": "505",
+      "features": {
+        "action_count": 94,
+        "forward_steps": 59,
+        "maximum_forward_displacement_m": 0.30914116152453974,
+        "minimum_forward_displacement_m": 0.24999985655129967,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 17,
+        "turn_right_count": 17
+      },
+      "index": 43,
+      "parent_index": 39,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 11.52090072631836,
+      "scene_id": "mp3d/kEZ7cmS4wCh/kEZ7cmS4wCh.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "5048"
+    },
+    {
+      "artifact_stem": "0044-19",
+      "episode_id": "19",
+      "features": {
+        "action_count": 53,
+        "forward_steps": 39,
+        "maximum_forward_displacement_m": 0.2978878301609565,
+        "minimum_forward_displacement_m": 0.24999990630122346,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 10,
+        "turn_right_count": 3
+      },
+      "index": 44,
+      "parent_index": 590,
+      "release_metadata_geodesic_drift_m": 0.29865169525146484,
+      "runtime_reset_geodesic_m": 10.273116111755371,
+      "scene_id": "mp3d/kEZ7cmS4wCh/kEZ7cmS4wCh.glb",
+      "selection_reasons": [
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "185"
+    },
+    {
+      "artifact_stem": "0045-734",
+      "episode_id": "734",
+      "features": {
+        "action_count": 73,
+        "forward_steps": 53,
+        "maximum_forward_displacement_m": 0.27093095366084635,
+        "minimum_forward_displacement_m": 0.24999985655129967,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 11,
+        "turn_right_count": 8
+      },
+      "index": 45,
+      "parent_index": 604,
+      "release_metadata_geodesic_drift_m": 0.3134441375732422,
+      "runtime_reset_geodesic_m": 13.016728401184082,
+      "scene_id": "mp3d/kEZ7cmS4wCh/kEZ7cmS4wCh.glb",
+      "selection_reasons": [
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "7059"
+    },
+    {
+      "artifact_stem": "0046-241",
+      "episode_id": "241",
+      "features": {
+        "action_count": 55,
+        "forward_steps": 34,
+        "maximum_forward_displacement_m": 0.26516525695730137,
+        "minimum_forward_displacement_m": 0.24999972962709494,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 7,
+        "turn_right_count": 13
+      },
+      "index": 46,
+      "parent_index": 40,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 8.753811836242676,
+      "scene_id": "mp3d/mJXqzFtmKg4/mJXqzFtmKg4.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2367"
+    },
+    {
+      "artifact_stem": "0047-298",
+      "episode_id": "298",
+      "features": {
+        "action_count": 82,
+        "forward_steps": 58,
+        "maximum_forward_displacement_m": 0.2516425178438873,
+        "minimum_forward_displacement_m": 0.24999982569766707,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 11,
+        "turn_right_count": 12
+      },
+      "index": 47,
+      "parent_index": 41,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 13.039000511169434,
+      "scene_id": "mp3d/p5wJjkQkbXX/p5wJjkQkbXX.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "2818"
+    },
+    {
+      "artifact_stem": "0048-664",
+      "episode_id": "664",
+      "features": {
+        "action_count": 65,
+        "forward_steps": 33,
+        "maximum_forward_displacement_m": 0.2977592040982167,
+        "minimum_forward_displacement_m": 0.24999996398521693,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 10,
+        "turn_right_count": 21
+      },
+      "index": 48,
+      "parent_index": 42,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 8.234903335571289,
+      "scene_id": "mp3d/pRbA3pwrgk9/pRbA3pwrgk9.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "6436"
+    },
+    {
+      "artifact_stem": "0049-121",
+      "episode_id": "121",
+      "features": {
+        "action_count": 63,
+        "forward_steps": 44,
+        "maximum_forward_displacement_m": 0.25000011769961433,
+        "minimum_forward_displacement_m": 0.24999982569766707,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 5,
+        "turn_right_count": 13
+      },
+      "index": 49,
+      "parent_index": 43,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 10.611000061035156,
+      "scene_id": "mp3d/qoiz87JEwZ2/qoiz87JEwZ2.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1357"
+    },
+    {
+      "artifact_stem": "0050-142",
+      "episode_id": "142",
+      "features": {
+        "action_count": 104,
+        "forward_steps": 64,
+        "maximum_forward_displacement_m": 0.2698731789136638,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 29,
+        "turn_right_count": 10
+      },
+      "index": 50,
+      "parent_index": 44,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 15.469685554504395,
+      "scene_id": "mp3d/r1Q1Z4BcV1o/r1Q1Z4BcV1o.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1623"
+    },
+    {
+      "artifact_stem": "0051-92",
+      "episode_id": "92",
+      "features": {
+        "action_count": 72,
+        "forward_steps": 52,
+        "maximum_forward_displacement_m": 0.27292140079138266,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 12,
+        "turn_right_count": 7
+      },
+      "index": 51,
+      "parent_index": 654,
+      "release_metadata_geodesic_drift_m": 0.1697378158569336,
+      "runtime_reset_geodesic_m": 12.434494018554688,
+      "scene_id": "mp3d/r1Q1Z4BcV1o/r1Q1Z4BcV1o.glb",
+      "selection_reasons": [
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "1116"
+    },
+    {
+      "artifact_stem": "0052-36",
+      "episode_id": "36",
+      "features": {
+        "action_count": 80,
+        "forward_steps": 55,
+        "maximum_forward_displacement_m": 0.25878706890919356,
+        "minimum_forward_displacement_m": 0.24999982569766707,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 13,
+        "turn_right_count": 11
+      },
+      "index": 52,
+      "parent_index": 45,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 13.641937255859375,
+      "scene_id": "mp3d/r47D5H71a5s/r47D5H71a5s.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "356"
+    },
+    {
+      "artifact_stem": "0053-172",
+      "episode_id": "172",
+      "features": {
+        "action_count": 64,
+        "forward_steps": 35,
+        "maximum_forward_displacement_m": 0.3175586850812626,
+        "minimum_forward_displacement_m": 0.24999990630122346,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 21,
+        "turn_right_count": 7
+      },
+      "index": 53,
+      "parent_index": 46,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 9.233928680419922,
+      "scene_id": "mp3d/rPc6DW4iMge/rPc6DW4iMge.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "1942"
+    },
+    {
+      "artifact_stem": "0054-3",
+      "episode_id": "3",
+      "features": {
+        "action_count": 70,
+        "forward_steps": 42,
+        "maximum_forward_displacement_m": 0.3199833965683122,
+        "minimum_forward_displacement_m": 0.24999985655129967,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 3,
+        "turn_right_count": 24
+      },
+      "index": 54,
+      "parent_index": 47,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 10.39185905456543,
+      "scene_id": "mp3d/s8pcmisQ38h/s8pcmisQ38h.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "37"
+    },
+    {
+      "artifact_stem": "0055-460",
+      "episode_id": "460",
+      "features": {
+        "action_count": 71,
+        "forward_steps": 53,
+        "maximum_forward_displacement_m": 0.28405057475239265,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 9,
+        "turn_right_count": 8
+      },
+      "index": 55,
+      "parent_index": 48,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 13.468184471130371,
+      "scene_id": "mp3d/sKLMLpTHeUy/sKLMLpTHeUy.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "4554"
+    },
+    {
+      "artifact_stem": "0056-715",
+      "episode_id": "715",
+      "features": {
+        "action_count": 79,
+        "forward_steps": 48,
+        "maximum_forward_displacement_m": 0.2511825866729507,
+        "minimum_forward_displacement_m": 0.2499995231628418,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 17,
+        "turn_right_count": 13
+      },
+      "index": 56,
+      "parent_index": 49,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 11.827942848205566,
+      "scene_id": "mp3d/sT4fr6TAbpF/sT4fr6TAbpF.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "6854"
+    },
+    {
+      "artifact_stem": "0057-562",
+      "episode_id": "562",
+      "features": {
+        "action_count": 40,
+        "forward_steps": 27,
+        "maximum_forward_displacement_m": 0.3104462916769995,
+        "minimum_forward_displacement_m": 0.2499998874049853,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 7,
+        "turn_right_count": 5
+      },
+      "index": 57,
+      "parent_index": 50,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 6.6170549392700195,
+      "scene_id": "mp3d/uNb9QFRL6hY/uNb9QFRL6hY.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "5448"
+    },
+    {
+      "artifact_stem": "0058-718",
+      "episode_id": "718",
+      "features": {
+        "action_count": 94,
+        "forward_steps": 69,
+        "maximum_forward_displacement_m": 0.2609073630185993,
+        "minimum_forward_displacement_m": 0.25,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 7,
+        "turn_right_count": 17
+      },
+      "index": 58,
+      "parent_index": 51,
+      "release_metadata_geodesic_drift_m": 0.3146476745605469,
+      "runtime_reset_geodesic_m": 17.040889739990234,
+      "scene_id": "mp3d/ur6pFq6Qu1A/ur6pFq6Qu1A.glb",
+      "selection_reasons": [
+        "scene_coverage_stress",
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "6923"
+    },
+    {
+      "artifact_stem": "0059-485",
+      "episode_id": "485",
+      "features": {
+        "action_count": 85,
+        "forward_steps": 59,
+        "maximum_forward_displacement_m": 0.25107538329552365,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 13,
+        "turn_right_count": 12
+      },
+      "index": 59,
+      "parent_index": 759,
+      "release_metadata_geodesic_drift_m": 0.4406394958496094,
+      "runtime_reset_geodesic_m": 14.025086402893066,
+      "scene_id": "mp3d/ur6pFq6Qu1A/ur6pFq6Qu1A.glb",
+      "selection_reasons": [
+        "runtime_geodesic_drift"
+      ],
+      "trajectory_id": "4884"
+    },
+    {
+      "artifact_stem": "0060-415",
+      "episode_id": "415",
+      "features": {
+        "action_count": 68,
+        "forward_steps": 38,
+        "maximum_forward_displacement_m": 0.2606207137916222,
+        "minimum_forward_displacement_m": 0.24999969982473144,
+        "no_displacement_forward_count": 0,
+        "short_displacement_forward_count": 0,
+        "turn_left_count": 13,
+        "turn_right_count": 16
+      },
+      "index": 60,
+      "parent_index": 52,
+      "release_metadata_geodesic_drift_m": 0.0,
+      "runtime_reset_geodesic_m": 9.4765043258667,
+      "scene_id": "mp3d/vyrNrziPKCB/vyrNrziPKCB.glb",
+      "selection_reasons": [
+        "scene_coverage_stress"
+      ],
+      "trajectory_id": "4020"
+    }
+  ],
+  "gate": "native_qwen_c0_latency_selected_closed_loop_evaluation_v1",
+  "max_hours_per_invocation": 30.0,
+  "outcome_used_for_scope_selection": false,
+  "protocol": {
+    "checkpoints": [
+      {
+        "checkpoint_gate": "native_qwen_c0_development_v1",
+        "checkpoint_id": "unweighted_s20260825",
+        "checkpoint_relative_path": "step_0160.pt",
+        "checkpoint_sha256": "a4a58cd34409e24c805c847249cd921da17d11c2bef96e37a20bf7c50a86987d",
+        "replication_seed": 20260825,
+        "selected_update": 160,
+        "source_run_id": "native_c0_development_v1",
+        "treatment": "unweighted"
+      },
+      {
+        "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+        "checkpoint_id": "inverse_frequency_s20260825",
+        "checkpoint_relative_path": "step_0192.pt",
+        "checkpoint_sha256": "f21496af3bc35bcc9f680b142bb19b4eff7f92fb5e8b405837e50ff7181872dc",
+        "replication_seed": 20260825,
+        "selected_update": 192,
+        "source_run_id": "native_c0_action_balance_v1",
+        "treatment": "inverse_frequency"
+      },
+      {
+        "checkpoint_gate": "native_qwen_c0_development_v1",
+        "checkpoint_id": "unweighted_s20260826",
+        "checkpoint_relative_path": "step_0160.pt",
+        "checkpoint_sha256": "ac5b106093c3b7e0a30851f907bba094b0db35f382940394bbc6d95fd4b89413",
+        "replication_seed": 20260826,
+        "selected_update": 160,
+        "source_run_id": "native_c0_seed_replication_unweighted_s20260826_v1",
+        "treatment": "unweighted"
+      },
+      {
+        "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+        "checkpoint_id": "inverse_frequency_s20260826",
+        "checkpoint_relative_path": "step_0128.pt",
+        "checkpoint_sha256": "55380852648df9581c06b887f5399240f981245d4da7b868019fb6ea8a544260",
+        "replication_seed": 20260826,
+        "selected_update": 128,
+        "source_run_id": "native_c0_seed_replication_inverse_frequency_s20260826_v1",
+        "treatment": "inverse_frequency"
+      },
+      {
+        "checkpoint_gate": "native_qwen_c0_development_v1",
+        "checkpoint_id": "unweighted_s20260827",
+        "checkpoint_relative_path": "step_0160.pt",
+        "checkpoint_sha256": "7264fdd47d9554ce9d21da8f29d7ccb73dbe3903560b587c26106297cf86da21",
+        "replication_seed": 20260827,
+        "selected_update": 160,
+        "source_run_id": "native_c0_seed_replication_unweighted_s20260827_v1",
+        "treatment": "unweighted"
+      },
+      {
+        "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+        "checkpoint_id": "inverse_frequency_s20260827",
+        "checkpoint_relative_path": "step_0192.pt",
+        "checkpoint_sha256": "77f6eb8695323db53cf7394125f33a4a78be0b9608c500dfe575b4078eec81fc",
+        "replication_seed": 20260827,
+        "selected_update": 192,
+        "source_run_id": "native_c0_seed_replication_inverse_frequency_s20260827_v1",
+        "treatment": "inverse_frequency"
+      }
+    ],
+    "chunk_length": 1,
+    "evidence_boundary": {
+      "stress_pass_does_not_establish": "Navigation competence, success, oracle success, treatment ordering, generalization, or any C1-C4 claim.",
+      "stress_pass_establishes": "One selected native-C0 checkpoint completed 32 sequential H4 batch-1 policy decisions and simulator steps with finite telemetry inside the infrastructure cap."
+    },
+    "headline_metrics": [
+      "oracle_success_rate",
+      "success_rate"
+    ],
+    "history_mode": "H4_CAUSAL",
+    "latency_scope_rule": [
+      {
+        "branch": "all_six_61_episodes",
+        "upper_inclusive_seconds": 0.5
+      },
+      {
+        "branch": "paired_original_plus_unweighted_replication_61_episodes",
+        "lower_exclusive_seconds": 0.5,
+        "upper_inclusive_seconds": 1.5
+      },
+      {
+        "branch": "single_unweighted_50_episodes",
+        "lower_exclusive_seconds": 1.5
+      }
+    ],
+    "official_max_steps": 500,
+    "schema_version": 1,
+    "sealed_split": "val_unseen",
+    "secondary_metrics": [
+      "spl",
+      "navigation_error",
+      "ndtw",
+      "sdtw",
+      "stop_rate",
+      "step_cap_rate",
+      "collision_count"
+    ],
+    "split": "val_seen",
+    "stress": {
+      "checkpoint_id": "unweighted_s20260825",
+      "decision_count": 32,
+      "hard_max_seconds": 1800,
+      "scientific_metrics_emitted": false
+    },
+    "success_distance_m": 3.0
+  },
+  "recorded_at_utc": "2026-08-26T03:23:52.582088+00:00",
+  "resume_unit": "completed episode report with linked steps and timings",
+  "run_id": "native_c0_closed_loop_v1",
+  "schema_version": 1,
+  "selected_checkpoints": [
+    {
+      "checkpoint_gate": "native_qwen_c0_development_v1",
+      "checkpoint_id": "unweighted_s20260825",
+      "checkpoint_relative_path": "step_0160.pt",
+      "checkpoint_sha256": "a4a58cd34409e24c805c847249cd921da17d11c2bef96e37a20bf7c50a86987d",
+      "replication_seed": 20260825,
+      "selected_update": 160,
+      "source_run_id": "native_c0_development_v1",
+      "treatment": "unweighted"
+    },
+    {
+      "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+      "checkpoint_id": "inverse_frequency_s20260825",
+      "checkpoint_relative_path": "step_0192.pt",
+      "checkpoint_sha256": "f21496af3bc35bcc9f680b142bb19b4eff7f92fb5e8b405837e50ff7181872dc",
+      "replication_seed": 20260825,
+      "selected_update": 192,
+      "source_run_id": "native_c0_action_balance_v1",
+      "treatment": "inverse_frequency"
+    },
+    {
+      "checkpoint_gate": "native_qwen_c0_development_v1",
+      "checkpoint_id": "unweighted_s20260826",
+      "checkpoint_relative_path": "step_0160.pt",
+      "checkpoint_sha256": "ac5b106093c3b7e0a30851f907bba094b0db35f382940394bbc6d95fd4b89413",
+      "replication_seed": 20260826,
+      "selected_update": 160,
+      "source_run_id": "native_c0_seed_replication_unweighted_s20260826_v1",
+      "treatment": "unweighted"
+    },
+    {
+      "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+      "checkpoint_id": "inverse_frequency_s20260826",
+      "checkpoint_relative_path": "step_0128.pt",
+      "checkpoint_sha256": "55380852648df9581c06b887f5399240f981245d4da7b868019fb6ea8a544260",
+      "replication_seed": 20260826,
+      "selected_update": 128,
+      "source_run_id": "native_c0_seed_replication_inverse_frequency_s20260826_v1",
+      "treatment": "inverse_frequency"
+    },
+    {
+      "checkpoint_gate": "native_qwen_c0_development_v1",
+      "checkpoint_id": "unweighted_s20260827",
+      "checkpoint_relative_path": "step_0160.pt",
+      "checkpoint_sha256": "7264fdd47d9554ce9d21da8f29d7ccb73dbe3903560b587c26106297cf86da21",
+      "replication_seed": 20260827,
+      "selected_update": 160,
+      "source_run_id": "native_c0_seed_replication_unweighted_s20260827_v1",
+      "treatment": "unweighted"
+    },
+    {
+      "checkpoint_gate": "native_qwen_c0_action_balance_v1",
+      "checkpoint_id": "inverse_frequency_s20260827",
+      "checkpoint_relative_path": "step_0192.pt",
+      "checkpoint_sha256": "77f6eb8695323db53cf7394125f33a4a78be0b9608c500dfe575b4078eec81fc",
+      "replication_seed": 20260827,
+      "selected_update": 192,
+      "source_run_id": "native_c0_seed_replication_inverse_frequency_s20260827_v1",
+      "treatment": "inverse_frequency"
+    }
+  ],
+  "selected_scope": {
+    "branch_id": "all_six_61_episodes",
+    "checkpoint_ids": [
+      "unweighted_s20260825",
+      "inverse_frequency_s20260825",
+      "unweighted_s20260826",
+      "inverse_frequency_s20260826",
+      "unweighted_s20260827",
+      "inverse_frequency_s20260827"
+    ],
+    "episode_count": 61,
+    "measured_seconds_per_step": 0.25243097158090677
+  },
+  "software_sha256": {
+    "scripts/check_native_c0_closed_loop_artifacts.py": "98ece4cd6188328e9e881669a38a072ac7f88436db28daf74ef8a791c951720e",
+    "scripts/run_spark_native_c0_closed_loop.py": "3100ba820e90e468484875283c6b8a55144a4300e77434a2b62163f5d7ef434d",
+    "scripts/run_spark_native_c0_closed_loop.sh": "a0b58d18434e8662483cf0eafeef8ac0363c949551d8997a27758bdbb34b41d7",
+    "scripts/start_spark_native_c0_closed_loop.sh": "954a970e94eac96df3f531e862983cc2dc738b4153d49bd822d5e8b5277c9e38",
+    "src/spatialvlm/data/habitat_sim_r2r.py": "5f4365c5a3d6f49eee70114c13b83ab66c534a7a78025078d21aa42d63c345a3",
+    "src/spatialvlm/data/history.py": "f7f29f1306b386b08e66ad741ebf68452ec7d86bdc5101162cd4361fe541bdf0",
+    "src/spatialvlm/data/native_qwen.py": "2b221c8856d25c593bd42b5971d18bc76cb766fb1bbe468be9172902e57b1f39",
+    "src/spatialvlm/eval/action_decision.py": "7b526f2948745440cd84aafad1191b7e0cc998f1ca918c051a999e55420ee781",
+    "src/spatialvlm/eval/metrics.py": "63177d682c2b5ff38135863f473615452c056f1ae880dfbbb693f131ea558949",
+    "src/spatialvlm/eval/native_closed_loop.py": "61cbbcaeb15233fd7247b299bc5074c0dedab419702c4dfae2dd28c8b3832e77",
+    "src/spatialvlm/eval/native_policy.py": "6c0b87cdb6f4aad1b27b48453b78c5a76a8b9fa1e6b139e433e065ecc00b73ca",
+    "src/spatialvlm/eval/qwen_action_scorer.py": "905cc4bbf29b3552b092f73028911c434b738aa992c4940a38c6636c107ea88c",
+    "src/spatialvlm/eval/r2r_ce.py": "96ad6b316a1c88c3ca2107754fb9c1c2f982afcc56647a2d096397d3c884de89",
+    "src/spatialvlm/training/native_c0_gate.py": "f813c5d9dfc3ce146e9865978ead20d0c2c35ea783b2bbe93a31a1453e44857b"
+  },
+  "status": "frozen",
+  "stress_locks": {
+    "manifest_sha256": "6f8e91cd64c49c992a102f128e1e04407f1c68b08b08c9ab036e5f84628d8bfb",
+    "result_sha256": "2a91efb4c91c097f0191f190f2d00aa1c6ef1820630a46d691b216c8e5e417c5",
+    "timings_sha256": "78aa24932577b184780882e39c8d659eea0b9266651c572e2474ee1315350c2c",
+    "verification_sha256": "926339c977af5b68b84a85e9343081ef6bb0706bcebdd4d7ec8b3d3850c7509e"
+  }
+}

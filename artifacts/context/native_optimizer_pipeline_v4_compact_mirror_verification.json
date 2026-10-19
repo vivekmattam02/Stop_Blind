@@ -1,0 +1,293 @@
+{
+  "artifact_root": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/spark",
+  "error_count": 0,
+  "errors": [],
+  "evidence_boundary": {
+    "established": "The compact Spark artifacts, current source locks, arm/event hash chains, selection record, and independent-verifier linkages survived the Mac transfer.",
+    "not_established": "Local bytes for unmirrored Spark checkpoints/caches/model weights, navigation competence, generalization, learning-rate optimality, or paper performance."
+  },
+  "gate": "native_qwen_optimizer_compact_mac_mirror_verification_v1",
+  "optimizer_admission_v1": {
+    "arms": [
+      {
+        "arm_id": "lr_2em07",
+        "calibration": [
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.463550877436743,
+            "update_step": 0
+          },
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.426577752695797,
+            "update_step": 8
+          },
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.448919094284216,
+            "update_step": 16
+          },
+          {
+            "descriptive_accuracy": 0.34375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.333939569513335,
+            "update_step": 32
+          },
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.419555832240938,
+            "update_step": 64
+          }
+        ],
+        "changed_update_count": 64,
+        "completed_updates": 64,
+        "events_sha256": "a9adcd5ba3ca26cda2817366020a892241b7f990699c3ed1ede9af4dd8f770ab",
+        "learning_rate": 2e-07,
+        "result_sha256": "3af4e6dd05d98a27f9912ce19cc9986619be531777c834c6bc64b5401f7542d1"
+      },
+      {
+        "arm_id": "lr_2em06",
+        "calibration": [
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.463550877436743,
+            "update_step": 0
+          },
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.332453945942065,
+            "update_step": 8
+          },
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.075080572797203,
+            "update_step": 16
+          },
+          {
+            "descriptive_accuracy": 0.390625,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.534355728016568,
+            "update_step": 32
+          },
+          {
+            "descriptive_accuracy": 0.390625,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.095715736070018,
+            "update_step": 64
+          }
+        ],
+        "changed_update_count": 64,
+        "completed_updates": 64,
+        "events_sha256": "edd6cfeb35f018789f9e44d103f06f2818679f0d44ad356c81833e0a0c38fdc0",
+        "learning_rate": 2e-06,
+        "result_sha256": "a83c762da71d845f52fb135f474b39a6881b7d819628966785160a70b2054d3a"
+      },
+      {
+        "arm_id": "lr_2em05",
+        "calibration": [
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.463550877436743,
+            "update_step": 0
+          },
+          {
+            "descriptive_accuracy": 0.375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 6.390947120851506,
+            "update_step": 8
+          },
+          {
+            "descriptive_accuracy": 0.375,
+            "distinct_predicted_action_count": 4,
+            "mean_restricted_action_ce": 2.3174732783553114,
+            "update_step": 16
+          },
+          {
+            "descriptive_accuracy": 0.34375,
+            "distinct_predicted_action_count": 4,
+            "mean_restricted_action_ce": 1.4360101681665811,
+            "update_step": 32
+          },
+          {
+            "descriptive_accuracy": 0.375,
+            "distinct_predicted_action_count": 4,
+            "mean_restricted_action_ce": 1.4093931798020154,
+            "update_step": 64
+          }
+        ],
+        "changed_update_count": 64,
+        "completed_updates": 64,
+        "events_sha256": "abaf6d2124937f622483d1d23fad0280d5245f807684b0515dd405dffd7267b3",
+        "learning_rate": 2e-05,
+        "result_sha256": "6f32fb58955f65285dd46443d7c06b92bac831d41b2eb62eb0704f75b3784f00"
+      },
+      {
+        "arm_id": "lr_5em05",
+        "calibration": [
+          {
+            "descriptive_accuracy": 0.359375,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 10.463550877436743,
+            "update_step": 0
+          },
+          {
+            "descriptive_accuracy": 0.34375,
+            "distinct_predicted_action_count": 4,
+            "mean_restricted_action_ce": 1.93749444718088,
+            "update_step": 8
+          },
+          {
+            "descriptive_accuracy": 0.3125,
+            "distinct_predicted_action_count": 4,
+            "mean_restricted_action_ce": 1.3977953829266863,
+            "update_step": 16
+          },
+          {
+            "descriptive_accuracy": 0.375,
+            "distinct_predicted_action_count": 4,
+            "mean_restricted_action_ce": 1.4518756757597893,
+            "update_step": 32
+          },
+          {
+            "descriptive_accuracy": 0.3125,
+            "distinct_predicted_action_count": 4,
+            "mean_restricted_action_ce": 2.0400661390761243,
+            "update_step": 64
+          }
+        ],
+        "changed_update_count": 64,
+        "completed_updates": 64,
+        "events_sha256": "63779067aed43ebc8b0e643d14e318e5abd7653a89f88c91e79bbe74dfa96bba",
+        "learning_rate": 5e-05,
+        "result_sha256": "0e988367a6762faff8850aca9c90c5d92c885b6f037a8f4747528d68c29efa4b"
+      }
+    ],
+    "elapsed_suite_seconds": 2702.946373878047,
+    "initial_trainable_state_sha256": "127e107fa24288c2b1b140983ad20762cfadc0fdb9bb7f48aee1ab406711f6dc",
+    "manifest_sha256": "d2419a75e50ca8a723bad632883e4da8e786bba6fa1ad645e0a97a586a904f7d",
+    "selected_learning_rate": 2e-07,
+    "suite_sha256": "92d12ee29b52c4d74771638351be54ab8a24b9290dc79c625fbd6096bfda7e5c",
+    "verification_sha256": "e99f861c78c4e9dab6e0a19a63f9a1d1f5bfcc2d91276a0b9aec064a2d2c8c9d",
+    "verified_source_lock_count": 37
+  },
+  "optimizer_stress_v1": {
+    "arms": [
+      {
+        "arm_id": "lr_2em07",
+        "calibration": [
+          {
+            "descriptive_accuracy": 0.25,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.921283985414286,
+            "update_step": 0
+          },
+          {
+            "descriptive_accuracy": 0.25,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.906320866006999,
+            "update_step": 1
+          }
+        ],
+        "changed_update_count": 1,
+        "completed_updates": 1,
+        "events_sha256": "6bf4425aaeab2420e52a023325f2f012d1b4ad75df3ca36a0b8d80787d2d485b",
+        "learning_rate": 2e-07,
+        "result_sha256": "004f4f8debc45eb5dc492c5dd89544d073488c1c47431621ca4c2e5342cd1b09"
+      },
+      {
+        "arm_id": "lr_2em06",
+        "calibration": [
+          {
+            "descriptive_accuracy": 0.25,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.921283985414286,
+            "update_step": 0
+          },
+          {
+            "descriptive_accuracy": 0.25,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.778713570733215,
+            "update_step": 1
+          }
+        ],
+        "changed_update_count": 1,
+        "completed_updates": 1,
+        "events_sha256": "5ca186bbf59c7777eb1b82b0149eb5bcee782ed5aa784b4d80504a92f12dff99",
+        "learning_rate": 2e-06,
+        "result_sha256": "bd99a2289563d985ae722274a602aedfed0ce81b78955eb6e35608396cf01161"
+      },
+      {
+        "arm_id": "lr_2em05",
+        "calibration": [
+          {
+            "descriptive_accuracy": 0.25,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.921283985414286,
+            "update_step": 0
+          },
+          {
+            "descriptive_accuracy": 0.3125,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.596334760004204,
+            "update_step": 1
+          }
+        ],
+        "changed_update_count": 1,
+        "completed_updates": 1,
+        "events_sha256": "6af38b4dc9083f2efcc067300627801de7ed63607b9b573f9805100a4360ee3b",
+        "learning_rate": 2e-05,
+        "result_sha256": "7d7174dabb33a079892f3127250dc6d03e1a36481965f8c2212cc346a426e8a9"
+      },
+      {
+        "arm_id": "lr_5em05",
+        "calibration": [
+          {
+            "descriptive_accuracy": 0.25,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.921283985414286,
+            "update_step": 0
+          },
+          {
+            "descriptive_accuracy": 0.3125,
+            "distinct_predicted_action_count": 3,
+            "mean_restricted_action_ce": 9.078551849542134,
+            "update_step": 1
+          }
+        ],
+        "changed_update_count": 1,
+        "completed_updates": 1,
+        "events_sha256": "9dc6fc3465ceb8ff8f6ad95aa57a9a1bf7c1116907da0d60641a661c46b55904",
+        "learning_rate": 5e-05,
+        "result_sha256": "8117bf21e9ce26a2b86ff34c81ff7266bbff9ac36c7fead93d6a5a8682880b2f"
+      }
+    ],
+    "elapsed_suite_seconds": 641.3181531580631,
+    "initial_trainable_state_sha256": "127e107fa24288c2b1b140983ad20762cfadc0fdb9bb7f48aee1ab406711f6dc",
+    "manifest_sha256": "c8674adef710362e582c21a8501891ad97293af0672199f9e365d0d4899bad38",
+    "selected_learning_rate": 2e-07,
+    "suite_sha256": "ee0eaf2fc174516733b2ccc7ae18f2f1926f70cdd66a21fd7709d26d8e2f6e70",
+    "verification_sha256": "af8d01d61689904c3f3a08df0af32b71881d63e1a6a3a5c420e2f974c0447a25",
+    "verified_source_lock_count": 37
+  },
+  "pipeline_v4_log_sha256": "a61afd1b189210e4d68cb64467ba11d415093004c2540d73f9f4f53684e1ac3e",
+  "recorded_at_utc": "2026-08-25T00:30:44.594817+00:00",
+  "repo": "/Users/vivekmattam/Desktop/GI/GridNav",
+  "schema_version": 1,
+  "sensitivity_v2": {
+    "decision_count": 64,
+    "manifest_sha256": "5460d5d6ba824b8cecb7ede4c5a3d3b43d3021f8a709080f3c2c014e9082a3be",
+    "result_sha256": "2fa947125c0c807fb07c898e8cbd029b80c7c3627252a9adef8fea7106a12bf5",
+    "verdict": "logit_sensitive_admit_optimizer_diagnostic",
+    "verification_sha256": "5d2a71e46759fd56acbc3107e6c33838da9f3cb87fa52a62ffac55ab6097d1c6",
+    "verified_source_lock_count": 22
+  },
+  "status": "passed"
+}

@@ -1,0 +1,15 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_c0_development_measurements_verification_v2",
+  "inventory_path": "/artifacts/inventory.json",
+  "inventory_sha256": "b22186a0535a2e44aa20cca41ed139a13c19ab25604eebf055f04af7fe826f3f",
+  "manifest_path": "/artifacts/manifest.json",
+  "manifest_sha256": "fc9c136f376b8c3d003f06fa3650018c533db1657cd2b65c23b053ce15cfc4ac",
+  "recorded_at_utc": "2026-08-25T04:49:41.707708+00:00",
+  "result_path": "/artifacts/result.json",
+  "result_sha256": "43f3c5ba2feaef52c78d570f02bbac473f5268439db55748c0ae94c446af22aa",
+  "run_id": "native_development_measurements_v2",
+  "schema_version": 2,
+  "status": "passed"
+}

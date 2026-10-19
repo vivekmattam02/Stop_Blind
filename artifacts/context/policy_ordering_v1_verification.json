@@ -1,0 +1,983 @@
+{
+  "checks": {
+    "aggregate_summary_recomputed": true,
+    "canonical_manifest_hash_matches": true,
+    "deterministic_policy_schedules_verified": 854,
+    "episode_reports_verified": 854,
+    "errors": [],
+    "locked_software_hashes_verified": 8,
+    "parent_artifact_hashes_verified": 2,
+    "pre_registered_analysis_recomputed": true,
+    "report_filename_set_matches_manifest": true,
+    "step_filename_set_matches_manifest": true,
+    "step_trace_hashes_verified": 854,
+    "suite_and_progress_links_match": true,
+    "trajectory_metric_bundles_recomputed": 854
+  },
+  "evidence_boundary": {
+    "established_if_passed": "The locked modern Spark evaluator distinguishes released replay, STOP, missing-STOP, invalid-action, and recognized non-learning controls on 61 unique val_seen trajectories spanning all 53 scenes and all observed geodesic-drift trajectories. Stochastic results are descriptive across fixed seeds.",
+    "not_established": "Learned-policy quality, legacy Habitat 0.1.7 numerical reproduction, CMA or Qwen baseline performance, val_unseen generalization, training correctness, or any paper superiority claim."
+  },
+  "recomputed_pre_registered_analysis": {
+    "all_required_checks_pass": true,
+    "checks": {
+      "always_forward_never_stopped": true,
+      "always_forward_reaches_step_cap": true,
+      "always_forward_zero_success": true,
+      "immediate_stop_all_stopped": true,
+      "immediate_stop_zero_motion": true,
+      "immediate_stop_zero_success": true,
+      "invalid_action_exactly_one_per_episode": true,
+      "invalid_action_zero_executed_actions": true,
+      "invalid_action_zero_success": true,
+      "official_handcrafted_every_seed_below_replay_ndtw": true,
+      "official_handcrafted_every_seed_below_replay_sdtw": true,
+      "official_handcrafted_every_seed_below_replay_spl": true,
+      "official_handcrafted_every_seed_below_replay_success": true,
+      "official_handcrafted_no_invalid_actions": true,
+      "official_random_every_seed_below_replay_ndtw": true,
+      "official_random_every_seed_below_replay_sdtw": true,
+      "official_random_every_seed_below_replay_spl": true,
+      "official_random_every_seed_below_replay_success": true,
+      "official_random_no_invalid_actions": true,
+      "released_replay_all_stopped": true,
+      "released_replay_all_success": true,
+      "released_replay_minimum_ndtw": true,
+      "released_replay_no_invalid": true
+    },
+    "non_required_comparison": "No random-versus-handcrafted ordering was tested or required.",
+    "status": "passed",
+    "summary": {
+      "completed_report_count": 854,
+      "families": {
+        "always_forward": {
+          "navigation_error": {
+            "maximum_seed_run": 12.889695964875768,
+            "mean_across_seed_runs": 12.889695964875768,
+            "minimum_seed_run": 12.889695964875768
+          },
+          "ndtw": {
+            "maximum_seed_run": 0.2335901499992437,
+            "mean_across_seed_runs": 0.2335901499992437,
+            "minimum_seed_run": 0.2335901499992437
+          },
+          "run_count": 1,
+          "sdtw": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          },
+          "seeds": [],
+          "spl": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          },
+          "success": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          }
+        },
+        "immediate_stop": {
+          "navigation_error": {
+            "maximum_seed_run": 11.98435396444602,
+            "mean_across_seed_runs": 11.98435396444602,
+            "minimum_seed_run": 11.98435396444602
+          },
+          "ndtw": {
+            "maximum_seed_run": 0.20402761100327937,
+            "mean_across_seed_runs": 0.20402761100327937,
+            "minimum_seed_run": 0.20402761100327937
+          },
+          "run_count": 1,
+          "sdtw": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          },
+          "seeds": [],
+          "spl": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          },
+          "success": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          }
+        },
+        "invalid_action": {
+          "navigation_error": {
+            "maximum_seed_run": 11.98435396444602,
+            "mean_across_seed_runs": 11.98435396444602,
+            "minimum_seed_run": 11.98435396444602
+          },
+          "ndtw": {
+            "maximum_seed_run": 0.20402761100327937,
+            "mean_across_seed_runs": 0.20402761100327937,
+            "minimum_seed_run": 0.20402761100327937
+          },
+          "run_count": 1,
+          "sdtw": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          },
+          "seeds": [],
+          "spl": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          },
+          "success": {
+            "maximum_seed_run": 0.0,
+            "mean_across_seed_runs": 0.0,
+            "minimum_seed_run": 0.0
+          }
+        },
+        "official_handcrafted": {
+          "navigation_error": {
+            "maximum_seed_run": 12.557183937948258,
+            "mean_across_seed_runs": 12.347040356182662,
+            "minimum_seed_run": 11.889037913963444
+          },
+          "ndtw": {
+            "maximum_seed_run": 0.2772294512057204,
+            "mean_across_seed_runs": 0.24484111588920737,
+            "minimum_seed_run": 0.23201859635439323
+          },
+          "run_count": 5,
+          "sdtw": {
+            "maximum_seed_run": 0.044073659027131735,
+            "mean_across_seed_runs": 0.008814731805426346,
+            "minimum_seed_run": 0.0
+          },
+          "seeds": [
+            17,
+            29,
+            43,
+            71,
+            101
+          ],
+          "spl": {
+            "maximum_seed_run": 0.047608768549950393,
+            "mean_across_seed_runs": 0.009521753709990078,
+            "minimum_seed_run": 0.0
+          },
+          "success": {
+            "maximum_seed_run": 0.04918032786885246,
+            "mean_across_seed_runs": 0.009836065573770491,
+            "minimum_seed_run": 0.0
+          }
+        },
+        "official_random": {
+          "navigation_error": {
+            "maximum_seed_run": 12.46290665962657,
+            "mean_across_seed_runs": 12.03551923173373,
+            "minimum_seed_run": 11.58123306368218
+          },
+          "ndtw": {
+            "maximum_seed_run": 0.2543492480921021,
+            "mean_across_seed_runs": 0.23266249917494974,
+            "minimum_seed_run": 0.21118494159347706
+          },
+          "run_count": 5,
+          "sdtw": {
+            "maximum_seed_run": 0.018535488304495532,
+            "mean_across_seed_runs": 0.00582857925744894,
+            "minimum_seed_run": 0.0
+          },
+          "seeds": [
+            17,
+            29,
+            43,
+            71,
+            101
+          ],
+          "spl": {
+            "maximum_seed_run": 0.026257932236638762,
+            "mean_across_seed_runs": 0.007880115319993948,
+            "minimum_seed_run": 0.0
+          },
+          "success": {
+            "maximum_seed_run": 0.03278688524590164,
+            "mean_across_seed_runs": 0.009836065573770491,
+            "minimum_seed_run": 0.0
+          }
+        },
+        "released_ground_truth_replay": {
+          "navigation_error": {
+            "maximum_seed_run": 0.36376468617408003,
+            "mean_across_seed_runs": 0.36376468617408003,
+            "minimum_seed_run": 0.36376468617408003
+          },
+          "ndtw": {
+            "maximum_seed_run": 0.9999998263566409,
+            "mean_across_seed_runs": 0.9999998263566409,
+            "minimum_seed_run": 0.9999998263566409
+          },
+          "run_count": 1,
+          "sdtw": {
+            "maximum_seed_run": 0.9999998263566409,
+            "mean_across_seed_runs": 0.9999998263566409,
+            "minimum_seed_run": 0.9999998263566409
+          },
+          "seeds": [],
+          "spl": {
+            "maximum_seed_run": 0.9679499574919964,
+            "mean_across_seed_runs": 0.9679499574919964,
+            "minimum_seed_run": 0.9679499574919964
+          },
+          "success": {
+            "maximum_seed_run": 1.0,
+            "mean_across_seed_runs": 1.0,
+            "minimum_seed_run": 1.0
+          }
+        }
+      },
+      "policy_runs": {
+        "always_forward": {
+          "collision_count": 29677,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "always_forward",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 6.034998655795536e-08,
+          "navigation_error": 12.889695964875768,
+          "ndtw": 0.2335901499992437,
+          "oracle_success": 0.01639344262295082,
+          "passed_episode_count": 61,
+          "path_length": 4.671681417609315,
+          "sdtw": 0.0,
+          "seed": null,
+          "spl": 0.0,
+          "step_count": 500.0,
+          "stopped_rate": 0.0,
+          "success": 0.0
+        },
+        "immediate_stop": {
+          "collision_count": 0,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "immediate_stop",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.0655359629293207,
+          "navigation_error": 11.98435396444602,
+          "ndtw": 0.20402761100327937,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 0.0,
+          "sdtw": 0.0,
+          "seed": null,
+          "spl": 0.0,
+          "step_count": 1.0,
+          "stopped_rate": 1.0,
+          "success": 0.0
+        },
+        "invalid_action": {
+          "collision_count": 0,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "invalid_action",
+          "invalid_action_count": 61,
+          "minimum_ndtw": 0.0655359629293207,
+          "navigation_error": 11.98435396444602,
+          "ndtw": 0.20402761100327937,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 0.0,
+          "sdtw": 0.0,
+          "seed": null,
+          "spl": 0.0,
+          "step_count": 1.0,
+          "stopped_rate": 0.0,
+          "success": 0.0
+        },
+        "official_handcrafted_seed_101": {
+          "collision_count": 1713,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_handcrafted",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.04602154360281714,
+          "navigation_error": 12.557183937948258,
+          "ndtw": 0.24213974292630025,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 3.3921360278858104,
+          "sdtw": 0.0,
+          "seed": 101,
+          "spl": 0.0,
+          "step_count": 50.622950819672134,
+          "stopped_rate": 1.0,
+          "success": 0.0
+        },
+        "official_handcrafted_seed_17": {
+          "collision_count": 1606,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_handcrafted",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.04602154360281714,
+          "navigation_error": 11.889037913963444,
+          "ndtw": 0.2772294512057204,
+          "oracle_success": 0.04918032786885246,
+          "passed_episode_count": 61,
+          "path_length": 3.807663540770982,
+          "sdtw": 0.044073659027131735,
+          "seed": 17,
+          "spl": 0.047608768549950393,
+          "step_count": 50.42622950819672,
+          "stopped_rate": 1.0,
+          "success": 0.04918032786885246
+        },
+        "official_handcrafted_seed_29": {
+          "collision_count": 1822,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_handcrafted",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.0692624183528867,
+          "navigation_error": 12.341965237601858,
+          "ndtw": 0.23201859635439323,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 2.9020258981909866,
+          "sdtw": 0.0,
+          "seed": 29,
+          "spl": 0.0,
+          "step_count": 49.295081967213115,
+          "stopped_rate": 1.0,
+          "success": 0.0
+        },
+        "official_handcrafted_seed_43": {
+          "collision_count": 1843,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_handcrafted",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.0671273365701062,
+          "navigation_error": 12.488229595246862,
+          "ndtw": 0.23240060694314954,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 2.6946786847086233,
+          "sdtw": 0.0,
+          "seed": 43,
+          "spl": 0.0,
+          "step_count": 51.14754098360656,
+          "stopped_rate": 1.0,
+          "success": 0.0
+        },
+        "official_handcrafted_seed_71": {
+          "collision_count": 1700,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_handcrafted",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.051654282646421586,
+          "navigation_error": 12.458785096152884,
+          "ndtw": 0.24041718201647355,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 3.345072245615919,
+          "sdtw": 0.0,
+          "seed": 71,
+          "spl": 0.0,
+          "step_count": 49.459016393442624,
+          "stopped_rate": 1.0,
+          "success": 0.0
+        },
+        "official_random_seed_101": {
+          "collision_count": 1933,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_random",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.012052307441303712,
+          "navigation_error": 12.337558167879699,
+          "ndtw": 0.21118494159347706,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 3.507712109513791,
+          "sdtw": 0.0,
+          "seed": 101,
+          "spl": 0.0,
+          "step_count": 57.721311475409834,
+          "stopped_rate": 1.0,
+          "success": 0.0
+        },
+        "official_random_seed_17": {
+          "collision_count": 2114,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_random",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.0012801532849754796,
+          "navigation_error": 12.46290665962657,
+          "ndtw": 0.22746907313481496,
+          "oracle_success": 0.01639344262295082,
+          "passed_episode_count": 61,
+          "path_length": 4.331648440443754,
+          "sdtw": 0.010607407982749168,
+          "seed": 17,
+          "spl": 0.013142644363330978,
+          "step_count": 65.45901639344262,
+          "stopped_rate": 1.0,
+          "success": 0.01639344262295082
+        },
+        "official_random_seed_29": {
+          "collision_count": 1687,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_random",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.05190295238286982,
+          "navigation_error": 11.920318212665496,
+          "ndtw": 0.22842670515056626,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 3.669479783838454,
+          "sdtw": 0.0,
+          "seed": 29,
+          "spl": 0.0,
+          "step_count": 52.50819672131148,
+          "stopped_rate": 1.0,
+          "success": 0.0
+        },
+        "official_random_seed_43": {
+          "collision_count": 1427,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_random",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.04652101099415092,
+          "navigation_error": 11.58123306368218,
+          "ndtw": 0.2543492480921021,
+          "oracle_success": 0.0,
+          "passed_episode_count": 61,
+          "path_length": 3.5987935965912694,
+          "sdtw": 0.0,
+          "seed": 43,
+          "spl": 0.0,
+          "step_count": 48.42622950819672,
+          "stopped_rate": 1.0,
+          "success": 0.0
+        },
+        "official_random_seed_71": {
+          "collision_count": 1305,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "official_random",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.0040449214422223784,
+          "navigation_error": 11.875580054814698,
+          "ndtw": 0.2418825279037884,
+          "oracle_success": 0.03278688524590164,
+          "passed_episode_count": 61,
+          "path_length": 3.4079805607279248,
+          "sdtw": 0.018535488304495532,
+          "seed": 71,
+          "spl": 0.026257932236638762,
+          "step_count": 44.60655737704918,
+          "stopped_rate": 1.0,
+          "success": 0.03278688524590164
+        },
+        "released_ground_truth_replay": {
+          "collision_count": 0,
+          "completed_episode_count": 61,
+          "failed_episode_count": 0,
+          "family": "released_ground_truth_replay",
+          "invalid_action_count": 0,
+          "minimum_ndtw": 0.9999988743872253,
+          "navigation_error": 0.36376468617408003,
+          "ndtw": 0.9999998263566409,
+          "oracle_success": 1.0,
+          "passed_episode_count": 61,
+          "path_length": 12.35575222984119,
+          "sdtw": 0.9999998263566409,
+          "seed": null,
+          "spl": 0.9679499574919964,
+          "step_count": 74.55737704918033,
+          "stopped_rate": 1.0,
+          "success": 1.0
+        }
+      },
+      "remaining_report_count": 0,
+      "target_report_count": 854
+    }
+  },
+  "recomputed_summary": {
+    "completed_report_count": 854,
+    "families": {
+      "always_forward": {
+        "navigation_error": {
+          "maximum_seed_run": 12.889695964875768,
+          "mean_across_seed_runs": 12.889695964875768,
+          "minimum_seed_run": 12.889695964875768
+        },
+        "ndtw": {
+          "maximum_seed_run": 0.2335901499992437,
+          "mean_across_seed_runs": 0.2335901499992437,
+          "minimum_seed_run": 0.2335901499992437
+        },
+        "run_count": 1,
+        "sdtw": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        },
+        "seeds": [],
+        "spl": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        },
+        "success": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        }
+      },
+      "immediate_stop": {
+        "navigation_error": {
+          "maximum_seed_run": 11.98435396444602,
+          "mean_across_seed_runs": 11.98435396444602,
+          "minimum_seed_run": 11.98435396444602
+        },
+        "ndtw": {
+          "maximum_seed_run": 0.20402761100327937,
+          "mean_across_seed_runs": 0.20402761100327937,
+          "minimum_seed_run": 0.20402761100327937
+        },
+        "run_count": 1,
+        "sdtw": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        },
+        "seeds": [],
+        "spl": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        },
+        "success": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        }
+      },
+      "invalid_action": {
+        "navigation_error": {
+          "maximum_seed_run": 11.98435396444602,
+          "mean_across_seed_runs": 11.98435396444602,
+          "minimum_seed_run": 11.98435396444602
+        },
+        "ndtw": {
+          "maximum_seed_run": 0.20402761100327937,
+          "mean_across_seed_runs": 0.20402761100327937,
+          "minimum_seed_run": 0.20402761100327937
+        },
+        "run_count": 1,
+        "sdtw": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        },
+        "seeds": [],
+        "spl": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        },
+        "success": {
+          "maximum_seed_run": 0.0,
+          "mean_across_seed_runs": 0.0,
+          "minimum_seed_run": 0.0
+        }
+      },
+      "official_handcrafted": {
+        "navigation_error": {
+          "maximum_seed_run": 12.557183937948258,
+          "mean_across_seed_runs": 12.347040356182662,
+          "minimum_seed_run": 11.889037913963444
+        },
+        "ndtw": {
+          "maximum_seed_run": 0.2772294512057204,
+          "mean_across_seed_runs": 0.24484111588920737,
+          "minimum_seed_run": 0.23201859635439323
+        },
+        "run_count": 5,
+        "sdtw": {
+          "maximum_seed_run": 0.044073659027131735,
+          "mean_across_seed_runs": 0.008814731805426346,
+          "minimum_seed_run": 0.0
+        },
+        "seeds": [
+          17,
+          29,
+          43,
+          71,
+          101
+        ],
+        "spl": {
+          "maximum_seed_run": 0.047608768549950393,
+          "mean_across_seed_runs": 0.009521753709990078,
+          "minimum_seed_run": 0.0
+        },
+        "success": {
+          "maximum_seed_run": 0.04918032786885246,
+          "mean_across_seed_runs": 0.009836065573770491,
+          "minimum_seed_run": 0.0
+        }
+      },
+      "official_random": {
+        "navigation_error": {
+          "maximum_seed_run": 12.46290665962657,
+          "mean_across_seed_runs": 12.03551923173373,
+          "minimum_seed_run": 11.58123306368218
+        },
+        "ndtw": {
+          "maximum_seed_run": 0.2543492480921021,
+          "mean_across_seed_runs": 0.23266249917494974,
+          "minimum_seed_run": 0.21118494159347706
+        },
+        "run_count": 5,
+        "sdtw": {
+          "maximum_seed_run": 0.018535488304495532,
+          "mean_across_seed_runs": 0.00582857925744894,
+          "minimum_seed_run": 0.0
+        },
+        "seeds": [
+          17,
+          29,
+          43,
+          71,
+          101
+        ],
+        "spl": {
+          "maximum_seed_run": 0.026257932236638762,
+          "mean_across_seed_runs": 0.007880115319993948,
+          "minimum_seed_run": 0.0
+        },
+        "success": {
+          "maximum_seed_run": 0.03278688524590164,
+          "mean_across_seed_runs": 0.009836065573770491,
+          "minimum_seed_run": 0.0
+        }
+      },
+      "released_ground_truth_replay": {
+        "navigation_error": {
+          "maximum_seed_run": 0.36376468617408003,
+          "mean_across_seed_runs": 0.36376468617408003,
+          "minimum_seed_run": 0.36376468617408003
+        },
+        "ndtw": {
+          "maximum_seed_run": 0.9999998263566409,
+          "mean_across_seed_runs": 0.9999998263566409,
+          "minimum_seed_run": 0.9999998263566409
+        },
+        "run_count": 1,
+        "sdtw": {
+          "maximum_seed_run": 0.9999998263566409,
+          "mean_across_seed_runs": 0.9999998263566409,
+          "minimum_seed_run": 0.9999998263566409
+        },
+        "seeds": [],
+        "spl": {
+          "maximum_seed_run": 0.9679499574919964,
+          "mean_across_seed_runs": 0.9679499574919964,
+          "minimum_seed_run": 0.9679499574919964
+        },
+        "success": {
+          "maximum_seed_run": 1.0,
+          "mean_across_seed_runs": 1.0,
+          "minimum_seed_run": 1.0
+        }
+      }
+    },
+    "policy_runs": {
+      "always_forward": {
+        "collision_count": 29677,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "always_forward",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 6.034998655795536e-08,
+        "navigation_error": 12.889695964875768,
+        "ndtw": 0.2335901499992437,
+        "oracle_success": 0.01639344262295082,
+        "passed_episode_count": 61,
+        "path_length": 4.671681417609315,
+        "sdtw": 0.0,
+        "seed": null,
+        "spl": 0.0,
+        "step_count": 500.0,
+        "stopped_rate": 0.0,
+        "success": 0.0
+      },
+      "immediate_stop": {
+        "collision_count": 0,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "immediate_stop",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.0655359629293207,
+        "navigation_error": 11.98435396444602,
+        "ndtw": 0.20402761100327937,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 0.0,
+        "sdtw": 0.0,
+        "seed": null,
+        "spl": 0.0,
+        "step_count": 1.0,
+        "stopped_rate": 1.0,
+        "success": 0.0
+      },
+      "invalid_action": {
+        "collision_count": 0,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "invalid_action",
+        "invalid_action_count": 61,
+        "minimum_ndtw": 0.0655359629293207,
+        "navigation_error": 11.98435396444602,
+        "ndtw": 0.20402761100327937,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 0.0,
+        "sdtw": 0.0,
+        "seed": null,
+        "spl": 0.0,
+        "step_count": 1.0,
+        "stopped_rate": 0.0,
+        "success": 0.0
+      },
+      "official_handcrafted_seed_101": {
+        "collision_count": 1713,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_handcrafted",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.04602154360281714,
+        "navigation_error": 12.557183937948258,
+        "ndtw": 0.24213974292630025,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 3.3921360278858104,
+        "sdtw": 0.0,
+        "seed": 101,
+        "spl": 0.0,
+        "step_count": 50.622950819672134,
+        "stopped_rate": 1.0,
+        "success": 0.0
+      },
+      "official_handcrafted_seed_17": {
+        "collision_count": 1606,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_handcrafted",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.04602154360281714,
+        "navigation_error": 11.889037913963444,
+        "ndtw": 0.2772294512057204,
+        "oracle_success": 0.04918032786885246,
+        "passed_episode_count": 61,
+        "path_length": 3.807663540770982,
+        "sdtw": 0.044073659027131735,
+        "seed": 17,
+        "spl": 0.047608768549950393,
+        "step_count": 50.42622950819672,
+        "stopped_rate": 1.0,
+        "success": 0.04918032786885246
+      },
+      "official_handcrafted_seed_29": {
+        "collision_count": 1822,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_handcrafted",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.0692624183528867,
+        "navigation_error": 12.341965237601858,
+        "ndtw": 0.23201859635439323,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 2.9020258981909866,
+        "sdtw": 0.0,
+        "seed": 29,
+        "spl": 0.0,
+        "step_count": 49.295081967213115,
+        "stopped_rate": 1.0,
+        "success": 0.0
+      },
+      "official_handcrafted_seed_43": {
+        "collision_count": 1843,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_handcrafted",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.0671273365701062,
+        "navigation_error": 12.488229595246862,
+        "ndtw": 0.23240060694314954,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 2.6946786847086233,
+        "sdtw": 0.0,
+        "seed": 43,
+        "spl": 0.0,
+        "step_count": 51.14754098360656,
+        "stopped_rate": 1.0,
+        "success": 0.0
+      },
+      "official_handcrafted_seed_71": {
+        "collision_count": 1700,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_handcrafted",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.051654282646421586,
+        "navigation_error": 12.458785096152884,
+        "ndtw": 0.24041718201647355,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 3.345072245615919,
+        "sdtw": 0.0,
+        "seed": 71,
+        "spl": 0.0,
+        "step_count": 49.459016393442624,
+        "stopped_rate": 1.0,
+        "success": 0.0
+      },
+      "official_random_seed_101": {
+        "collision_count": 1933,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_random",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.012052307441303712,
+        "navigation_error": 12.337558167879699,
+        "ndtw": 0.21118494159347706,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 3.507712109513791,
+        "sdtw": 0.0,
+        "seed": 101,
+        "spl": 0.0,
+        "step_count": 57.721311475409834,
+        "stopped_rate": 1.0,
+        "success": 0.0
+      },
+      "official_random_seed_17": {
+        "collision_count": 2114,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_random",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.0012801532849754796,
+        "navigation_error": 12.46290665962657,
+        "ndtw": 0.22746907313481496,
+        "oracle_success": 0.01639344262295082,
+        "passed_episode_count": 61,
+        "path_length": 4.331648440443754,
+        "sdtw": 0.010607407982749168,
+        "seed": 17,
+        "spl": 0.013142644363330978,
+        "step_count": 65.45901639344262,
+        "stopped_rate": 1.0,
+        "success": 0.01639344262295082
+      },
+      "official_random_seed_29": {
+        "collision_count": 1687,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_random",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.05190295238286982,
+        "navigation_error": 11.920318212665496,
+        "ndtw": 0.22842670515056626,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 3.669479783838454,
+        "sdtw": 0.0,
+        "seed": 29,
+        "spl": 0.0,
+        "step_count": 52.50819672131148,
+        "stopped_rate": 1.0,
+        "success": 0.0
+      },
+      "official_random_seed_43": {
+        "collision_count": 1427,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_random",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.04652101099415092,
+        "navigation_error": 11.58123306368218,
+        "ndtw": 0.2543492480921021,
+        "oracle_success": 0.0,
+        "passed_episode_count": 61,
+        "path_length": 3.5987935965912694,
+        "sdtw": 0.0,
+        "seed": 43,
+        "spl": 0.0,
+        "step_count": 48.42622950819672,
+        "stopped_rate": 1.0,
+        "success": 0.0
+      },
+      "official_random_seed_71": {
+        "collision_count": 1305,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "official_random",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.0040449214422223784,
+        "navigation_error": 11.875580054814698,
+        "ndtw": 0.2418825279037884,
+        "oracle_success": 0.03278688524590164,
+        "passed_episode_count": 61,
+        "path_length": 3.4079805607279248,
+        "sdtw": 0.018535488304495532,
+        "seed": 71,
+        "spl": 0.026257932236638762,
+        "step_count": 44.60655737704918,
+        "stopped_rate": 1.0,
+        "success": 0.03278688524590164
+      },
+      "released_ground_truth_replay": {
+        "collision_count": 0,
+        "completed_episode_count": 61,
+        "failed_episode_count": 0,
+        "family": "released_ground_truth_replay",
+        "invalid_action_count": 0,
+        "minimum_ndtw": 0.9999988743872253,
+        "navigation_error": 0.36376468617408003,
+        "ndtw": 0.9999998263566409,
+        "oracle_success": 1.0,
+        "passed_episode_count": 61,
+        "path_length": 12.35575222984119,
+        "sdtw": 0.9999998263566409,
+        "seed": null,
+        "spl": 0.9679499574919964,
+        "step_count": 74.55737704918033,
+        "stopped_rate": 1.0,
+        "success": 1.0
+      }
+    },
+    "remaining_report_count": 0,
+    "target_report_count": 854
+  },
+  "schema_version": 1,
+  "source_artifact_root": "artifacts/spark/policy_ordering_v1",
+  "source_sha256": {
+    "canonical_manifest_payload": "ad3a9a55ebcbb3a0d8119e76e603fedbc71a0ad744c05a6fd005e4d43458fa93",
+    "progress.json": "94cd58929627025dcf19e875b1c707ecd169c9e4742c1ce9b8adcb965aa8f5b3",
+    "suite.json": "2fab8d96958f4abc9377a204f2e43bc1e49d58fc1c7422f60315cf35479557b9",
+    "suite_manifest.json": "cb75d6259e42decccc161d069df2e04fdadbb7b4f20c6c480bcbca575ec44af4"
+  },
+  "status": "passed",
+  "verified_at_utc": "2026-08-23T17:04:34.811969+00:00"
+}

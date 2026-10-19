@@ -1,0 +1,24 @@
+{
+  "manifest_sha256": "69053d0ea8591565c8f24f7b1d61a6e88d72919a2cce7bc4d25e82992f6a134e",
+  "reason": "Every episode in the immutable full-split manifest passed.",
+  "recorded_at_utc": "2026-08-23T07:34:52.468642+00:00",
+  "schema_version": 2,
+  "status": "passed",
+  "summary": {
+    "completed_episode_count": 778,
+    "completed_scene_count": 53,
+    "failed_episode_count": 0,
+    "maximum_location_error_m": 8.117741786718522e-06,
+    "maximum_release_metadata_geodesic_drift_m": 0.48644065856933594,
+    "mean_release_metadata_geodesic_drift_m": 0.012306430345942245,
+    "mean_spl": 0.975375007692186,
+    "mean_success_rate": 1.0,
+    "minimum_ndtw": 0.9999988743872253,
+    "passed_episode_count": 778,
+    "release_metadata_geodesic_drift_episode_count": 36,
+    "remaining_episode_count": 0,
+    "runtime_collision_count": 0,
+    "target_episode_count": 778,
+    "target_scene_count": 53
+  }
+}

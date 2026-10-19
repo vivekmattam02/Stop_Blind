@@ -1,0 +1,11 @@
+{
+  "checkpoint": "adapter_u03000.pt",
+  "update": 3000,
+  "between_scene_variation": 1.2605961561203003,
+  "within_scene_variation": 1.2623951435089111,
+  "overall_embedding_std": 3.0426902770996094,
+  "between_within_ratio": 0.9985749125480652,
+  "flat_wall_rms_shift": 1.9251761436462402,
+  "flat_wall_shift_over_std": 0.6327217221260071,
+  "probe_samples": 24
+}

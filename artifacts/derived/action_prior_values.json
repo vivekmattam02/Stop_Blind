@@ -1,0 +1,12 @@
+{
+  "note": "Inflection-weighting coefficient over the released R2R-CE training split, computed from the ground-truth file named in sources. Extracted for this release so the claims checker has no dependency outside it.",
+  "figures": [
+    {
+      "figure": "p2_action_prior.pdf",
+      "sources": [
+        "/ep/R2R_VLNCE_v1-3_preprocessed/train/train_gt.json.gz"
+      ],
+      "inflection_coefficient": 2.554557779081767
+    }
+  ]
+}

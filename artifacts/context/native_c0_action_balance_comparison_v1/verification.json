@@ -1,0 +1,15 @@
+{
+  "analysis_gate": "native_qwen_c0_action_balance_comparison_v1",
+  "analysis_path": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/context/native_c0_action_balance_comparison_v1/analysis.json",
+  "analysis_reconstruction_performed": true,
+  "analysis_sha256": "0f34547df38e63e528d30998709e429097bcf1ac3cdee9868d6559271aadd218",
+  "both_selected_checkpoints_fully_hashed": true,
+  "both_upstream_verifications_linked": true,
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_qwen_c0_action_balance_comparison_verification_v1",
+  "per_decision_comparison_reconstructed": true,
+  "recorded_at_utc": "2026-08-25T17:58:36.259083+00:00",
+  "schema_version": 1,
+  "status": "passed"
+}

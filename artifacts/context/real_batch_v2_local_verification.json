@@ -1,0 +1,12 @@
+{
+  "checkpoint_path": "/Users/vivekmattam/Desktop/GI/GridNav/checkpoints/real_batch_v2/trainable_step1.pt",
+  "checkpoint_sha256": "95140f96540a63b852b417f83dde35d44440cd5b027e1ad6cbbfbb93f4457f29",
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_spark_real_batch_artifact_verification_v1",
+  "recorded_at_utc": "2026-08-23T18:06:08.272020+00:00",
+  "result_path": "/Users/vivekmattam/Desktop/GI/GridNav/artifacts/spark/real_batch_v2/result.json",
+  "result_sha256": "9d3309afabc7b02fec90a572eb7d7e88eecfcfbab0f0fed48db3bc03b2d09157",
+  "schema_version": 1,
+  "status": "passed"
+}

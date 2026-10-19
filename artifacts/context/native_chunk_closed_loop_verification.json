@@ -1,0 +1,63 @@
+{
+  "gate": "native_chunk_closed_loop_artifacts_v1",
+  "verified_at_utc": "2026-08-29T23:05:28.104906+00:00",
+  "status": "passed",
+  "error_count": 0,
+  "errors": [],
+  "warnings": [],
+  "episode_artifact_count": 61,
+  "source_sha256": {
+    "manifest.json": "330313fefde1c427c78df3801c47968ba335b141afd326474368dd676759e335",
+    "result.json": "7700192e616b901d52ca54e028a2b91a90985557600c4ad1d13dd94d9700c8cb"
+  },
+  "reconstructed": {
+    "episodes_evaluated": 61,
+    "success_rate": 0.0,
+    "oracle_success_rate": 0.04918032786885246,
+    "episodes_that_stopped": 0,
+    "constant_action_episodes": 39,
+    "episodes_at_step_cap": 61,
+    "mean_navigation_error": 12.168862620338064,
+    "total_actions": 30500,
+    "action_histogram": {
+      "MOVE_FORWARD": 13431,
+      "TURN_LEFT": 11684,
+      "TURN_RIGHT": 5385
+    },
+    "stop_events": [],
+    "stop_events_inside_radius": 0
+  },
+  "reported_vs_reconstructed": {
+    "episodes_evaluated": {
+      "reported": 61,
+      "reconstructed": 61,
+      "agree": true
+    },
+    "success_rate": {
+      "reported": 0.0,
+      "reconstructed": 0.0,
+      "agree": true
+    },
+    "oracle_success_rate": {
+      "reported": 0.04918032786885246,
+      "reconstructed": 0.04918032786885246,
+      "agree": true
+    },
+    "episodes_that_stopped": {
+      "reported": 0,
+      "reconstructed": 0,
+      "agree": true
+    },
+    "constant_action_episodes": {
+      "reported": 39,
+      "reconstructed": 39,
+      "agree": true
+    },
+    "total_actions": {
+      "reported": 30500,
+      "reconstructed": 30500,
+      "agree": true
+    }
+  },
+  "evidence_boundary": "Exploratory pilot. This verifier reconstructs the pilot's own outputs; it does not re-verify the episode suite, non-learning controls, or checkpoint provenance against their frozen hashes. Passing here is necessary, not sufficient, for admission to the manuscript."
+}

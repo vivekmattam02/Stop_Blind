@@ -1,0 +1,35 @@
+\section{Limitations}
+\label{sec:limitations}
+
+\paragraph{Development split only.}
+All simulator results come from a frozen set of 61 \texttt{val\_seen} episodes, a development split
+whose buildings appear in training. They support exact comparisons within this protocol.
+They do not support a leaderboard claim or a claim about unseen buildings (\texttt{val\_unseen}).
+
+\paragraph{Other remedies.}
+We test only one remedy, inverse-frequency class weighting. We do not test the inflection weighting
+of the VLN-CE baseline \citep{wijmans2019eqa}, which upweights changes of action, a dedicated
+stopping head \citep{xiang2020l2stop}, or data rebalancing \citep{cheng2025navila}.
+
+\paragraph{Statistical power.}
+Under the preregistered design, a checkpoint with a true success rate of $10\%$ would have been
+confirmed with probability about $0.52$, and one at $15\%$ with probability about $0.91$ (with the
+other candidates at $2\%$ and every comparator at $0$). The sweep therefore cannot rule out modest
+gains over the selected checkpoint. Each trained checkpoint's $0/61$ is consistent with a success
+rate of up to $10.3\%$ when all 37 checkpoints are bounded together.
+
+\paragraph{No working policy to compare.}
+Every trained policy here fails in the simulator, so the per-class checks are observed only on
+failing policies. How often they would flag a policy that navigates, and whether passing them
+predicts success, is untested.
+
+\paragraph{Three seeds and one configuration.}
+Each treatment has three paired seeds, with one learning rate, training length, model, history
+length and data split. Three seeds are below the count at which interval estimates over runs are
+certified \citep{agarwal2021rliable}, so we report per-seed values beside every aggregate and run
+no significance test across seeds.
+
+\paragraph{Causal mechanism.}
+Action frequency, offline per-class recall and the response to weighting are consistent with one
+another. Frequency, however, also varies with what each action means and with the states in which
+it occurs, so the results show what this procedure selected without establishing why.

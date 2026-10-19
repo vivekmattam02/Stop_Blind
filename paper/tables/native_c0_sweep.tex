@@ -1,0 +1,28 @@
+%
+\begin{table}[t]
+\centering
+\small
+\caption{Every saved checkpoint executed on the 61 main episodes on NVIDIA L40S GPUs:
+\textsc{stop} presses, with oracle successes in parentheses. Bold: the selection rule's pick, re-run
+here. Every trained checkpoint succeeds in $0/61$ episodes: exact two-sided $95\%$ interval
+$0$--$5.9\%$ for one checkpoint alone, and at most $10.3\%$ when all 37 are bounded together
+(one-sided, Bonferroni). Update 0, one untrained model shared by all six runs, succeeds in
+$1/61$ (bounded together: at most $13.7\%$), enters the radius in 1 and presses
+\textsc{stop} 50 times.}
+\label{tab:sweep}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+ & & \multicolumn{6}{c}{Update} \\
+\cmidrule(l){3-8}
+Treatment & Seed & 32 & 64 & 96 & 128 & 160 & 192 \\
+\midrule
+Unweighted & 20260825 & 0 (1) & 3 (1) & 0 (1) & 0 (1) & \textbf{0 (1)} & 0 (1) \\
+ & 20260826 & 8 (0) & 5 (1) & 0 (1) & 0 (1) & \textbf{0 (1)} & 0 (1) \\
+ & 20260827 & 7 (1) & 0 (1) & 0 (1) & 0 (1) & \textbf{0 (1)} & 0 (0) \\
+\midrule
+Weighted & 20260825 & 3 (0) & 6 (0) & 0 (1) & 4 (0) & 8 (1) & \textbf{5 (1)} \\
+ & 20260826 & 22 (0) & 42 (0) & 0 (0) & \textbf{0 (1)} & 1 (0) & 6 (1) \\
+ & 20260827 & 25 (0) & 0 (0) & 0 (2) & 0 (1) & 15 (0) & \textbf{3 (0)} \\
+\bottomrule
+\end{tabular}
+\end{table}

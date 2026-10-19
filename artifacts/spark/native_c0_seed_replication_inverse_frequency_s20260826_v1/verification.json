@@ -1,0 +1,20 @@
+{
+  "all_checkpoint_files_fully_loaded_and_hashed": true,
+  "error_count": 0,
+  "errors": [],
+  "event_chain_reconstruction_performed": true,
+  "gate": "independent_native_qwen_c0_paired_seed_replication_verification_v1",
+  "manifest_path": "/artifacts/manifest.json",
+  "manifest_sha256": "d78f32d8daa0548cdbe0feaacf2577b6dd488110119fcd648a248a74a1ccebee",
+  "outcome_reconstruction_performed": true,
+  "recorded_at_utc": "2026-08-25T22:34:05.722032+00:00",
+  "replication_contract_reconstruction_performed": true,
+  "replication_seed": 20260826,
+  "result_path": "/artifacts/result.json",
+  "result_sha256": "52ae0f71a5269ed92794b0412f87af9391ee25bff749b5c1dd553a18cc6f8aa0",
+  "schema_version": 1,
+  "status": "passed",
+  "treatment": "inverse_frequency",
+  "updates_path": "/artifacts/updates.jsonl",
+  "updates_sha256": "214dbcc57e1c10d5dd7c9ee3269e8b367c22bc505f112a7cf4ed4bedbf7cf274"
+}

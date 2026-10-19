@@ -1,0 +1,16 @@
+{
+  "all_checkpoint_files_fully_hashed": true,
+  "control_reconstruction_performed": true,
+  "error_count": 0,
+  "errors": [],
+  "gate": "independent_native_qwen_c0_latency_selected_closed_loop_verification_v1",
+  "manifest_path": "/artifacts/manifest.json",
+  "manifest_sha256": "9d8e272d194106b924d4eee7e46e7dc3e478e023020954283773a788368a269a",
+  "metric_reconstruction_performed": true,
+  "recorded_at_utc": "2026-08-26T15:32:05.838260+00:00",
+  "result_path": "/artifacts/result.json",
+  "result_sha256": "be7ec8bd979ce587813243b53620b7c367128fc3f75066dec84d92786a3e361c",
+  "schema_version": 1,
+  "scope_reconstruction_performed": true,
+  "status": "passed"
+}
