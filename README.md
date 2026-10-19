@@ -126,5 +126,13 @@ default to folders under `$HOME`.
 
 ## Licence
 
-MIT; see `LICENSE`. The one exception is `paper/neurips_2026.sty`, the NeurIPS style file,
-which is included only so that the paper compiles.
+The code, and the text written for this project, are under the MIT licence (`LICENSE`), with two
+exceptions.
+
+- **Material derived from Matterport3D.** Every episode ran in a Matterport3D scan, so the run
+  records in `artifacts/`, and the figures and tables made from them, are information derived from
+  the Matterport3D dataset. So are the three camera frames rendered from a scan in Figure 3
+  (`paper/figures/p1_stop_moments.pdf`, also in `paper/main.pdf`). The MIT licence does not cover
+  this material. It is released for non-commercial academic use only, under the
+  [Matterport End User License Agreement for Academic Use of Model Data](https://kaldir.vc.in.tum.de/matterport/MP_TOS.pdf).
+- `paper/neurips_2026.sty` is the NeurIPS style file, included only so that the paper compiles.
